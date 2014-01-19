@@ -1,0 +1,51 @@
+CACHE MANIFEST
+# 2013-06-12:v2
+
+# PHP
+/index.php
+/projetos.php
+
+# INCLUDES
+/inc/inc.footer.php
+/inc/inc.head.php
+/inc/inc.perfil.php
+
+# CSS
+/css/main.min.css
+
+# FONTES
+/css/fonts/helvetica/helveticaltstd-boldcond.svg
+/css/fonts/helvetica/helveticaltstd-boldcond.ttf
+/css/fonts/helvetica/helveticaltstd-boldcond.eot
+/css/fonts/helvetica/helveticaltstd-boldcond.woff
+
+/css/fonts/sourcepro-regular/sourcesanspro-regular.svg
+/css/fonts/sourcepro-regular/sourcesanspro-regular.ttf
+/css/fonts/sourcepro-regular/sourcesanspro-regular.eot
+/css/fonts/sourcepro-regular/sourcesanspro-regular.woff
+
+# IMAGES
+/favicon.ico
+/apple-touch-icon.png
+/apple-touch-icon-iphone4.png
+/apple-touch-icon-ipad.png
+
+/img/icones/blog.svg
+/img/icones/email.svg
+/img/icones/facebook.svg
+/img/icones/linkedin.svg
+/img/icones/trabalhos.svg
+/img/icones/twitter.svg
+/img/icones/github.svg
+
+/img/principal/experimentos.png
+
+/img/bg-open-source.png
+/img/thulio.png
+
+# JS
+js/main.js
+js/vendor/head.min.js
+js/vendor/jquery.cycle.all.js
+js/vendor/jquery.min.js
+js/vendor/jquery.tooltipster.js

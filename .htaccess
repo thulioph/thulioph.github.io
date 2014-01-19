@@ -1,0 +1,8 @@
+AddType text/cache-manifest .appcache
+
+<IfModule mod_rewrite.c>
+
+    RewriteEngine On
+    RewriteRule ^index/?$ /index.php [NC,L]
+    RewriteRule ^projetos/?$ /projetos.php [NC,L]
+</IfModule>
