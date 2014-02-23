@@ -12,6 +12,23 @@
                     projetos das agências onde passei e algumas brincadeiras que faço no tempo livre, aqui não tem "restrição". Se o projeto ficou bonito ou feio estará aqui :)
                 </p>
 
+                <article id="api-geolocation" class="projetos open-source">
+                    <figure class="img-projeto">
+                        <img src="img/projetos/api-geolocation-html5.png" alt="Preview do experimento utilizando a API Geolocation do HTML5">
+                    </figure>
+
+                    <h3 class="titulo-projeto titulo-projeto-open-source">
+                        API Geolocation HTML5
+                    </h3>
+
+                    <p class="info-projeto info-projeto-open-source">
+                        Experimento utilizando a API do HTML5 Geolocation, para capturar a localização do usuário.<br>
+                        <a href="http://thulioph.github.io/geolocation/" target="_blank" title="ir para o site do projeto" class="link link-info-projeto link-info-projeto-open-source">ver projeto</a>
+                    </p>
+
+                    <a href="https://github.com/thulioph/geolocation" class="open-source" target="_blank" title="Veja o código">Open Source</a>
+                </article>
+
                 <article id="api-google-maps" class="projetos open-source">
                     <figure class="img-projeto">
                         <img src="img/projetos/api-google-maps.png" alt="Preview do experimento utilizando a API do Google Maps">
