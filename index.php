@@ -9,18 +9,22 @@
                 <article id="quem-sou" class="topico-cv">
                     <h2 class="titulos titulo-cv">Quem Sou?</h2>
                     <p class="descricao-cv">
-                        Me chamo Thulio Philipe, tenho 23 anos e sou formado em Design Gráfico pela 
-                        <a class="link" href="http://www.unibratec.com.br/" target="_blank" title="Vá para o site da Universidade Brasileira de Tecnologia">Universidade Brasileira de Tecnologia</a>.
+                        Me chamo Thulio Philipe, tenho 23 anos e estou cursando uma pós em Tecnologias Front-End e WebApps na
+                        <a href="http://www.unibratec.edu.br/" class="link" title="Clique para ir ao site da Unibratec">Universidade Brasileira de Tecnologia</a>,
+                        mesma instituição onde me formei em Design Gráfico.
+
                         Resido no bairro de Piedade e me divirto como front-end desde Junho de 2012.
-                        Atualmente faço parte da equipe de desenvolvimento da <a class="link" href="http://www.boldcomunicacao.com.br" target="_blank" title="Vá para o site da Bold">Bold Comunicação Estratégica</a>,
-                        agência de comunicação, com sede no bairro de Boa Viagem.
-                        <br><br>
+                        Atualmente faço parte do time de desenvolvimento da <a class="link" href="http://mbag.com.br/" target="_blank" title="Vá para o site da MBAG Marketing">MBAG Marketing</a>, empresa de
+                        Marketing e publicidade, com sede no bairro de Candeias.
+                        <br /><br />
+
                         Trabalhei com televendas na LB Automotive, distribuidora de peças automotivas, no período de 2008 - 2012, quando resolvi me afastar para uma
-                        maior dedicação aos estudos. No mesmo ano comecei a integrar a equipe da <a class="link" href="http://www.dropsolucoes.com" target="_blank" title="Vá para o site da Drop Soluções">Drop Soluções</a>, 
-                        agência com sede no bairro de Boa Viagem onde trabalhei no período de 06/2012 - 02/2013. 
-                        Logo depois, surgiu a oportunidade de trabalhar na Bold, onde estou até hoje.
+                        maior dedicação aos estudos. No mesmo ano comecei a integrar a equipe da
+                        <a class="link" href="http://www.dropsolucoes.com" target="_blank" title="Vá para o site da Drop Soluções">Drop Soluções</a>,
+                        agência com sede no bairro de Boa Viagem onde trabalhei no período de 06/2012 á 02/2013 e no mesmo mês dei início as minhas atividades na
+                        <a class="link" href="http://www.boldcomunicacao.com.br" target="_blank" title="Vá para o site da Bold">Bold Comunicação Estratégica</a>,
+                        agência de comunicação também sediada no bairro de Boa Viagem.
                     </p>
-                    <img src="" alt="">
                 </article>
 
                 <article id="formacao" class="topico-cv">

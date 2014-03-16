@@ -93,7 +93,7 @@
 
                     <p class="info-projeto">
                         Projeto desenvolvido pela Bold para a Locbuggy, passeios em Fernando de Noronha. <br>
-                        <a href="http://boldcomunicacao.com.br/locbuggy" target="_blank" title="ir para o site do projeto" class="link link-info-projeto">ver projeto</a>
+                        <a href="http://boldcomunicacao.com.br/trabalhos/locbuggy" target="_blank" title="ir para o site do projeto" class="link link-info-projeto">ver projeto</a>
                     </p>
                     <!-- <p class="info-projeto obs-projeto">
                         Colaborei neste projeto no desenvolvimento front-end e toda
@@ -112,7 +112,7 @@
 
                     <p class="info-projeto">
                         Projeto desenvolvido pela Bold para a Distribuidora Comercial Uchoa. <br>
-                        <a href="http://boldcomunicacao.com.br/uchoa" target="_blank" title="ir para o site do projeto" class="link link-info-projeto">ver projeto</a>
+                        <a href="http://boldcomunicacao.com.br/trabalhos/uchoa" target="_blank" title="ir para o site do projeto" class="link link-info-projeto">ver projeto</a>
                     </p>
                     <!-- <p class="info-projeto obs-projeto">
                         Colaborei neste projeto no desenvolvimento front-end e toda

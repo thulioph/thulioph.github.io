@@ -22,7 +22,7 @@
             <a href="http://www.linkedin.com/in/thulioph" target="_blank" tabindex="2" title="Linkedin" class="icones ico-linkedin">Linkedin</a>
             <a href="https://twitter.com/thulioph_" tabindex="6" title="Twitter" target="_blank" class="icones ico-twitter">Twitter</a>
             <a href="http://github.com/thulioph/" tabindex="3" title="Github" target="_blank" class="icones ico-github">Github</a>
-            <a href="./projetos" tabindex="1" title="Projetos" class="icones ico-trabalhos">Projetos</a>
+            <a href="projetos" tabindex="1" title="Projetos" class="icones ico-trabalhos">Projetos</a>
             <a href="mailto:email@thulioph.com" tabindex="7" title="E-mail" class="icones ico-email">E-mail</a>
         </div>
     </aside>
