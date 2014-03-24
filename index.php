@@ -75,6 +75,9 @@
 
                     <ul class="list-eventos">
                         <li class="ano-formacao">
+                            <a href="http://eventos.locaweb.com.br/" target="_blank" title="Conheça o Evento" class="link"> 16º Encontro Locaweb </a> - <span class="italico">2014</span>
+                        </li>
+                        <li class="ano-formacao">
                              <a href="http://www.frontinrecife.com.br/" target="_blank" title="Conheça o Evento" class="link">Front in Recife</a>  - <span class="italico">2013</span>
                         </li>
                         <li class="ano-formacao">
@@ -90,7 +93,7 @@
                             <a href="http://abrilproruby.com/" target="_blank" title="Conheça o Evento" class="link">Abril pro Ruby</a> - <span class="italico">2013</span>
                         </li>
                         <li class="ano-formacao">
-                            <a href="http://eventos.locaweb.com.br/" target="_blank" title="Conheça o Evento" class="link"> Encontro Locaweb </a> - <span class="italico">2013</span>
+                            <a href="http://eventos.locaweb.com.br/" target="_blank" title="Conheça o Evento" class="link"> 15º Encontro Locaweb </a> - <span class="italico">2013</span>
                         </li>
                         <li class="ano-formacao">
                             <a href="http://www.youtube.com/watch?v=e3JVzNr_SR0" target="_blank" title="Conheça o Evento" class="link"> Startup DevDay </a> - <span class="italico">2013</span>

@@ -12,6 +12,25 @@
                     projetos das agências onde passei e algumas brincadeiras que faço no tempo livre, aqui não tem "restrição". Se o projeto ficou bonito ou feio estará aqui :)
                 </p>
 
+                <article id="herbalist-2014" class="projetos">
+                    <figure class="img-projeto">
+                        <img src="img/projetos/portal-herbalist.png" alt="Layout do projeto Herbalist 2014">
+                    </figure>
+
+                    <h3 class="titulo-projeto">
+                        Portal Herbalist
+                    </h3>
+
+                    <p class="info-projeto">
+                        Projeto desenvolvido pela MBAG para o portal da Herbalist.<br>
+                        <a href="http://www.herbalist.com.br/2014" target="_blank" title="ir para o site do projeto" class="link link-info-projeto">ver projeto</a>
+                    </p>
+                    <!-- <p class="info-projeto obs-projeto">
+                        Colaborei neste projeto no desenvolvimento front-end e toda
+                        implementação do back-end ficou com o JC.
+                    </p> -->
+                </article>
+
                 <article id="api-geolocation" class="projetos open-source">
                     <figure class="img-projeto">
                         <img src="img/projetos/api-geolocation-html5.png" alt="Preview do experimento utilizando a API Geolocation do HTML5">
