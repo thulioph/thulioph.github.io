@@ -9,7 +9,7 @@
                 <article id="quem-sou" class="topico-cv">
                     <h2 class="titulos titulo-cv">Quem Sou?</h2>
                     <p class="descricao-cv">
-                        Me chamo Thulio Philipe, tenho 23 anos e estou cursando uma pós em Tecnologias Front-End e WebApps na
+                        Me chamo Thulio Philipe, tenho 23 anos e estou cursando pós em Tecnologias Front-End e WebApps na
                         <a href="http://www.unibratec.edu.br/" class="link" title="Clique para ir ao site da Unibratec">Universidade Brasileira de Tecnologia</a>,
                         mesma instituição onde me formei em Design Gráfico.
 
@@ -21,7 +21,7 @@
                         Trabalhei com televendas na LB Automotive, distribuidora de peças automotivas, no período de 2008 - 2012, quando resolvi me afastar para uma
                         maior dedicação aos estudos. No mesmo ano comecei a integrar a equipe da
                         <a class="link" href="http://www.dropsolucoes.com" target="_blank" title="Vá para o site da Drop Soluções">Drop Soluções</a>,
-                        agência com sede no bairro de Boa Viagem onde trabalhei no período de 06/2012 á 02/2013 e no mesmo mês dei início as minhas atividades na
+                        agência com sede no bairro de Boa Viagem onde trabalhei no período de 06/2012 á 02/2013 e no mesmo mês iniciei minhas atividades na
                         <a class="link" href="http://www.boldcomunicacao.com.br" target="_blank" title="Vá para o site da Bold">Bold Comunicação Estratégica</a>,
                         agência de comunicação também sediada no bairro de Boa Viagem.
                     </p>
