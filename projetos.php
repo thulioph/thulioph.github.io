@@ -12,7 +12,7 @@
                     projetos das agências onde passei e algumas brincadeiras que faço no tempo livre, aqui não tem "restrição". Se o projeto ficou bonito ou feio estará aqui :)
                 </p>
 
-                <article id="herbalist-2014" class="projetos">
+                <article id="portal-herbalist" class="projetos">
                     <figure class="img-projeto">
                         <img src="img/projetos/portal-herbalist.png" alt="Layout do projeto Herbalist 2014">
                     </figure>
@@ -46,6 +46,25 @@
                     </p>
 
                     <a href="https://github.com/thulioph/geolocation" class="open-source" target="_blank" title="Veja o código">Open Source</a>
+                </article>
+
+                <article id="blog-herbalist" class="projetos">
+                    <figure class="img-projeto">
+                        <img src="img/projetos/blog-herbalist.png" alt="Layout do projeto Blog Herbalist">
+                    </figure>
+
+                    <h3 class="titulo-projeto">
+                        Herbalist Blog
+                    </h3>
+
+                    <p class="info-projeto">
+                        Projeto desenvolvido pela MBAG para o blog da Herbalist.<br>
+                        <a href="http://www.herbalist.com.br/blog" target="_blank" title="ir para o site do projeto" class="link link-info-projeto">ver projeto</a>
+                    </p>
+                    <!-- <p class="info-projeto obs-projeto">
+                        Colaborei neste projeto no desenvolvimento front-end e toda
+                        implementação do back-end ficou com o JC.
+                    </p> -->
                 </article>
 
                 <article id="api-google-maps" class="projetos open-source">
