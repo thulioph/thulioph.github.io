@@ -14,16 +14,17 @@
                         mesma instituição onde me formei em Design Gráfico.
 
                         Resido no bairro de Piedade e me divirto como front-end desde Junho de 2012.
-                        Atualmente faço parte do time de desenvolvimento da <a class="link" href="http://mbag.com.br/" target="_blank" title="Vá para o site da MBAG Marketing">MBAG Marketing</a>, empresa de
-                        Marketing e publicidade, com sede no bairro de Candeias.
+                        Atualmente estou trabalhando em casa com alguns projetos <a href="http://pt.wikipedia.org/wiki/C%C3%B3digo_aberto" title="Não sabe do que eu estou falando?" class="link">open-source</a> e freelancers.
                         <br /><br />
 
-                        Trabalhei com televendas na LB Automotive, distribuidora de peças automotivas, no período de 2008 - 2012, quando resolvi me afastar para uma
+                        Trabalhei como televendas na LB Automotive, distribuidora de peças automotivas no período de 2008 - 2012, quando resolvi me afastar para uma
                         maior dedicação aos estudos. No mesmo ano comecei a integrar a equipe da
                         <a class="link" href="http://www.dropsolucoes.com" target="_blank" title="Vá para o site da Drop Soluções">Drop Soluções</a>,
                         agência com sede no bairro de Boa Viagem onde trabalhei no período de 06/2012 á 02/2013 e no mesmo mês iniciei minhas atividades na
                         <a class="link" href="http://www.boldcomunicacao.com.br" target="_blank" title="Vá para o site da Bold">Bold Comunicação Estratégica</a>,
-                        agência de comunicação também sediada no bairro de Boa Viagem.
+                        agência de comunicação também sediada no bairro de Boa Viagem, depois de um ano fui chamado para fazer parte da
+                        <a class="link" href="http://mbag.com.br/" target="_blank" title="Vá para o site da MBAG Marketing">MBAG Marketing</a>, empresa de Marketing e
+                        Publicidade que fica no bairro de Candeias, trabalhei lá de 02/2014 á 04/2014 quando me desliguei.
                     </p>
                 </article>
 
