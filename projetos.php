@@ -12,6 +12,21 @@
                     projetos das agências onde passei e algumas brincadeiras que faço no tempo livre, aqui não tem "restrição". Se o projeto ficou bonito ou feio estará aqui :)
                 </p>
 
+                <article id="comuniq-app" class="projetos">
+                    <figure class="img-projeto">
+                        <img src="img/projetos/comuniq.png" alt="Layout do projeto ComuniQ">
+                    </figure>
+
+                    <h3 class="titulo-projeto">
+                        ComuniQ
+                    </h3>
+
+                    <p class="info-projeto">
+                        Projeto desenvolvido em parceria com a i2 Mobile.<br>
+                        <a href="http://comuniqapp.com.br" target="_blank" title="ir para o site do projeto" class="link link-info-projeto">ver projeto</a>
+                    </p>
+                </article>
+
                 <article id="portal-herbalist" class="projetos">
                     <figure class="img-projeto">
                         <img src="img/projetos/portal-herbalist.png" alt="Layout do projeto Herbalist 2014">
@@ -25,10 +40,6 @@
                         Projeto desenvolvido pela MBAG para o portal da Herbalist.<br>
                         <a href="http://www.herbalist.com.br/2014" target="_blank" title="ir para o site do projeto" class="link link-info-projeto">ver projeto</a>
                     </p>
-                    <!-- <p class="info-projeto obs-projeto">
-                        Colaborei neste projeto no desenvolvimento front-end e toda
-                        implementação do back-end ficou com o JC.
-                    </p> -->
                 </article>
 
                 <article id="api-geolocation" class="projetos open-source">
@@ -61,10 +72,6 @@
                         Projeto desenvolvido pela MBAG para o blog da Herbalist.<br>
                         <a href="http://www.herbalist.com.br/blog" target="_blank" title="ir para o site do projeto" class="link link-info-projeto">ver projeto</a>
                     </p>
-                    <!-- <p class="info-projeto obs-projeto">
-                        Colaborei neste projeto no desenvolvimento front-end e toda
-                        implementação do back-end ficou com o JC.
-                    </p> -->
                 </article>
 
                 <article id="api-google-maps" class="projetos open-source">
@@ -114,10 +121,6 @@
                         Projeto desenvolvido pela Bold para o camarote da Downtown no Galo 2014. <br>
                         <a href="http://www.downtownnogalo.com.br" target="_blank" title="ir para o site do projeto" class="link link-info-projeto">ver projeto</a>
                     </p>
-                    <!-- <p class="info-projeto obs-projeto">
-                        Colaborei neste projeto no desenvolvimento front-end e toda
-                        implementação do back-end ficou com o JC.
-                    </p> -->
                 </article>
 
                 <article id="locbuggy" class="projetos">
@@ -133,10 +136,6 @@
                         Projeto desenvolvido pela Bold para a Locbuggy, passeios em Fernando de Noronha. <br>
                         <a href="http://boldcomunicacao.com.br/trabalhos/locbuggy" target="_blank" title="ir para o site do projeto" class="link link-info-projeto">ver projeto</a>
                     </p>
-                    <!-- <p class="info-projeto obs-projeto">
-                        Colaborei neste projeto no desenvolvimento front-end e toda
-                        implementação do back-end ficou com o JC.
-                    </p> -->
                 </article>
 
                 <article id="comercial-uchoa" class="projetos">
@@ -152,10 +151,6 @@
                         Projeto desenvolvido pela Bold para a Distribuidora Comercial Uchoa. <br>
                         <a href="http://boldcomunicacao.com.br/trabalhos/uchoa" target="_blank" title="ir para o site do projeto" class="link link-info-projeto">ver projeto</a>
                     </p>
-                    <!-- <p class="info-projeto obs-projeto">
-                        Colaborei neste projeto no desenvolvimento front-end e toda
-                        implementação do back-end ficou com o JC.
-                    </p> -->
                 </article>
 
                 <article id="light-events" class="projetos open-source">
@@ -188,10 +183,6 @@
                         Projeto desenvolvido pela Bold para o JC. <br>
                         <a href="http://tvjornal.ne10.uol.com.br/bookdeprojetos/" target="_blank" title="ir para o site do projeto" class="link link-info-projeto">ver projeto</a>
                     </p>
-                    <!-- <p class="info-projeto obs-projeto">
-                        Colaborei neste projeto no desenvolvimento front-end e toda
-                        implementação do back-end ficou com o JC.
-                    </p> -->
                 </article>
 
                 <article id="amigo-secreto-shopping-recife" class="projetos">
@@ -207,11 +198,6 @@
                         Projeto desenvolvido pela Bold em parceria do JC. <br>
                         <a href="http://amigosecretoshoppingrecife.com.br/" target="_blank" title="ir para o site do projeto" class="link link-info-projeto">ver projeto</a>
                     </p>
-
-                    <!-- <p class="info-projeto obs-projeto">
-                        Colaborei neste projeto no desenvolvimento front-end e toda
-                        implementação do back-end ficou com o JC.
-                    </p> -->
                 </article>
 
                 <article id="vlm" class="projetos">
@@ -227,11 +213,6 @@
                         Projeto desenvolvido pela Bold para a VLM Assessoria.<br>
                         <a href="http://vlm.com.br/" target="_blank" title="ir para o site do projeto" class="link link-info-projeto">ver projeto</a>
                     </p>
-
-                    <!-- <p class="info-projeto obs-projeto">
-                        Colaborei neste projeto no desenvolvimento front-end e toda
-                        implementação do back-end ficou com o JC.
-                    </p> -->
                 </article>
 
                 <article id="nossa-liga" class="projetos">
@@ -247,11 +228,6 @@
                         Projeto desenvolvido pela Bold para a Nossa Liga em parceria com o JC. <br>
                         <a href="http://www.nossaliga.com/" target="_blank" title="ir para o site do projeto" class="link link-info-projeto">ver projeto</a>
                     </p>
-
-                    <!-- <p class="info-projeto obs-projeto">
-                        Colaborei neste projeto no desenvolvimento front-end e toda
-                        implementação do back-end ficou com o JC.
-                    </p> -->
                 </article>
 
                 <article id="chevrolet-perfeito" class="projetos">
@@ -267,11 +243,6 @@
                         Projeto desenvolvido pela Bold para a Chevrolet Tambaí. <br>
                         <a href="https://www.facebook.com/ChevroletTambai/app_101658270026994" target="_blank" title="ir para o site do projeto" class="link link-info-projeto">ver projeto</a>
                     </p>
-
-                    <!-- <p class="info-projeto obs-projeto">
-                        Colaborei neste projeto no desenvolvimento front-end e toda
-                        implementação do back-end ficou com o JC.
-                    </p> -->
                 </article>
 
                 <article id="drop" class="projetos">
@@ -287,11 +258,6 @@
                         Projeto desenvolvido para a Drop.<br>
                         <a href="http://www.dropsolucoes.com/" target="_blank" title="ir para o site do projeto" class="link link-info-projeto">ver projeto</a>
                     </p>
-
-                    <!-- <p class="info-projeto obs-projeto">
-                        Colaborei neste projeto no desenvolvimento front-end e toda
-                        implementação do back-end ficou com o JC.
-                    </p> -->
                 </article>
 
                 <article id="dia-da-mulher" class="projetos">
@@ -307,11 +273,6 @@
                         Projeto desenvolvido pela Bold para a Chlorophylla. <br>
                         <a href="https://www.facebook.com/ChlorophyllaOFICIAL/app_147636955402598" target="_blank" title="ir para o site do projeto" class="link link-info-projeto">ver projeto</a>
                     </p>
-
-                    <!-- <p class="info-projeto obs-projeto">
-                        Colaborei neste projeto no desenvolvimento front-end e toda
-                        implementação do back-end ficou com o JC.
-                    </p> -->
                 </article>
 
                 <article id="revealjs" class="projetos open-source">
@@ -344,11 +305,6 @@
                         Projeto desenvolvido pela Bold para o JC. <br>
                         <a href="http://parceirone10.hospedagemdesites.ws/copadoscampeoes/" target="_blank" title="ir para o site do projeto" class="link link-info-projeto">ver projeto</a>
                     </p>
-
-                    <!-- <p class="info-projeto obs-projeto">
-                        Colaborei neste projeto no desenvolvimento front-end e toda
-                        implementação do back-end ficou com o JC.
-                    </p> -->
                 </article>
 
                 <article id="leticia-antunes" class="projetos">
@@ -364,11 +320,6 @@
                         Projeto desenvolvido para Letícia Antunes Recepções.<br>
                         <a href="http://leticiaantunes.com.br/" target="_blank" title="ir para o site do projeto" class="link link-info-projeto">ver projeto</a>
                     </p>
-
-                    <!-- <p class="info-projeto obs-projeto">
-                        Colaborei neste projeto no desenvolvimento front-end e toda
-                        implementação do back-end ficou com o JC.
-                    </p> -->
                 </article>
 
                 <article id="sante-dia-dos-pais" class="projetos">
@@ -384,11 +335,6 @@
                         Projeto desenvolvido pela Bold para a Santé Club.<br>
                         <a href="https://www.facebook.com/santeclubrecife/app_555992574457059" target="_blank" title="ir para o site do projeto" class="link link-info-projeto">ver projeto</a>
                     </p>
-
-                    <!-- <p class="info-projeto obs-projeto">
-                        Colaborei neste projeto no desenvolvimento front-end e toda
-                        implementação do back-end ficou com o JC.
-                    </p> -->
                 </article>
 
                 <article id="saindo-de-uma-fria-tambai" class="projetos">
@@ -404,11 +350,6 @@
                         Projeto desenvolvido pela Bold para a Chevrolet Tambaí.<br>
                         <a href="https://www.facebook.com/ChevroletTambai/app_566690970018879" target="_blank" title="ir para o site do projeto" class="link link-info-projeto">ver projeto</a>
                     </p>
-
-                    <!-- <p class="info-projeto obs-projeto">
-                        Colaborei neste projeto no desenvolvimento front-end e toda
-                        implementação do back-end ficou com o JC.
-                    </p> -->
                 </article>
 
                 <article id="antonio-campos" class="projetos">
@@ -424,11 +365,6 @@
                         Projeto desenvolvido pela Drop para Antônio Campos.<br>
                         <a href="http://www.antoniocampos.com.br/" target="_blank" title="ir para o site do projeto" class="link link-info-projeto">ver projeto</a>
                     </p>
-
-                    <!-- <p class="info-projeto obs-projeto">
-                        Colaborei neste projeto no desenvolvimento front-end e toda
-                        implementação do back-end ficou com o JC.
-                    </p> -->
                 </article>
 
                 <article id="zummi" class="projetos">
@@ -444,11 +380,6 @@
                         Projeto desenvolvido pela Bold para a Zummi Bicicletas.<br>
                         <a href="http://www.zummi.com.br/" target="_blank" title="ir para o site do projeto" class="link link-info-projeto">ver projeto</a>
                     </p>
-
-                    <!-- <p class="info-projeto obs-projeto">
-                        Colaborei neste projeto no desenvolvimento front-end e toda
-                        implementação do back-end ficou com o JC.
-                    </p> -->
                 </article>
 
                 <article id="bold-comunicacao" class="projetos open-source">
@@ -466,11 +397,6 @@
                     </p>
 
                     <a href="https://bitbucket.org/thulioph/bold" class="open-source" target="_blank" title="Veja o código">Open Source</a>
-
-                    <!-- <p class="info-projeto obs-projeto">
-                        Colaborei neste projeto no desenvolvimento front-end e toda
-                        implementação do back-end ficou com o JC.
-                    </p> -->
                 </article>
 
                 <article id="radio-jornal" class="projetos">
@@ -486,11 +412,6 @@
                         Projeto desenvolvido pela Bold para a Rádio Jornal.<br>
                         <a href="http://parceirone10.hospedagemdesites.ws/radiojornal/" target="_blank" title="ir para o site do projeto" class="link link-info-projeto">ver projeto</a>
                     </p>
-
-                    <!-- <p class="info-projeto obs-projeto">
-                        Colaborei neste projeto no desenvolvimento front-end e toda
-                        implementação do back-end ficou com o JC.
-                    </p> -->
                 </article>
 
                 <article id="tour-virtual-jquery" class="projetos open-source">
@@ -504,15 +425,9 @@
 
                     <p class="info-projeto info-projeto-open-source">
                         Experimento desenvolvido simulando um tour virtual com jQuery.<br>
-                        <!-- <a href="http://www.boldcomunicacao.com.br" target="_blank" title="ir para o site do projeto" class="link link-info-projeto link-info-projeto-open-source">ver projeto</a> -->
                     </p>
 
                     <a href="https://bitbucket.org/thulioph/tour-virtual" class="open-source" target="_blank" title="Veja o código">Open Source</a>
-
-                    <!-- <p class="info-projeto obs-projeto">
-                        Colaborei neste projeto no desenvolvimento front-end e toda
-                        implementação do back-end ficou com o JC.
-                    </p> -->
                 </article>
 
                 <article id="sos-controle-pragas" class="projetos">
@@ -528,11 +443,6 @@
                         Primeiro site que fiz na vida rsrs.<br>
                         <a href="http://www.soscontroledepragas.com.br/" target="_blank" title="ir para o site do projeto" class="link link-info-projeto">ver projeto</a>
                     </p>
-
-                    <!-- <p class="info-projeto obs-projeto">
-                        Colaborei neste projeto no desenvolvimento front-end e toda
-                        implementação do back-end ficou com o JC.
-                    </p> -->
                 </article>
 
                 <article id="dia-dos-pais-chlorophylla" class="projetos">
@@ -548,11 +458,6 @@
                         Projeto desenvolvido pela Bold para a Chlorophylla. <br>
                         <a href="https://www.facebook.com/ChlorophyllaOFICIAL/app_426410827473486" target="_blank" title="ir para o site do projeto" class="link link-info-projeto">ver projeto</a>
                     </p>
-
-                    <!-- <p class="info-projeto obs-projeto">
-                        Colaborei neste projeto no desenvolvimento front-end e toda
-                        implementação do back-end ficou com o JC.
-                    </p> -->
                 </article>
 
                 <article id="cce-cursos" class="projetos">
@@ -568,11 +473,6 @@
                         Projeto desenvolvido pela Drop para CCE Cursos.<br>
                         <a href="http://ccecursos.com.br/" target="_blank" title="ir para o site do projeto" class="link link-info-projeto">ver projeto</a>
                     </p>
-
-                    <!-- <p class="info-projeto obs-projeto">
-                        Colaborei neste projeto no desenvolvimento front-end e toda
-                        implementação do back-end ficou com o JC.
-                    </p> -->
                 </article>
 
                 <article id="ea-cursos" class="projetos">
@@ -588,11 +488,6 @@
                         Projeto desenvolvido pela Bold para a EA Cursos. <br>
                         <a href="http://www.eacursos.com.br/" target="_blank" title="ir para o site do projeto" class="link link-info-projeto">ver projeto</a>
                     </p>
-
-                    <!-- <p class="info-projeto obs-projeto">
-                        Colaborei neste projeto no desenvolvimento front-end e toda
-                        implementação do back-end ficou com o JC.
-                    </p> -->
                 </article>
 
                 <article id="framebold" class="projetos open-source">
@@ -606,7 +501,6 @@
 
                     <p class="info-projeto info-projeto-open-source">
                         Template de projetos que utilizo no dia-a-dia.<br>
-                        <!-- <a href="http://thulioph.github.io/framebold/" target="_blank" title="ir para o site do projeto" class="link link-info-projeto link-info-projeto-open-source">ver projeto</a> -->
                     </p>
 
                     <a href="http://thulioph.github.io/framebold/" class="open-source" target="_blank" title="Veja o código">Open Source</a>
@@ -625,11 +519,6 @@
                         Projeto desenvolvido pela Bold para a Pleno Consultoria. <br>
                         <a href="http://www.plenoonline.com.br/" target="_blank" title="ir para o site do projeto" class="link link-info-projeto">ver projeto</a>
                     </p>
-
-                    <!-- <p class="info-projeto obs-projeto">
-                        Colaborei neste projeto no desenvolvimento front-end e toda
-                        implementação do back-end ficou com o JC.
-                    </p> -->
                 </article>
             </section>
         </section> <!--fim #content-->
