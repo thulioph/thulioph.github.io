@@ -29,8 +29,9 @@ Main = {
     feedsBlog: {
     	createFeeds: function() {
 	        $.ajax({
-	            url: 'proxy.php',
-	            dataType: 'JSON',
+	        	method: 'GET',
+	            url: 'http://api.tumblr.com/v2/blog/blog.thulioph.com/posts/text?api_key=' + 'oRPllhCbg5hkjgcDcsrG0FpmsaPhuDkt9ztQV0fGOKMWrnAIto',
+	            dataType: 'JSONP',
 	            beforeSend: function() {
 	                $("#loading").addClass('loading');
 	            },
