@@ -440,8 +440,11 @@ section.feeds-blog {
   color: #333332;
   text-align: left;
 }
-.error {
-  background-color: red;
+.error::after {
+  content: 'Ocorreu um erro ao carregar os feeds, por favor tente novamente em alguns segundos.';
+  font-size: 15px;
+  color: #333332;
+  text-align: left;
 }
 
 .post {
@@ -557,8 +560,8 @@ a.link-post:hover {
     border-top: 1px solid #dededc;
     width: 100%;
     height: auto;
-    top: 102%;
-    padding: 1%;
+    top: 88%;
+    padding: 1% 0;
   }
   .icones-contato{
     width: 100%;
@@ -570,10 +573,10 @@ a.link-post:hover {
     text-align: justify;
   }
   article.projetos{
-    margin-bottom: 90px;
+    margin-bottom: 50px;
     border-bottom: 1px solid #dededc;
     padding-bottom: 20px;
-    max-height: 420px;
+    min-height: 420px;
   }
   figure.img-projeto{
     width: 100%;
@@ -608,8 +611,20 @@ a.link-post:hover {
   a.link-onde-estou{
     float: left;
   }
+  section.feeds-blog {
+    margin-bottom: 0;
+  }
   .post {
-    width: 100%;
+    width: 95%;
+    text-align: left;
+    height: auto;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    background: transparent;
+    margin: 10px 0 10px 0;
+  }
+  .link-post {
+    left: 0;
+    position: relative;
   }
 }
 

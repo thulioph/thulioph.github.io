@@ -1,5 +1,7 @@
         <?php include("inc/inc.head.php") ?>
 
+        <body data-screen="projects">
+
         <!-- ======== INÍCIO DO PROJETO ======== -->
 
         <?php include("inc/inc.perfil.php") ?>

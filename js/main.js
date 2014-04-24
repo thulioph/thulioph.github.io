@@ -1,11 +1,33 @@
-head.js("js/vendor/jquery.min.js","js/vendor/jquery.tooltipster.js", function(){
-		jQuery(function(){
-			// Tooltip
-				$("a.icones").addClass("tooltip");
-				$(".link-onde-estou").addClass("tooltip");
-				$(".tooltip").tooltipster();
+var Main = {};
 
-			// feeds my blog
+Main = {
+    _BASEPATH: 'img/',
+    _currentScreen: null,
+
+    setUp: function(){
+        var that = this;
+
+        that._currentScreen = $('body').data('screen');
+
+        that.analitycs.generateAnalitycs();
+        that.tooltip.createTooltip();
+
+        if(that._currentScreen == 'blog') {
+        	that.feedsBlog.createFeeds();
+        }
+
+    },
+
+    tooltip: {
+    	createTooltip: function() {
+    		$("a.icones").addClass("tooltip");
+			$(".link-onde-estou").addClass("tooltip");
+			$(".tooltip").tooltipster();
+    	}
+    },
+
+    feedsBlog: {
+    	createFeeds: function() {
 	        $.ajax({
 	            url: 'proxy.php',
 	            dataType: 'JSON',
@@ -84,5 +106,19 @@ head.js("js/vendor/jquery.min.js","js/vendor/jquery.tooltipster.js", function(){
 
 	          }); //end ajax
 
-		});
-});
+    	}
+    },
+
+    analitycs: {
+    	generateAnalitycs: function() {
+    		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-41030049-1', 'thulioph.com');
+            ga('send', 'pageview');
+    	}
+    }
+
+}

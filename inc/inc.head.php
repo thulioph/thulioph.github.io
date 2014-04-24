@@ -48,8 +48,3 @@
             <meta property='og:type' content='website' />
             <meta property='og:description' content='Desenvolvedor Front End' />
     </head>
-
-    <body>
-        <!--[if lt IE 7]>
-            <p class="chromeframe">Você está usando um browser <strong>ultrapassado</strong>. Por favor <a href="http://browsehappy.com/">atualize o browser</a> ou <a href="http://www.google.com/chromeframe/?redirect=true">ative o Frame do Google Chrome</a> para melhorar a experiência.</p>
-        <![endif]-->
