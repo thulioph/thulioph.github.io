@@ -28,7 +28,7 @@
             <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
         <!-- CSS -->
-            <link rel="stylesheet" href="css/main.min.css" media="all">
+            <link rel="stylesheet" href="css/main.css" media="all">
             <link rel="stylesheet" href="css/tooltipster.min.css" media="all">
 
         <!-- HUMANS -->

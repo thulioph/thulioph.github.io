@@ -4,7 +4,7 @@
 **
 **  @Project: Portfólio - thulioph;
 **  @url: http://www.thulioph.com;
-**  @Version: 1.0.0;
+**  @Version: 1.0.2;
 **
 **  @Project Organizers Team:
 **      @Member Thulio Philipe (Front-end Developer);
@@ -422,6 +422,118 @@ a.link-info-projeto-open-source:hover{
 }
 
 /* ==========================================================================
+   BLOG
+   ========================================================================== */
+
+section.feeds-blog {
+  margin: 20px 0;
+  width: 100%;
+  height: auto;
+}
+#loading {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.loading::after {
+  content: 'Aguarde enquanto os posts estão sendo carregados...';
+  font-size: 15px;
+  color: #333332;
+  text-align: left;
+}
+.error {
+  background-color: red;
+}
+
+.post {
+  padding: 5px;
+  background: rgba(0,0,0,0.1);
+  display: inline-block;
+  width: 190px;
+  height: 110px;
+  vertical-align: middle;
+  margin: 10px 10px 0 0;
+  text-align: center;
+  position: relative;
+
+  -webkit-animation: showPosts 1s;
+  -moz-animation: showPosts 1s;
+  -ms-animation: showPosts 1s;
+  -o-animation: showPosts 1s;
+  animation: showPosts 1s;
+}
+
+@-webkit-keyframes showPosts {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes showPosts {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-o-keyframes showPosts {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-ms-keyframes showPosts {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.title-post {
+  font-size: 2em;
+  font-family: helvetica;
+}
+.link-post {
+  display: inline-block;
+  padding: 5px;
+  font-size: 1.4em;
+  font-family: inherit;
+  position: absolute;
+  bottom: 0;
+  left: 35%;
+  text-decoration: none;
+  color: rgba(228,228,228, 1);
+  background-color: #333332;
+
+  -webkit-transition: all .2s linear 0s;
+  -moz-transition: all .2s linear 0s;
+  -ms-transition: all .2s linear 0s;
+  -o-transition: all .2s linear 0s;
+  transition: all .2s linear 0s;
+}
+a.link-post:hover {
+  background: rgba(228,228,228, 1);
+  color: #333332;
+  border: 1px solid #333332;
+}
+.date-post {
+  font-family: inherit;
+  display: block;
+  font-size: 1.2em;
+  margin: 5px 0;
+}
+.description-post {
+  font-family: inherit;
+}
+
+/* ==========================================================================
    MEDIA QUERIES
    ========================================================================== */
 
@@ -496,6 +608,9 @@ a.link-info-projeto-open-source:hover{
   }
   a.link-onde-estou{
     float: left;
+  }
+  .post {
+    width: 100%;
   }
 }
 

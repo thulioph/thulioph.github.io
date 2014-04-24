@@ -17,7 +17,7 @@
             Brasil, Recife
         </p>
         <div class="icones-contato">
-            <a href="http://blog.thulioph.com" target="_blank" accesskey="b" tabindex="4" title="Blog" class="icones ico-blog">Blog</a>
+            <a href="blog" accesskey="b" tabindex="4" title="Blog" class="icones ico-blog">Blog</a>
             <a href="https://www.facebook.com/Thulioph" target="_blank" tabindex="5" title="Facebook" class="icones ico-facebook">Facebook</a>
             <a href="http://www.linkedin.com/in/thulioph" target="_blank" tabindex="2" title="Linkedin" class="icones ico-linkedin">Linkedin</a>
             <a href="https://twitter.com/thulioph_" tabindex="6" title="Twitter" target="_blank" class="icones ico-twitter">Twitter</a>
