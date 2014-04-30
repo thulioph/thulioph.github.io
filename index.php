@@ -56,8 +56,7 @@
                         Acredito que conhecendo e dominando estes dois "mundos" irei ajudar bastante o grupo que farei parte.
                         A cada dia procuro ler e me aprimorar em dicas, truques e materiais que possam me ajudar a melhorar a experiência dos usuários ao acessarem a web.
                         O reconhecimento, sem dúvida é o mais almejado dos objetivos e para que este seja alcançado, sei que preciso sempre me dispor a traçar novos desafios e aceitar as oportunidades.
-                        Considero de total importância estar sempre aprendendo, melhorando e compartilhando meus códigos/práticas, afinal o que faz um bom desenvolvedor é a sua habilidade com códigos, sua organização e empenho.
-                        Considero de total importância estar sempre aprendendo, melhorando e compartilhando meus códigos/práticas, afinal o que faz um bom desenvolvedor é a sua habilidade.
+                        Considero de total importância estar sempre aprendendo, melhorando e compartilhando meus códigos e/ou práticas afinal o que faz um bom desenvolvedor é a sua habilidade com códigos, sua organização e empenho.
                          <br> <br>
                         <!-- Ah, e faltou o melhor de todos <a href="http://www.youtube.com/watch?v=UGtKGX8B9hU" target="_blank" title="Vídeo legal?" class="link"> só vou pra sua empresa se tiver café!</a> rsrsrs -->
                     </p>
