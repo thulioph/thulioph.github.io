@@ -10,9 +10,26 @@
             <section id="main">
                 <h2 class="titulos titulo-cv">Projetos</h2>
                 <p class="descricao-cv">
-                    Projetos <a href="http://pt.wikipedia.org/wiki/C%C3%B3digo_aberto" target="_blank" title="Conheça este termo" class="link">open-source</a> , 
+                    Projetos <a href="http://pt.wikipedia.org/wiki/C%C3%B3digo_aberto" target="_blank" title="Conheça este termo" class="link">open-source</a> ,
                     projetos das agências onde passei e algumas brincadeiras que faço no tempo livre, aqui não tem "restrição". Se o projeto ficou bonito ou feio estará aqui :)
                 </p>
+
+                <article id="dont-have-insta" class="projetos open-source">
+                    <figure class="img-projeto">
+                        <img src="img/projetos/donthaveinsta.png" alt="Logo do projeto Don't Have Insta">
+                    </figure>
+
+                    <h3 class="titulo-projeto titulo-projeto-open-source">
+                        Don't Have Insta
+                    </h3>
+
+                    <p class="info-projeto info-projeto-open-source">
+                        Experimento utilizando a API do Instagram para localizar imagens através de tags.<br>
+                        <a href="http://thulioph.com/labs/donthaveinsta" target="_blank" title="Ir para o site do projeto" class="link link-info-projeto link-info-projeto-open-source">ver projeto</a>
+                    </p>
+
+                    <a href="https://github.com/thulioph/dont-have-insta/" class="open-source" target="_blank" title="Veja o código">Open Source</a>
+                </article>
 
                 <article id="comuniq-app" class="projetos">
                     <figure class="img-projeto">
