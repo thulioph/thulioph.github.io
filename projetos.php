@@ -14,6 +14,21 @@
                     projetos das agências onde passei e algumas brincadeiras que faço no tempo livre, aqui não tem "restrição". Se o projeto ficou bonito ou feio estará aqui :)
                 </p>
 
+                <article id="saude-na-copa" class="projetos">
+                    <figure class="img-projeto">
+                        <img src="img/projetos/saude-na-copa.png" alt="Layout do projeto Saúde na Copa">
+                    </figure>
+
+                    <h3 class="titulo-projeto">
+                        Saúde na Copa
+                    </h3>
+
+                    <p class="info-projeto">
+                        Projeto desenvolvido em parceria com a Epitrack para a Copa do Mundo de 2014.<br>
+                        <a href="http://www.saudenacopa.com" target="_blank" title="ir para o site do projeto" class="link link-info-projeto">ver projeto</a>
+                    </p>
+                </article>
+
                 <article id="dont-have-insta" class="projetos open-source">
                     <figure class="img-projeto">
                         <img src="img/projetos/donthaveinsta.png" alt="Logo do projeto Don't Have Insta">

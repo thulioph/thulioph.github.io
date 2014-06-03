@@ -30,7 +30,7 @@ Main = {
     	createFeeds: function() {
 	        $.ajax({
 	        	method: 'GET',
-	            url: 'http://api.tumblr.com/v2/blog/blog.thulioph.com/posts/text?api_key=' + 'oRPllhCbg5hkjgcDcsrG0FpmsaPhuDkt9ztQV0fGOKMWrnAIto',
+	            url: 'http://api.tumblr.com/v2/blog/thulioph.tumblr.com/posts/text?api_key=' + 'oRPllhCbg5hkjgcDcsrG0FpmsaPhuDkt9ztQV0fGOKMWrnAIto',
 	            dataType: 'JSONP',
 	            beforeSend: function() {
 	                $("#loading").addClass('loading');
