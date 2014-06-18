@@ -14,6 +14,23 @@
                     projetos das agências onde passei e algumas brincadeiras que faço no tempo livre, aqui não tem "restrição". Se o projeto ficou bonito ou feio estará aqui :)
                 </p>
 
+                <article id="world-cup-now" class="projetos open-source">
+                    <figure class="img-projeto">
+                        <img src="img/projetos/world-cup-now.png" alt="Logo do projeto World Cup Now">
+                    </figure>
+
+                    <h3 class="titulo-projeto titulo-projeto-open-source">
+                        World Cup Now
+                    </h3>
+
+                    <p class="info-projeto info-projeto-open-source">
+                        App criado para acompanhar os jogos da copa, placar, vencedor, hora e data do jogo. <br />
+                        <a href="http://world-cup-now.herokuapp.com" target="_blank" title="Ir para o site do projeto" class="link link-info-projeto link-info-projeto-open-source">ver projeto</a>
+                    </p>
+
+                    <a href="https://github.com/thulioph/world-cup-now" class="open-source" target="_blank" title="Veja o código">Open Source</a>
+                </article>
+
                 <article id="saude-na-copa" class="projetos">
                     <figure class="img-projeto">
                         <img src="img/projetos/saude-na-copa.png" alt="Layout do projeto Saúde na Copa">
@@ -43,7 +60,7 @@
                         <a href="http://thulioph.com/labs/donthaveinsta" target="_blank" title="Ir para o site do projeto" class="link link-info-projeto link-info-projeto-open-source">ver projeto</a>
                     </p>
 
-                    <a href="https://github.com/thulioph/dont-have-insta/" class="open-source" target="_blank" title="Veja o código">Open Source</a>
+                    <a href="http://thulioph.github.io/dont-have-insta" class="open-source" target="_blank" title="Veja o código">Open Source</a>
                 </article>
 
                 <article id="comuniq-app" class="projetos">
