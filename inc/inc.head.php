@@ -46,5 +46,5 @@
             <meta property='og:url' content='http://thulioph.com' />
             <meta property='og:image' content='http://thulioph.com/img/facebook.png'/>
             <meta property='og:type' content='website' />
-            <meta property='og:description' content='Desenvolvedor Front End' />
+            <meta property='og:description' content='Desenvolvedor Front-End' />
     </head>
