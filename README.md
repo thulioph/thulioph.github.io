@@ -2,6 +2,9 @@
 
 Este projeto foi desenvolvido utilizando o [Hexo](http://hexo.io).
 
+## `hexo server`
+Para levantar um servidor.
+
 ## `hexo new post <title>`
 Para criar um novo post.
 
