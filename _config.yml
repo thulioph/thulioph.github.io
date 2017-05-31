@@ -5,23 +5,35 @@
 # Site
 title: thulio philipe
 subtitle:
-description: Front-end developer com experiência em desenvolvimento de aplicações web e aplicativos híbridos, divido meu tempo ministrando palestras, treinamentos e escrevendo artigos.
+description: Eu sou [Thulio](https://www.google.com.br/?gws_rd=ssl#q=thulioph), atualmente trabalho como Desenvolvedor Web na [Labcodes](http://labcodes.com.br).
+
+
+  Sou formado em Design Gráfico pela [Unibratec](http://www.unibratec.edu.br/) e tenho uma pós-graduação em Desenvolvimento de WebApps pela mesma instituição.
+
+
+  Tenho experiência com desenvolvimento de aplicações web e aplicativos híbridos, divido meu tempo ministrando palestras, treinamentos e escrevendo artigos.
+
+
+  Meus estudos estão sendo com foco em **Offline first**, **Google Maps API**, **Web Performance** e **Segurança da informação**.
+
+
+  Também sou apreciador de uma boa breja, cheers 🍻!
 author: thulioph
-language:
+language: pt-br
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://thulioph.com
 root: /
-permalink: :year/:month/:day/:title/
+permalink: /notes/:year/:month/:day/:title/
 permalink_defaults:
 
 # Directory
 source_dir: source
 public_dir: public
 tag_dir: tags
-archive_dir: blog
+archive_dir: notes
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
