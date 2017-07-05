@@ -1,5 +1,10 @@
 [
    {
+      "name":"Segurança de Aplicações Web - 101",
+      "url":"https://goo.gl/3qh3g8",
+      "desc":"Labcodes"
+   },
+   {
       "name":"Vuejs",
       "url":"https://speakerdeck.com/thulioph/vuejs",
       "desc":"Front in Maceió"
@@ -13,10 +18,5 @@
       "name":"Google Maps 101",
       "url":"https://speakerdeck.com/thulioph/google-maps-101",
       "desc":"GDG DevFest Nordeste"
-   },
-   {
-      "name":"Aplicações Real-Time com Socket.io e Firebase",
-      "url":"https://speakerdeck.com/thulioph/aplicacoes-real-time-com-socketio-e-firebase",
-      "desc":"TDC Porto Alegre"
    }
 ]
