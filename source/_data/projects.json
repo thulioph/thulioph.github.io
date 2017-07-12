@@ -9,5 +9,11 @@
       "name":"Veggiemap",
       "url":"https://github.com/starkland/veggiemap",
       "desc":"aplicação real-time feita com vuejs, leaflet e firebase"
+   },
+
+   {
+      "name":"Twitter Realtime",
+      "url":"https://github.com/thulioph/twitter-realtime",
+      "desc":"Twitter API + Socket.io + Google Maps"
    }
 ]
