@@ -14,11 +14,11 @@ Devido ao crescimento e necessidade cada vez maior de aplicações web utilizare
 
 ## Vulnerabilidades
 
-Todos os dias empresas sofrem com casos de invasão ou vulnerabilidade e a maioria não cai na mídia, companhias como Snapchat, Verizon, LinkedIn e Dropbox, tiveram diversos problemas de vulnerabilidade desde, phishing, combinações de e-mails e senhas reveladas e vazamento de informações sigilosas, obrigando as equipes a encontrarem as vulnerabilidades o mais rápido possível.
+Todos os dias empresas sofrem com casos de invasão ou vulnerabilidade e a maioria não cai na mídia, companhias como [Snapchat][snapchat], [Verizon][verizon], [LinkedIn][linkedin] e [Dropbox][dropbox], tiveram diversos problemas de vulnerabilidade desde, phishing, combinações de e-mails e senhas reveladas e vazamento de informações sigilosas, obrigando as equipes a encontrarem as vulnerabilidades o mais rápido possível.
 
-Em 2017, o cenário não mudou muito e empresas como E-Sports, Gmail e organizações como Washington State University sofreram com vazamento de informações sensíveis, phishing ou brechas de segurança. Recentemente, tivemos o caso Wannacry que era uma espécie de vírus que solicitava pagamento em bitcoin para liberar os arquivos da máquina infectada.
+Em 2017, o cenário não mudou muito e empresas como [E-Sports][esports], [Gmail][gmail] e organizações como [Washington State University][wsu] sofreram com vazamento de informações sensíveis, phishing ou brechas de segurança. Recentemente, tivemos o caso [Wannacry][wannacry] que era uma espécie de vírus que solicitava pagamento em bitcoin para liberar os arquivos da máquina infectada.
 
-As brechas de segurança das empresas citadas, afetaram mais de 20 milhões de usuários que tiveram seus dados revelados, e você faz idéia do custo que isso teve para as gigantes? São muitos zeros!
+As brechas de segurança das empresas citadas, afetaram mais de **20 milhões de usuários** que tiveram seus dados revelados, e você faz idéia do custo que isso teve para as gigantes? São muitos zeros!
 
 ## OWASP
 
@@ -28,27 +28,27 @@ Todo ano eles lançam uma lista com as TOP 10 vulnerabilidades, baseadas princip
 
 ## Recursos
 
-Para ajudar organizações e desenvolvedores na redução dos riscos de suas aplicações, foram produzidos recursos free e open para que você possa utiliza-los como guia na segurança de sua aplicação, eles são divididos em várias categorias, algumas são:
+Para ajudar organizações e desenvolvedores na redução dos riscos de suas aplicações, foram produzidos recursos **free e open** para que você possa utiliza-los como guia na segurança de sua aplicação, eles são divididos em várias categorias, algumas são:
 
-### Cheat Sheet Series
+### [Cheat Sheet Series][cheat-sheet-series]
 
-É uma coleção de dicas valiosas em tópicos específicos sobre aplicações web, provendo um excelente guia de segurança de fácil leitura e compreensão. Alguns tópicos mais conhecidos são Ajax, Autenticação, HTML5 Security, Gerenciamento de sessões, entre outros.
+É uma coleção de dicas valiosas em tópicos específicos sobre aplicações web, provendo um excelente guia de segurança de fácil leitura e compreensão. Alguns tópicos mais conhecidos são [Ajax][ajax], [Autenticação][authentication], [HTML5 Security][html5-sec], [Gerenciamento de sessões][session-manegement], entre outros.
 
-### Enterprise Security API
+### [Enterprise Security API][enterprise-security-api]
 
 A ESAPI é uma biblioteca free e open-source que tem o objetivo de tornar mais fácil a escrita de aplicações com baixo risco de vulnerabilidade, foi desenhada para se adaptar a segurança de aplicações já existentes podendo ser implementada por várias linguagens.
 
-### Broken Web Applications Project
+### [Broken Web Applications Project][broken-web-application-project]
 
 Coleção de vulnerabilidades conhecidas em aplicações web, distribuídas e executadas em uma máquina virtual, perfeito para quem deseja aprender mais sobre segurança em aplicações web, testar algumas ferramentas e observar como funciona o fluxo de ataques.
 
 ## Riscos
 
-A identificação dos riscos é feita pela coleta de informações sobre a ameaça envolvida, o tipo de ataque que será utilizado, a vulnerabilidade envolvida e o impacto dessa vulnerabilidade caso o atacante obtenha sucesso. Essa análise é calculada utilizando a seguinte fórmula:
+A identificação dos riscos é feita pela coleta de informações sobre a **ameaça envolvida**, o **tipo de ataque** que será utilizado, a **vulnerabilidade** envolvida e o **impacto** dessa vulnerabilidade caso o atacante obtenha sucesso. Essa análise é calculada utilizando a seguinte fórmula:
 
 <br>
 
-![formula-dos-riscos](/images/web-security/formula-dos-riscos.png)
+![formula-dos-riscos](/images/web-security/formula-dos-riscos.png "risco = probabilidade * impacto")
 
 <br>
 
@@ -64,7 +64,7 @@ Como o próprio nome já diz, tem como alvo senhas de acesso. O atacante utiliza
 
 ### Cross-Site Scripting— XSS
 
-Esta vulnerabilidade consiste na inserção de scripts maliciosos que serão executados no momento em que a página for acessada. Existem várias abordagens, os mais utilizados são através da URL ou inputs. E uma dica, tenha cuidado na utilização do eval()!
+Esta vulnerabilidade consiste na inserção de scripts maliciosos que serão executados no momento em que a página for acessada. Existem várias abordagens, os mais utilizados são através da URL ou inputs. E uma dica, [tenha cuidado na utilização do eval()!][eval]
 
 ### Insecure Direct Object References — Insecure DOR
 
@@ -72,7 +72,7 @@ Este tipo de ataque acontece quando um usuário mal intencionado obtém acesso a
 
 ### Sensitive Data Exposure
 
-Este tipo de vulnerabilidade pode ser descoberta, a partir do momento em que o servidor não protege os dados, como password, informações de cartão de crédito e e-mails de forma adequada. Criptografia é indispensável e autenticação em dois fatores é o mínimo, aprenda com o Github.
+Este tipo de vulnerabilidade pode ser descoberta, a partir do momento em que o servidor não protege os dados, como password, informações de cartão de crédito e e-mails de forma adequada. Criptografia é indispensável e autenticação em dois fatores é o mínimo, [aprenda com o Github][github-sensitive-data].
 
 ### Missing Function Level Access Control
 
@@ -80,7 +80,7 @@ Controle de acesso é importante para definir níveis de acesso, impossibilitand
 
 ### Cross-Site Request Forgery — CSRF
 
-O atacante engana o usuário, enviando um link via e-mail ou chat com o intuito de executar ações sem o consentimento do mesmo. Podendo realizar uma requisição para o servidor se passando pelo usuário, utilizando o seu cookie de sessão. Ao realizar a verificação do header Referer você já está começando bem.
+O atacante engana o usuário, enviando um link via e-mail ou chat com o intuito de executar ações sem o consentimento do mesmo. Podendo realizar uma requisição para o servidor se passando pelo usuário, utilizando o seu cookie de sessão. Ao realizar a verificação do [header Referer][header-referer] você já está começando bem.
 
 ### Utilizando componentes com vulnerabilidades conhecidas
 
@@ -88,13 +88,13 @@ Módulos, componentes, bibliotecas ou frameworks quase sempre são executados ut
 
 ### Clickjacking
 
-Obter os cliques do usuário e redirecionar para outra ação. Este tipo de vulnerabilidade se torna presente a partir do momento que uma aplicação permite ser exibida através de um Iframe, procure por HTTP X-Frame-Options no final da leitura.
+Obter os cliques do usuário e redirecionar para outra ação. Este tipo de vulnerabilidade se torna presente a partir do momento que uma aplicação permite ser exibida através de um Iframe, procure por [HTTP X-Frame-Options][http-x-frame] no final da leitura.
 
-A lista não se resume apenas as que foram citadas, outras vulnerabilidades são presentes e você pode saber mais sobre elas acessando através deste link.
+A lista não se resume apenas as que foram citadas, outras vulnerabilidades são presentes e você pode saber mais sobre elas acessando [através deste link][lista-completa].
 
 ## Comunidade
 
-Uma das partes mais legais de se trabalhar com comunidade, com certeza são os eventos e a troca de conhecimento. O artigo nem acabou e você já está querendo ir para o primeiro evento em segurança? Dá uma conferida na programação do Roadsec, eles estão sempre rodando o país com palestras, workshops e campeonatos como o Hackaflag envolvendo vários conceitos de segurança.
+Uma das partes mais legais de se trabalhar com comunidade, com certeza são os eventos e a troca de conhecimento. O artigo nem acabou e você já está querendo ir para o primeiro evento em segurança? Dá uma conferida na programação do [Roadsec][roadsec], eles estão sempre rodando o país com palestras, workshops e campeonatos como o [Hackaflag][hackaflag] envolvendo vários conceitos de segurança.
 
 Conhece alguma comunidade da sua região? Deixa o link nos comentários.
 
@@ -119,3 +119,26 @@ Conhece alguma comunidade da sua região? Deixa o link nos comentários.
 > Enquanto eu escrevia, eu ouvia..
 
 <iframe src="https://open.spotify.com/embed/album/4prye0ZPTfcHO2rNpQWYnG" width="600" height="400" frameborder="0" allowtransparency="true"></iframe>
+
+[snapchat]: https://www.washingtonpost.com/news/the-switch/wp/2016/03/01/the-human-problem-at-the-heart-of-snapchats-employee-data-breach/?utm_term=.59fbb0841c5b
+[verizon]: https://www.identityforce.com/blog/verizon-enterprise-data-breach
+[linkedin]: http://krebsonsecurity.com/2016/05/as-scope-of-2012-breach-expands-linkedin-to-again-reset-passwords-for-some-users/
+[dropbox]: https://motherboard.vice.com/en_us/article/nz74qb/hackers-stole-over-60-million-dropbox-accounts
+[gmail]: https://www.identityforce.com/blog/sophisticated-gmail-phishing-scam
+[wsu]: http://kuow.org/post/one-million-people-affected-wsu-data-breach
+[esports]: http://www.csoonline.com/article/3155397/security/esea-hacked-1-5-million-records-leaked-after-alleged-failed-extortion-attempt.html
+[wannacry]: https://www.google.com.br/search?q=wannacry&oq=wannacry&aqs=chrome..69i57j0l5.1644j0j1&sourceid=chrome&ie=UTF-8
+[cheat-sheet-series]: https://www.owasp.org/index.php/OWASP_Cheat_Sheet_Series
+[ajax]: https://www.owasp.org/index.php/AJAX_Security_Cheat_Sheet
+[authentication]: https://www.owasp.org/index.php/Authentication_Cheat_Sheet
+[html5-sec]: https://www.owasp.org/index.php/HTML5_Security_Cheat_Sheet
+[session-manegement]: https://www.owasp.org/index.php/Session_Management_Cheat_Sheet
+[enterprise-security-api]: https://www.owasp.org/index.php/Category:OWASP_Enterprise_Security_API
+[broken-web-application-project]: https://www.owasp.org/index.php/OWASP_Broken_Web_Applications_Project
+[eval]: http://devdocs.io/javascript/global_objects/eval
+[github-sensitive-data]: https://bounty.github.com/classifications/sensitive-data-exposure.html
+[header-referer]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referer
+[http-x-frame]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options
+[lista-completa]: https://www.owasp.org/index.php/Top_10_2017-Details_About_Risk_Factors
+[roadsec]: http://roadsec.com.br/
+[hackaflag]: http://roadsec.com.br/hackaflag/
