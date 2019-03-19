@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang=pt>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Eu nunca me importei até que em um belo dia, um cliente teve essa necessidade e foi aí que precisei pensar, pesquisar e aprender sobre internacionalização. Participei de um projeto para a copa do mund">
+<meta name="keywords" content="i18, javascript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="i18next para Internacionalização">
+<meta property="og:url" content="http://thulioph.com/archives/2014/10/20/i18next/index.html">
+<meta property="og:site_name" content="thulio philipe">
+<meta property="og:description" content="Eu nunca me importei até que em um belo dia, um cliente teve essa necessidade e foi aí que precisei pensar, pesquisar e aprender sobre internacionalização. Participei de um projeto para a copa do mund">
+<meta property="og:locale" content="pt-br">
+<meta property="og:updated_time" content="2019-03-19T21:44:46.058Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="i18next para Internacionalização">
+<meta name="twitter:description" content="Eu nunca me importei até que em um belo dia, um cliente teve essa necessidade e foi aí que precisei pensar, pesquisar e aprender sobre internacionalização. Participei de um projeto para a copa do mund">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>i18next para Internacionalização</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+    <link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+    <!-- jquery -->
+    <script src="/lib/jquery/jquery.min.js"></script>
+</head>
+
+<body>
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/archives/2014/11/10/feec-lite/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover="$("#i-prev").toggle();" onmouseout="$("#i-prev").toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="/archives/2014/08/10/front-in-aracaju/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover="$("#i-next").toggle();" onmouseout="$("#i-next").toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover="$("#i-top").toggle();" onmouseout="$("#i-top").toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover="$("#i-share").toggle();" onmouseout="$("#i-share").toggle();" onclick="$("#share").toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://thulioph.com/archives/2014/10/20/i18next/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://thulioph.com/archives/2014/10/20/i18next/&text=i18next para Internacionalização"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://thulioph.com/archives/2014/10/20/i18next/&title=i18next para Internacionalização"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://thulioph.com/archives/2014/10/20/i18next/&is_video=false&description=i18next para Internacionalização"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=i18next para Internacionalização&body=Check out this article: http://thulioph.com/archives/2014/10/20/i18next/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://thulioph.com/archives/2014/10/20/i18next/&title=i18next para Internacionalização"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://thulioph.com/archives/2014/10/20/i18next/&title=i18next para Internacionalização"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://thulioph.com/archives/2014/10/20/i18next/&title=i18next para Internacionalização"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://thulioph.com/archives/2014/10/20/i18next/&title=i18next para Internacionalização"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://thulioph.com/archives/2014/10/20/i18next/&name=i18next para Internacionalização&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Como-iniciar"><span class="toc-number">1.</span> <span class="toc-text">Como iniciar?</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Estrutura-basica"><span class="toc-number">1.1.</span> <span class="toc-text">Estrutura básica</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Configuracoes-basicas"><span class="toc-number">2.</span> <span class="toc-text">Configurações básicas</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Configuracao-detalhada"><span class="toc-number">3.</span> <span class="toc-text">Configuração detalhada</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#fallbackLng"><span class="toc-number">3.1.</span> <span class="toc-text">fallbackLng</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#debug"><span class="toc-number">3.2.</span> <span class="toc-text">debug</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#fixLng"><span class="toc-number">3.3.</span> <span class="toc-text">fixLng</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#load"><span class="toc-number">3.4.</span> <span class="toc-text">load</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#‘-data-i18n-’-i18n"><span class="toc-number">3.5.</span> <span class="toc-text">$(‘[data-i18n]’).i18n()</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Explicando"><span class="toc-number">4.</span> <span class="toc-text">Explicando</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        i18next para Internacionalização
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">thulio philipe</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2014-10-20T19:20:00.000Z" itemprop="datePublished">20 Out 2014</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/i18-javascript/">i18, javascript</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>Eu nunca me importei até que em um belo dia, um cliente teve essa necessidade e foi aí que precisei pensar, pesquisar e aprender sobre internacionalização. Participei de um projeto para a copa do mundo e o conteúdo deveria ser suportado por no mínimo 3 linguas diferentes: o inglês, espanhol e o português. Mas eu nunca tinha feito nada multilinguagem e nesse momento quase bateu o desespero. Acho que a pior dificuldade foi de me expressar, porque até então eu não tinha noção de que o termo <strong>internacionalização</strong> seria a palavra chave pra isso tudo.</p>
+<p>Os primeiros questionamentos que eu me fiz foram:</p>
+<ul>
+<li>“Vou ter que fazer 3 sites diferentes?”</li>
+<li>“Vou ter mais trabalho que o normal?”</li>
+<li>“Como eu vou pesquisar sobre alguma lib que me ajude com isso? Será que existe?”</li>
+</ul>
+<p>Antes de ir adiante, vamos ver o significado segundo o <a href="https://www.dicio.com.br/internacionalizacao/" target="_blank" rel="noopener">dicionário</a>: </p>
+<blockquote>
+<p>Ato de tornar internacional; seu resultado.</p>
+</blockquote>
+<p>Depois de toda essa introdução, finalmente apresento a vocês o maestro da orquestraque pode ser a solução para os seus problemas: O <a href="https://www.i18next.com/" target="_blank" rel="noopener">i18next</a>!</p>
+<p>Algumas considerações sobre esta lib:</p>
+<ul>
+<li>Seu suporte não é só para JavaScript.</li>
+<li>Possui integração com o jQuery.</li>
+<li>Todo seu conteúdo textual é inserido em um JSON.</li>
+<li>Documentação completa, fácil e direta.</li>
+<li>Você pode traduzir todo e qualquer texto do seu projeto, seja ele um <code>title</code>, <code>alt</code>, ou de qualquer outro atributo.</li>
+<li>Você pode detectar a linguagem do usuário e inserir o conteúdo de acordo com seu idioma.</li>
+<li>Ativar a internacionalização no clique.</li>
+</ul>
+<p>Vou descrever os passos para você conseguir chegar <a href="https://thulioph.github.io/i18next-internacionalizacao/" target="_blank" rel="noopener">neste resultado</a> que será acessível para espanhol, inglês e português.</p>
+<p><em>ps: não levem em conta as más práticas nem a nomenclatura, apenas criei a página para ajudar no entendimento.</em></p>
+<h2 id="Como-iniciar"><a href="#Como-iniciar" class="headerlink" title="Como iniciar?"></a>Como iniciar?</h2><h3 id="Estrutura-basica"><a href="#Estrutura-basica" class="headerlink" title="Estrutura básica"></a>Estrutura básica</h3><p>As traduções do conteúdo deverão ser subpastas da pasta <strong>locales</strong> e precisam conter um arquivo <strong>translation.json</strong> com o json das traduções.</p>
+<p>Então para o nosso exemplo a estrutura fica desta forma:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/locales -&gt; /en-US -&gt; translation.json</span><br><span class="line">/locales -&gt; /es -&gt; translation.json</span><br><span class="line">/locales -&gt; /pt-BR -&gt; translation.json</span><br></pre></td></tr></table></figure>
+<h2 id="Configuracoes-basicas"><a href="#Configuracoes-basicas" class="headerlink" title="Configurações básicas"></a>Configurações básicas</h2><p>Para o texto da tradução ser inserido no local desejado você deve utilizar o atributo <code>data-i18n</code> que permite vários valores, passando o objeto com chave e valor. Caso o conteúdo traduzido seja um atributo, seu nome deverá ser inserido dentro de colchetes <code>[]</code> seguido de sua posição no JSON. Algo assim:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span> <span class="attr">data-i18n</span>=<span class="string">"link.general;[title]attr.linkGeneral"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>O HTML fica sem nenhum conteúdo textual, pois todo conteúdo será inserido de acordo com a linguagem de forma dinâmica.</p>
+<p>Seguindo os passos para o HTML, você agora está pronto para o JavaScript, onde é preciso setar algumas configurações de inicialização. Algo como:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">i18n.init(&#123;</span><br><span class="line">  fallbackLng: <span class="string">'en-US'</span>,</span><br><span class="line">  debug: <span class="literal">true</span>,</span><br><span class="line">  fixLng: <span class="literal">true</span>,</span><br><span class="line">  load: <span class="string">'current'</span></span><br><span class="line">&#125;,</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span>(<span class="params">translation</span>) </span>&#123;</span><br><span class="line">  $(<span class="string">'[data-i18n]'</span>).i18n();</span><br><span class="line">  <span class="keyword">var</span> appName = translation(<span class="string">'app.name'</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="Configuracao-detalhada"><a href="#Configuracao-detalhada" class="headerlink" title="Configuração detalhada"></a>Configuração detalhada</h2><h3 id="fallbackLng"><a href="#fallbackLng" class="headerlink" title="fallbackLng"></a>fallbackLng</h3><p>Fallback para quando não for definida ou não for localizada a linguagem do usuário.</p>
+<h3 id="debug"><a href="#debug" class="headerlink" title="debug"></a>debug</h3><p><code>Debug</code> da lib, habilitando no console algumas informações que podem ser úteis para desenvolvimento.</p>
+<h3 id="fixLng"><a href="#fixLng" class="headerlink" title="fixLng"></a>fixLng</h3><p>Preserva o cookie da linguagem setada pelo usuário para quando o mesmo for acessar novamente.</p>
+<h3 id="load"><a href="#load" class="headerlink" title="load"></a>load</h3><p>Faz o request apenas para a linguagem definida.</p>
+<h3 id="‘-data-i18n-’-i18n"><a href="#‘-data-i18n-’-i18n" class="headerlink" title="$(‘[data-i18n]’).i18n()"></a>$(‘[data-i18n]’).i18n()</h3><p>Todos os atributos data-i18n recebem a tradução.</p>
+<h2 id="Explicando"><a href="#Explicando" class="headerlink" title="Explicando"></a>Explicando</h2><p>Por padrão a lib detecta a linguagem do navegador e insere o conteúdo de acordo, caso o idioma detectado não possua tradução, o que for definido em <strong>fallbackLng</strong> será o conteúdo inserido.</p>
+<p>Se o idioma for definido a partir de um clique ou qualquer outra interação você seta uma nova linguagem, preserva o cookie e inicia a tradução:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'elemento'</span>).on(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  i18n.setLng(<span class="string">'es'</span>, &#123; <span class="attr">fixLng</span>: <span class="literal">true</span> &#125;, <span class="function"><span class="keyword">function</span>(<span class="params">translation</span>)</span>&#123;</span><br><span class="line">    $(<span class="string">'[data-i18n]'</span>).i18n();</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>A lib é realmente bastante simples, não tem muito o que se fazer, seguindo os passos descritos, você consegue deixar seu conteúdo mais acessível e em vários idiomas. <a href="https://github.com/thulioph/i18next-internacionalizacao/" target="_blank" rel="noopener">Aqui</a> você encontra o repositório com o exemplo que foi mostrado e todo o código comentado.</p>
+<p>Qualquer dúvida, crítica ou sugestão você pode deixar nos comentários ou entrar em contato comigo 🙂</p>
+
+  </div>
+</article>
+
+    <div class="blog-post-comments">
+        <div id="disqus_thread">
+            <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+    </div>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Como-iniciar"><span class="toc-number">1.</span> <span class="toc-text">Como iniciar?</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Estrutura-basica"><span class="toc-number">1.1.</span> <span class="toc-text">Estrutura básica</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Configuracoes-basicas"><span class="toc-number">2.</span> <span class="toc-text">Configurações básicas</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Configuracao-detalhada"><span class="toc-number">3.</span> <span class="toc-text">Configuração detalhada</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#fallbackLng"><span class="toc-number">3.1.</span> <span class="toc-text">fallbackLng</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#debug"><span class="toc-number">3.2.</span> <span class="toc-text">debug</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#fixLng"><span class="toc-number">3.3.</span> <span class="toc-text">fixLng</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#load"><span class="toc-number">3.4.</span> <span class="toc-text">load</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#‘-data-i18n-’-i18n"><span class="toc-number">3.5.</span> <span class="toc-text">$(‘[data-i18n]’).i18n()</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Explicando"><span class="toc-number">4.</span> <span class="toc-text">Explicando</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://thulioph.com/archives/2014/10/20/i18next/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://thulioph.com/archives/2014/10/20/i18next/&text=i18next para Internacionalização"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://thulioph.com/archives/2014/10/20/i18next/&title=i18next para Internacionalização"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://thulioph.com/archives/2014/10/20/i18next/&is_video=false&description=i18next para Internacionalização"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=i18next para Internacionalização&body=Check out this article: http://thulioph.com/archives/2014/10/20/i18next/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://thulioph.com/archives/2014/10/20/i18next/&title=i18next para Internacionalização"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://thulioph.com/archives/2014/10/20/i18next/&title=i18next para Internacionalização"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://thulioph.com/archives/2014/10/20/i18next/&title=i18next para Internacionalização"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://thulioph.com/archives/2014/10/20/i18next/&title=i18next para Internacionalização"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://thulioph.com/archives/2014/10/20/i18next/&name=i18next para Internacionalização&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick="$("#toc-footer").toggle();return false;"><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick="$("#share-footer").toggle();return false;"><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick="$("#nav-footer").toggle();return false;"><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 thulioph
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-69489589-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+    <script type="text/javascript">
+        var disqus_shortname = 'thulioph';
+
+        (function(){
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        }());
+    </script>
+
+
+</body>
+</html>

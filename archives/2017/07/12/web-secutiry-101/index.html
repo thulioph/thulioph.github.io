@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang=pt>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Segurança de Aplicações Web — 101Devido ao crescimento e necessidade cada vez maior de aplicações web utilizarem o compartilhamento de informações, se faz necessária a adoção de mecanismos para mante">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Segurança de Aplicações Web — 101">
+<meta property="og:url" content="http://thulioph.com/archives/2017/07/12/web-secutiry-101/index.html">
+<meta property="og:site_name" content="thulio philipe">
+<meta property="og:description" content="Segurança de Aplicações Web — 101Devido ao crescimento e necessidade cada vez maior de aplicações web utilizarem o compartilhamento de informações, se faz necessária a adoção de mecanismos para mante">
+<meta property="og:locale" content="pt-br">
+<meta property="og:image" content="http://thulioph.com/images/web-security/elliot.jpeg">
+<meta property="og:image" content="http://thulioph.com/images/web-security/formula-dos-riscos.png">
+<meta property="og:updated_time" content="2019-03-19T19:53:48.071Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Segurança de Aplicações Web — 101">
+<meta name="twitter:description" content="Segurança de Aplicações Web — 101Devido ao crescimento e necessidade cada vez maior de aplicações web utilizarem o compartilhamento de informações, se faz necessária a adoção de mecanismos para mante">
+<meta name="twitter:image" content="http://thulioph.com/images/web-security/elliot.jpeg">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Segurança de Aplicações Web — 101</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+    <link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+    <!-- jquery -->
+    <script src="/lib/jquery/jquery.min.js"></script>
+</head>
+
+<body>
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/archives/2017/06/11/docker/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover="$("#i-next").toggle();" onmouseout="$("#i-next").toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover="$("#i-top").toggle();" onmouseout="$("#i-top").toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover="$("#i-share").toggle();" onmouseout="$("#i-share").toggle();" onclick="$("#share").toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://thulioph.com/archives/2017/07/12/web-secutiry-101/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://thulioph.com/archives/2017/07/12/web-secutiry-101/&text=Segurança de Aplicações Web — 101"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://thulioph.com/archives/2017/07/12/web-secutiry-101/&title=Segurança de Aplicações Web — 101"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://thulioph.com/archives/2017/07/12/web-secutiry-101/&is_video=false&description=Segurança de Aplicações Web — 101"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Segurança de Aplicações Web — 101&body=Check out this article: http://thulioph.com/archives/2017/07/12/web-secutiry-101/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://thulioph.com/archives/2017/07/12/web-secutiry-101/&title=Segurança de Aplicações Web — 101"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://thulioph.com/archives/2017/07/12/web-secutiry-101/&title=Segurança de Aplicações Web — 101"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://thulioph.com/archives/2017/07/12/web-secutiry-101/&title=Segurança de Aplicações Web — 101"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://thulioph.com/archives/2017/07/12/web-secutiry-101/&title=Segurança de Aplicações Web — 101"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://thulioph.com/archives/2017/07/12/web-secutiry-101/&name=Segurança de Aplicações Web — 101&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Seguranca-de-Aplicacoes-Web-—-101"><span class="toc-number">1.</span> <span class="toc-text">Segurança de Aplicações Web — 101</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Vulnerabilidades"><span class="toc-number">1.1.</span> <span class="toc-text">Vulnerabilidades</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#OWASP"><span class="toc-number">1.2.</span> <span class="toc-text">OWASP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Recursos"><span class="toc-number">1.3.</span> <span class="toc-text">Recursos</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Cheat-Sheet-Series"><span class="toc-number">1.3.1.</span> <span class="toc-text">Cheat Sheet Series</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Enterprise-Security-API"><span class="toc-number">1.3.2.</span> <span class="toc-text">Enterprise Security API</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Broken-Web-Applications-Project"><span class="toc-number">1.3.3.</span> <span class="toc-text">Broken Web Applications Project</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Riscos"><span class="toc-number">1.4.</span> <span class="toc-text">Riscos</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Denial-of-Service-—-DoS"><span class="toc-number">1.4.1.</span> <span class="toc-text">Denial of Service — DoS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Password-Guessing-Attacks"><span class="toc-number">1.4.2.</span> <span class="toc-text">Password Guessing Attacks</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Cross-Site-Scripting—-XSS"><span class="toc-number">1.4.3.</span> <span class="toc-text">Cross-Site Scripting— XSS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Insecure-Direct-Object-References-—-Insecure-DOR"><span class="toc-number">1.4.4.</span> <span class="toc-text">Insecure Direct Object References — Insecure DOR</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Sensitive-Data-Exposure"><span class="toc-number">1.4.5.</span> <span class="toc-text">Sensitive Data Exposure</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Missing-Function-Level-Access-Control"><span class="toc-number">1.4.6.</span> <span class="toc-text">Missing Function Level Access Control</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Cross-Site-Request-Forgery-—-CSRF"><span class="toc-number">1.4.7.</span> <span class="toc-text">Cross-Site Request Forgery — CSRF</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Utilizando-componentes-com-vulnerabilidades-conhecidas"><span class="toc-number">1.4.8.</span> <span class="toc-text">Utilizando componentes com vulnerabilidades conhecidas</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Clickjacking"><span class="toc-number">1.4.9.</span> <span class="toc-text">Clickjacking</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Comunidade"><span class="toc-number">1.5.</span> <span class="toc-text">Comunidade</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Material-Complementar"><span class="toc-number">1.6.</span> <span class="toc-text">Material Complementar</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Segurança de Aplicações Web — 101
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">thulio philipe</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2017-07-12T19:38:17.000Z" itemprop="datePublished">12 Jul 2017</time>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p><a href="http://mrrobot.wikia.com/wiki/Elliot_Alderson" target="_blank" rel="noopener"><img src="/images/web-security/elliot.jpeg" alt="imagem-principal" title="Elliot de Mr. Robot"></a></p>
+<h1 id="Seguranca-de-Aplicacoes-Web-—-101"><a href="#Seguranca-de-Aplicacoes-Web-—-101" class="headerlink" title="Segurança de Aplicações Web — 101"></a>Segurança de Aplicações Web — 101</h1><p>Devido ao crescimento e necessidade cada vez maior de aplicações web utilizarem o compartilhamento de informações, se faz necessária a adoção de mecanismos para manter tais aplicações e informações seguras. Este artigo mostra algumas das principais vulnerabilidades encontradas em aplicações web e como você pode conhece-las melhor.</p>
+<blockquote>
+<p>Questões de segurança acontecem principalmente porque desenvolvedores que sabem das coisas, esquecem ou ignoram.</p>
+</blockquote>
+<h2 id="Vulnerabilidades"><a href="#Vulnerabilidades" class="headerlink" title="Vulnerabilidades"></a>Vulnerabilidades</h2><p>Todos os dias empresas sofrem com casos de invasão ou vulnerabilidade e a maioria não cai na mídia, companhias como <a href="https://www.washingtonpost.com/news/the-switch/wp/2016/03/01/the-human-problem-at-the-heart-of-snapchats-employee-data-breach/?utm_term=.59fbb0841c5b" target="_blank" rel="noopener">Snapchat</a>, <a href="https://www.identityforce.com/blog/verizon-enterprise-data-breach" target="_blank" rel="noopener">Verizon</a>, <a href="http://krebsonsecurity.com/2016/05/as-scope-of-2012-breach-expands-linkedin-to-again-reset-passwords-for-some-users/" target="_blank" rel="noopener">LinkedIn</a> e <a href="https://motherboard.vice.com/en_us/article/nz74qb/hackers-stole-over-60-million-dropbox-accounts" target="_blank" rel="noopener">Dropbox</a>, tiveram diversos problemas de vulnerabilidade desde, phishing, combinações de e-mails e senhas reveladas e vazamento de informações sigilosas, obrigando as equipes a encontrarem as vulnerabilidades o mais rápido possível.</p>
+<p>Em 2017, o cenário não mudou muito e empresas como <a href="http://www.csoonline.com/article/3155397/security/esea-hacked-1-5-million-records-leaked-after-alleged-failed-extortion-attempt.html" target="_blank" rel="noopener">E-Sports</a>, <a href="https://www.identityforce.com/blog/sophisticated-gmail-phishing-scam" target="_blank" rel="noopener">Gmail</a> e organizações como <a href="http://kuow.org/post/one-million-people-affected-wsu-data-breach" target="_blank" rel="noopener">Washington State University</a> sofreram com vazamento de informações sensíveis, phishing ou brechas de segurança. Recentemente, tivemos o caso <a href="https://www.google.com.br/search?q=wannacry&amp;oq=wannacry&amp;aqs=chrome..69i57j0l5.1644j0j1&amp;sourceid=chrome&amp;ie=UTF-8" target="_blank" rel="noopener">Wannacry</a> que era uma espécie de vírus que solicitava pagamento em bitcoin para liberar os arquivos da máquina infectada.</p>
+<p>As brechas de segurança das empresas citadas, afetaram mais de <strong>20 milhões de usuários</strong> que tiveram seus dados revelados, e você faz idéia do custo que isso teve para as gigantes? São muitos zeros!</p>
+<h2 id="OWASP"><a href="#OWASP" class="headerlink" title="OWASP"></a>OWASP</h2><p>Fundada em Dezembro de 2001, o OWASP é uma comunidade online que cria e disponibiliza de forma gratuita artigos, metodologias, documentação e ferramentas para educar desenvolvedores, designers, arquitetos e organizações sobre as consequências das vulnerabilidades.</p>
+<p>Todo ano eles lançam uma lista com as TOP 10 vulnerabilidades, baseadas principalmente na grande massa de dados de 11 empresas especializadas em segurança de aplicações, totalizando mais de 50.000 aplicações e APIs em produção.</p>
+<h2 id="Recursos"><a href="#Recursos" class="headerlink" title="Recursos"></a>Recursos</h2><p>Para ajudar organizações e desenvolvedores na redução dos riscos de suas aplicações, foram produzidos recursos <strong>free e open</strong> para que você possa utiliza-los como guia na segurança de sua aplicação, eles são divididos em várias categorias, algumas são:</p>
+<h3 id="Cheat-Sheet-Series"><a href="#Cheat-Sheet-Series" class="headerlink" title="Cheat Sheet Series"></a><a href="https://www.owasp.org/index.php/OWASP_Cheat_Sheet_Series" target="_blank" rel="noopener">Cheat Sheet Series</a></h3><p>É uma coleção de dicas valiosas em tópicos específicos sobre aplicações web, provendo um excelente guia de segurança de fácil leitura e compreensão. Alguns tópicos mais conhecidos são <a href="https://www.owasp.org/index.php/AJAX_Security_Cheat_Sheet" target="_blank" rel="noopener">Ajax</a>, <a href="https://www.owasp.org/index.php/Authentication_Cheat_Sheet" target="_blank" rel="noopener">Autenticação</a>, <a href="https://www.owasp.org/index.php/HTML5_Security_Cheat_Sheet" target="_blank" rel="noopener">HTML5 Security</a>, <a href="https://www.owasp.org/index.php/Session_Management_Cheat_Sheet" target="_blank" rel="noopener">Gerenciamento de sessões</a>, entre outros.</p>
+<h3 id="Enterprise-Security-API"><a href="#Enterprise-Security-API" class="headerlink" title="Enterprise Security API"></a><a href="https://www.owasp.org/index.php/Category:OWASP_Enterprise_Security_API" target="_blank" rel="noopener">Enterprise Security API</a></h3><p>A ESAPI é uma biblioteca free e open-source que tem o objetivo de tornar mais fácil a escrita de aplicações com baixo risco de vulnerabilidade, foi desenhada para se adaptar a segurança de aplicações já existentes podendo ser implementada por várias linguagens.</p>
+<h3 id="Broken-Web-Applications-Project"><a href="#Broken-Web-Applications-Project" class="headerlink" title="Broken Web Applications Project"></a><a href="https://www.owasp.org/index.php/OWASP_Broken_Web_Applications_Project" target="_blank" rel="noopener">Broken Web Applications Project</a></h3><p>Coleção de vulnerabilidades conhecidas em aplicações web, distribuídas e executadas em uma máquina virtual, perfeito para quem deseja aprender mais sobre segurança em aplicações web, testar algumas ferramentas e observar como funciona o fluxo de ataques.</p>
+<h2 id="Riscos"><a href="#Riscos" class="headerlink" title="Riscos"></a>Riscos</h2><p>A identificação dos riscos é feita pela coleta de informações sobre a <strong>ameaça envolvida</strong>, o <strong>tipo de ataque</strong> que será utilizado, a <strong>vulnerabilidade</strong> envolvida e o <strong>impacto</strong> dessa vulnerabilidade caso o atacante obtenha sucesso. Essa análise é calculada utilizando a seguinte fórmula:</p>
+<p><br></p>
+<p><img src="/images/web-security/formula-dos-riscos.png" alt="formula-dos-riscos" title="risco = probabilidade * impacto"></p>
+<p><br></p>
+<p>Os principais riscos de segurança para 2017 ainda não foram finalizados, mas vamos introduzir alguns dos que estão sendo bastante cotados até o momento.</p>
+<h3 id="Denial-of-Service-—-DoS"><a href="#Denial-of-Service-—-DoS" class="headerlink" title="Denial of Service — DoS"></a>Denial of Service — DoS</h3><p>Também conhecido como negação de serviço, é uma tentativa de tornar os recursos de um sistema indisponíveis, tendo como alvo principal os servidores web. Quando o ataque parte de diversas fontes ele recebe o nome de Distributed Denial of Service.</p>
+<h3 id="Password-Guessing-Attacks"><a href="#Password-Guessing-Attacks" class="headerlink" title="Password Guessing Attacks"></a>Password Guessing Attacks</h3><p>Como o próprio nome já diz, tem como alvo senhas de acesso. O atacante utiliza de várias ferramentas como geradores de senhas randômicas, listas com passwords mais comuns, hashes e combinações existentes na web para ajudar neste ataque do tipo brute forte.</p>
+<h3 id="Cross-Site-Scripting—-XSS"><a href="#Cross-Site-Scripting—-XSS" class="headerlink" title="Cross-Site Scripting— XSS"></a>Cross-Site Scripting— XSS</h3><p>Esta vulnerabilidade consiste na inserção de scripts maliciosos que serão executados no momento em que a página for acessada. Existem várias abordagens, os mais utilizados são através da URL ou inputs. E uma dica, <a href="http://devdocs.io/javascript/global_objects/eval" target="_blank" rel="noopener">tenha cuidado na utilização do eval()!</a></p>
+<h3 id="Insecure-Direct-Object-References-—-Insecure-DOR"><a href="#Insecure-Direct-Object-References-—-Insecure-DOR" class="headerlink" title="Insecure Direct Object References — Insecure DOR"></a>Insecure Direct Object References — Insecure DOR</h3><p>Este tipo de ataque acontece quando um usuário mal intencionado obtém acesso a informações como userID, através da URL. Utilizando de um ID sequencial o usuário consegue obter acesso a informações de outros usuários alterando a URL.</p>
+<h3 id="Sensitive-Data-Exposure"><a href="#Sensitive-Data-Exposure" class="headerlink" title="Sensitive Data Exposure"></a>Sensitive Data Exposure</h3><p>Este tipo de vulnerabilidade pode ser descoberta, a partir do momento em que o servidor não protege os dados, como password, informações de cartão de crédito e e-mails de forma adequada. Criptografia é indispensável e autenticação em dois fatores é o mínimo, <a href="https://bounty.github.com/classifications/sensitive-data-exposure.html" target="_blank" rel="noopener">aprenda com o Github</a>.</p>
+<h3 id="Missing-Function-Level-Access-Control"><a href="#Missing-Function-Level-Access-Control" class="headerlink" title="Missing Function Level Access Control"></a>Missing Function Level Access Control</h3><p>Controle de acesso é importante para definir níveis de acesso, impossibilitando que usuários não autorizados alterem informações inadequadas. A partir do momento em que ocorre a quebra, a vulnerabilidade foi descoberta.</p>
+<h3 id="Cross-Site-Request-Forgery-—-CSRF"><a href="#Cross-Site-Request-Forgery-—-CSRF" class="headerlink" title="Cross-Site Request Forgery — CSRF"></a>Cross-Site Request Forgery — CSRF</h3><p>O atacante engana o usuário, enviando um link via e-mail ou chat com o intuito de executar ações sem o consentimento do mesmo. Podendo realizar uma requisição para o servidor se passando pelo usuário, utilizando o seu cookie de sessão. Ao realizar a verificação do <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referer" target="_blank" rel="noopener">header Referer</a> você já está começando bem.</p>
+<h3 id="Utilizando-componentes-com-vulnerabilidades-conhecidas"><a href="#Utilizando-componentes-com-vulnerabilidades-conhecidas" class="headerlink" title="Utilizando componentes com vulnerabilidades conhecidas"></a>Utilizando componentes com vulnerabilidades conhecidas</h3><p>Módulos, componentes, bibliotecas ou frameworks quase sempre são executados utilizando privilégios do usuário, caso algum pacote esteja desatualizado, pode facilmente aumentar o range de ataque. Algumas vulnerabilidades em pacotes node, você encontra aqui. Wordpress, estou falando de você!</p>
+<h3 id="Clickjacking"><a href="#Clickjacking" class="headerlink" title="Clickjacking"></a>Clickjacking</h3><p>Obter os cliques do usuário e redirecionar para outra ação. Este tipo de vulnerabilidade se torna presente a partir do momento que uma aplicação permite ser exibida através de um Iframe, procure por <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options" target="_blank" rel="noopener">HTTP X-Frame-Options</a> no final da leitura.</p>
+<p>A lista não se resume apenas as que foram citadas, outras vulnerabilidades são presentes e você pode saber mais sobre elas acessando <a href="https://www.owasp.org/index.php/Top_10_2017-Details_About_Risk_Factors" target="_blank" rel="noopener">através deste link</a>.</p>
+<h2 id="Comunidade"><a href="#Comunidade" class="headerlink" title="Comunidade"></a>Comunidade</h2><p>Uma das partes mais legais de se trabalhar com comunidade, com certeza são os eventos e a troca de conhecimento. O artigo nem acabou e você já está querendo ir para o primeiro evento em segurança? Dá uma conferida na programação do <a href="http://roadsec.com.br/" target="_blank" rel="noopener">Roadsec</a>, eles estão sempre rodando o país com palestras, workshops e campeonatos como o <a href="http://roadsec.com.br/hackaflag/" target="_blank" rel="noopener">Hackaflag</a> envolvendo vários conceitos de segurança.</p>
+<p>Conhece alguma comunidade da sua região? Deixa o link nos comentários.</p>
+<h2 id="Material-Complementar"><a href="#Material-Complementar" class="headerlink" title="Material Complementar"></a>Material Complementar</h2><ul>
+<li><a href="https://github.com/chuckfw/owaspbwa" target="_blank" rel="noopener">https://github.com/chuckfw/owaspbwa</a></li>
+<li><a href="https://lists.owasp.org/mailman/listinfo/owasp-cheat-sheets" target="_blank" rel="noopener">https://lists.owasp.org/mailman/listinfo/owasp-cheat-sheets</a></li>
+<li><a href="https://github.com/FallibleInc/security-guide-for-developers" target="_blank" rel="noopener">https://github.com/FallibleInc/security-guide-for-developers</a></li>
+<li><a href="https://github.com/OWASP/Top10" target="_blank" rel="noopener">https://github.com/OWASP/Top10</a></li>
+<li><a href="https://nodesecurity.io/advisories" target="_blank" rel="noopener">https://nodesecurity.io/advisories</a></li>
+<li><a href="https://www.identityforce.com/blog/2017-data-breaches" target="_blank" rel="noopener">https://www.identityforce.com/blog/2017-data-breaches</a></li>
+<li><a href="https://stackoverflow.com/a/477578/4008711" target="_blank" rel="noopener">https://stackoverflow.com/a/477578/4008711</a></li>
+<li><a href="https://speakerdeck.com/mathiasbynens/front-end-performance-the-dark-side-at-fronteers-spring-conference-2016" target="_blank" rel="noopener">https://speakerdeck.com/mathiasbynens/front-end-performance-the-dark-side-at-fronteers-spring-conference-2016</a></li>
+<li><a href="https://capec.mitre.org" target="_blank" rel="noopener">https://capec.mitre.org</a></li>
+<li><a href="https://javascript.info/frames-and-windows" target="_blank" rel="noopener">https://javascript.info/frames-and-windows</a></li>
+<li><a href="https://blog.apiki.com/2016/09/09/cross-site-scripting-xss/" target="_blank" rel="noopener">https://blog.apiki.com/2016/09/09/cross-site-scripting-xss/</a></li>
+<li><a href="https://mkw.st/r/csp" target="_blank" rel="noopener">https://mkw.st/r/csp</a></li>
+<li><a href="https://speakerdeck.com/mikewest/frontend-security-frontend-conf-zurich-2013-08-30" target="_blank" rel="noopener">https://speakerdeck.com/mikewest/frontend-security-frontend-conf-zurich-2013-08-30</a></li>
+<li><a href="https://www.owasp.org" target="_blank" rel="noopener">https://www.owasp.org</a></li>
+<li><a href="https://www.exploit-db.com" target="_blank" rel="noopener">https://www.exploit-db.com</a></li>
+</ul>
+<blockquote>
+<p>Enquanto eu escrevia, eu ouvia..</p>
+</blockquote>
+<iframe src="https://open.spotify.com/embed/album/4prye0ZPTfcHO2rNpQWYnG" width="600" height="400" frameborder="0" allowtransparency="true"></iframe>
+
+
+  </div>
+</article>
+
+    <div class="blog-post-comments">
+        <div id="disqus_thread">
+            <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+    </div>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Seguranca-de-Aplicacoes-Web-—-101"><span class="toc-number">1.</span> <span class="toc-text">Segurança de Aplicações Web — 101</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Vulnerabilidades"><span class="toc-number">1.1.</span> <span class="toc-text">Vulnerabilidades</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#OWASP"><span class="toc-number">1.2.</span> <span class="toc-text">OWASP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Recursos"><span class="toc-number">1.3.</span> <span class="toc-text">Recursos</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Cheat-Sheet-Series"><span class="toc-number">1.3.1.</span> <span class="toc-text">Cheat Sheet Series</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Enterprise-Security-API"><span class="toc-number">1.3.2.</span> <span class="toc-text">Enterprise Security API</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Broken-Web-Applications-Project"><span class="toc-number">1.3.3.</span> <span class="toc-text">Broken Web Applications Project</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Riscos"><span class="toc-number">1.4.</span> <span class="toc-text">Riscos</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Denial-of-Service-—-DoS"><span class="toc-number">1.4.1.</span> <span class="toc-text">Denial of Service — DoS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Password-Guessing-Attacks"><span class="toc-number">1.4.2.</span> <span class="toc-text">Password Guessing Attacks</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Cross-Site-Scripting—-XSS"><span class="toc-number">1.4.3.</span> <span class="toc-text">Cross-Site Scripting— XSS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Insecure-Direct-Object-References-—-Insecure-DOR"><span class="toc-number">1.4.4.</span> <span class="toc-text">Insecure Direct Object References — Insecure DOR</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Sensitive-Data-Exposure"><span class="toc-number">1.4.5.</span> <span class="toc-text">Sensitive Data Exposure</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Missing-Function-Level-Access-Control"><span class="toc-number">1.4.6.</span> <span class="toc-text">Missing Function Level Access Control</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Cross-Site-Request-Forgery-—-CSRF"><span class="toc-number">1.4.7.</span> <span class="toc-text">Cross-Site Request Forgery — CSRF</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Utilizando-componentes-com-vulnerabilidades-conhecidas"><span class="toc-number">1.4.8.</span> <span class="toc-text">Utilizando componentes com vulnerabilidades conhecidas</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Clickjacking"><span class="toc-number">1.4.9.</span> <span class="toc-text">Clickjacking</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Comunidade"><span class="toc-number">1.5.</span> <span class="toc-text">Comunidade</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Material-Complementar"><span class="toc-number">1.6.</span> <span class="toc-text">Material Complementar</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://thulioph.com/archives/2017/07/12/web-secutiry-101/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://thulioph.com/archives/2017/07/12/web-secutiry-101/&text=Segurança de Aplicações Web — 101"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://thulioph.com/archives/2017/07/12/web-secutiry-101/&title=Segurança de Aplicações Web — 101"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://thulioph.com/archives/2017/07/12/web-secutiry-101/&is_video=false&description=Segurança de Aplicações Web — 101"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Segurança de Aplicações Web — 101&body=Check out this article: http://thulioph.com/archives/2017/07/12/web-secutiry-101/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://thulioph.com/archives/2017/07/12/web-secutiry-101/&title=Segurança de Aplicações Web — 101"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://thulioph.com/archives/2017/07/12/web-secutiry-101/&title=Segurança de Aplicações Web — 101"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://thulioph.com/archives/2017/07/12/web-secutiry-101/&title=Segurança de Aplicações Web — 101"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://thulioph.com/archives/2017/07/12/web-secutiry-101/&title=Segurança de Aplicações Web — 101"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://thulioph.com/archives/2017/07/12/web-secutiry-101/&name=Segurança de Aplicações Web — 101&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick="$("#toc-footer").toggle();return false;"><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick="$("#share-footer").toggle();return false;"><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick="$("#nav-footer").toggle();return false;"><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 thulioph
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-69489589-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+    <script type="text/javascript">
+        var disqus_shortname = 'thulioph';
+
+        (function(){
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        }());
+    </script>
+
+
+</body>
+</html>
