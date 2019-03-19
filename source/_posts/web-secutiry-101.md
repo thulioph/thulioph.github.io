@@ -1,7 +1,7 @@
 ---
 title: Segurança de Aplicações Web — 101
-date: 2017-07-12 16:38:17
-tags:
+date: 2017-08-03 16:38:17
+tags: seguranca, web
 ---
 
 [![imagem-principal](/images/web-security/elliot.jpeg "Elliot de Mr. Robot")](http://mrrobot.wikia.com/wiki/Elliot_Alderson)

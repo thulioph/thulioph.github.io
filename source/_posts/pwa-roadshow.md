@@ -1,7 +1,7 @@
 ---
 title: PWA Roadshow - Rio de Janeiro
-date: 2017-04-11 20:28:36
-tags: eventos google labcodes
+date: 2017-04-12 20:28:36
+tags: eventos, pwa, google
 ---
 
 # Progressive Web App Roadshow - RJ
