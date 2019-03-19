@@ -1,22 +1,22 @@
 [
    {
-      "name":"Segurança de Aplicações Web - 101",
-      "url":"https://goo.gl/3qh3g8",
+      "name":"Recompose",
+      "url":"https://speakerdeck.com/thulioph/recompose",
+      "desc":"JS Day Recife"
+   },
+   {
+      "name":"Styled Components",
+      "url":"https://speakerdeck.com/thulioph/styled-components",
       "desc":"Labcodes"
    },
    {
-      "name":"Vuejs",
-      "url":"https://speakerdeck.com/thulioph/vuejs",
-      "desc":"Front in Maceió"
+      "name":"Redux - 101",
+      "url":"https://speakerdeck.com/thulioph/redux-101",
+      "desc":"Labcodes"
    },
    {
-      "name":"Frontend MEAN",
-      "url":"https://speakerdeck.com/thulioph/o-cara-do-frontend",
-      "desc":"CBTU"
-   },
-   {
-      "name":"Google Maps 101",
-      "url":"https://speakerdeck.com/thulioph/google-maps-101",
-      "desc":"GDG DevFest Nordeste"
+      "name":"Cache",
+      "url":"https://speakerdeck.com/thulioph/cache",
+      "desc":"JS Day Recife"
    }
 ]
