@@ -1,0 +1,14 @@
+{
+  "name": "thulioph.github.io",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:thulioph/thulioph.github.io.git",
+  "author": "Thulio Philipe <thulioph@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^0.12.1"
+  },
+  "scripts": {
+    "start": "node_modules/.bin/http-server -d -o --log-ip"
+  }
+}
