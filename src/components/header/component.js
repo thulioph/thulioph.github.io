@@ -9,10 +9,10 @@ const Header = () => {
   const { twitter, github, linkedin } = useSiteMetadata()
 
   const menuLinks = [
-    { url: '#about', value: 'About' },
-    { url: '#talks', value: 'Talks' },
-    { url: '#projects', value: 'Projects' },
-    { url: '#writings', value: 'Writings' },
+    { url: '/#about', value: 'About' },
+    { url: '/#talks', value: 'Talks' },
+    { url: '/#projects', value: 'Projects' },
+    { url: '/#writings', value: 'Writings' },
   ]
 
   const socialLinks = [

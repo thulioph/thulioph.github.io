@@ -23,16 +23,18 @@ const Projects = () => {
                 view site
               </a>
 
-              <figure>
-                <img src={mainImage} alt={title} />
-              </figure>
+              <div className="project-image">
+                <figure>
+                  <img src={mainImage} alt={title} />
+                </figure>
+              </div>
 
               <div className="stack-list">
                 <ul>
                   {techStack.map((tech, idx) => (
                     <li key={idx}>
                       <img
-                        src={`https://picsum.photos/42/${tech}`}
+                        src={`/public/images/${tech}`}
                         alt={tech}
                       />
                     </li>
