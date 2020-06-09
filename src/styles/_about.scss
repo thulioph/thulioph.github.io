@@ -1,0 +1,31 @@
+.about {
+  figure {
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    overflow: hidden;
+    border: 1px solid $gray-darker;
+    margin: 0 auto 20px auto;
+    
+    @media (min-width: $medium-devices) {
+      margin-bottom: 80px;
+    }
+    
+    img {
+      max-width: 100%;
+    }
+  }
+  
+  p {
+    color: $black;
+    font-family: $ff-secondary;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 10px;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, .4);
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

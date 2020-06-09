@@ -1,0 +1,18 @@
+// Main stylesheet file
+
+@import '_variables.scss';
+@import '_reset.scss';
+
+@import '_grid.scss';
+
+// Sections
+@import '_sections.scss';
+@import '_hero.scss';
+@import '_about.scss';
+@import '_talks.scss';
+@import '_projects.scss';
+@import '_spinner.scss';
+
+// Components
+@import '../components/header/style.scss';
+@import '../components/footer/style.scss';
