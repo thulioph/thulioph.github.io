@@ -1,9 +1,9 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import { useSiteMetadata } from '../../hooks/use-site-metadata'
+import { useSiteMetadata } from '../hooks/use-site-metadata'
 
-import { LogoIcon, TwitterIcon, LinkedinIcon, GithubIcon } from "../icons"
+import { LogoIcon, TwitterIcon, LinkedinIcon, GithubIcon } from "./icons"
 
 const Header = () => {
   const { twitter, github, linkedin } = useSiteMetadata()

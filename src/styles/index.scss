@@ -5,17 +5,13 @@
 
 @import '_grid.scss';
 
-// Sections
+@import '_header.scss';
 @import '_sections.scss';
 @import '_hero.scss';
 @import '_about.scss';
 @import '_talks.scss';
 @import '_projects.scss';
 @import '_spinner.scss';
+@import '_footer.scss';
 
-// Components
-@import '../components/header/style.scss';
-@import '../components/footer/style.scss';
-
-// Blog
 @import '_blog.scss'
