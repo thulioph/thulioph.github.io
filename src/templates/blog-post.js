@@ -1,25 +1,35 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
 import { graphql } from 'gatsby'
 
-// import '../css/blog-post.css'; // make it pretty!
+import Layout from './page'
+import SEO from "../components/seo"
+import Image from '../components/image'
 
 const Template = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
-    <div className="blog-post-container">
-      <Helmet title={`Your Blog Name - ${post.frontmatter.title}`} />
+    <React.Fragment>
+      <Layout>
+        <section className="blog-post-container">
+          <SEO title={`Your Blog Name - ${post.frontmatter.title}`} />
 
-      <div className="blog-post">
-        <h1>{post.frontmatter.title}</h1>
+          <div className="blog-post">
+            <Image
+              alt={post.frontmatter.caption}
+              filename={post.frontmatter.imageSlug}
+            />
 
-        <div
-          className="blog-post-content"
-          dangerouslySetInnerHTML={{ __html: post.html }}
-        />
-      </div>
-    </div>
+            <h1>{post.frontmatter.title}</h1>
+
+            <div
+              className="blog-post-content"
+              dangerouslySetInnerHTML={{ __html: post.html }}
+            />
+          </div>
+        </section>
+      </Layout>
+    </React.Fragment>
   )
 }
 
@@ -33,6 +43,8 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         path
         title
+        imageSlug
+        caption
       }
     }
   }
