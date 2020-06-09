@@ -30,6 +30,12 @@
   display: flex;
   flex-flow: column;
   align-items: center;
+
+  min-height: calc(100vh - 180px); // header + footer
+  
+  @media (min-width: $medium-devices) {
+    min-height: calc(100vh - 120px); // header + footer
+  }
 }
 
 .footer {
