@@ -2,13 +2,28 @@ module.exports = {
   siteMetadata: {
     title: "Thulio Philipe (thulioph)",
     description: `I'm a Web Developer for more than eight years. I already worked with ad agencies, startups,software studios and also as a consultant, always focused on the Front-End side (UI). My current focus is on WebApps and some topics that guide my studies are Performance, Security, User Engagement and Code Quality I like to share my knowledge through talks [1], articles [2] and all repositories on my Github [3] are open. My current focus is on WebApps and some topics that guide my studies are Performance, Security, User Engagement and Code Quality.`,
-    image:"https://avatars2.githubusercontent.com/u/2343288?s=460&u=34b95449c5414b41560dd5b41c97cf414bad8c8c&v=4",
+    image:
+      "https://avatars2.githubusercontent.com/u/2343288?s=460&u=34b95449c5414b41560dd5b41c97cf414bad8c8c&v=4",
     author: "thulioph",
     twitter: `@thulioph_`,
     github: `thulioph`,
     linkedin: `thulioph`,
   },
   plugins: [
+    `gatsby-plugin-catch-links`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/posts`,
+        name: `posts`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [],
+      },
+    },
     {
       resolve: `gatsby-plugin-web-font-loader`,
       options: {
