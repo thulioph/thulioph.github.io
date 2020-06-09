@@ -1,0 +1,86 @@
+// Header Styles
+
+.header {
+  @extend %header-grid;
+  background-color: $black;
+  
+  display: flex;
+  flex-flow: column;
+  
+  position: sticky;
+  top: 0;
+  padding: 20px 0;
+
+  z-index: 10;
+  
+  @media (min-width: $medium-devices) {
+    flex-flow: row;
+    align-items: center;
+    padding: 0;
+  }
+  
+ .logo {
+    flex: 1;
+    text-align: center;
+   
+   @media (min-width: $medium-devices) {
+     margin-top: 0;
+   }
+ 
+    a { display: inline-block; }
+  }
+  
+  ul {
+    display: flex;
+  }
+  
+  .menu-links {
+    justify-content: space-around;
+    
+    @media (min-width: $medium-devices) {
+      justify-content: space-evenly;
+    }
+  }
+  
+ .menu {
+    flex: 2;
+    margin: 20px 0 0 0;
+   
+   @media (min-width: $medium-devices) {
+     margin: 0;
+   }
+   
+   a {
+     opacity: .7;
+     transition: opacity .25s linear 0s;
+     
+     &.js-active,
+     &:hover {
+      opacity: 1;
+    }
+   }
+  }
+  
+  .social-links {
+    flex: 1;
+    justify-content: center;
+    display: none;
+    
+    @media (min-width: $medium-devices) {
+      display: flex;
+    }
+    
+    li {
+      margin-right: $default-mg/2;
+    }
+    
+    a {
+      opacity: .7;
+      transition: opacity .25s linear 0s;
+      
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
