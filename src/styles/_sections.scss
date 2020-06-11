@@ -25,11 +25,15 @@
   .container {
     display: flex;
     margin: 0 auto;
-    max-width: 90%;
+    max-width: 80%;
+
+    @media (min-width: $medium-devices) {
+      max-width: 90%;
+    }
   
     justify-content: center;
     
-    @media (min-width: $large-devices) {
+    @media (min-width: $xlarge-devices) {
       max-width: 1200px;
       padding: 50px 0 0 0;
     }

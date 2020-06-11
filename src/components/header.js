@@ -36,38 +36,40 @@ const Header = () => {
   return (
     <React.Fragment>
       <header className="header">
-        <h1 className="logo">
-          <Link to="/">
-            <LogoIcon width={53} height={53} />
-          </Link>
-        </h1>
+        <div className="container">
+          <h1 className="logo">
+            <Link to="/">
+              <LogoIcon width={53} height={53} />
+            </Link>
+          </h1>
 
-        <menu className="menu">
-          <ul className="menu-links">
-            {menuLinks.map(link => (
+          <menu className="menu">
+            <ul className="menu-links">
+              {menuLinks.map(link => (
+                <li key={link.value}>
+                  <a href={link.url} title={link.value}>
+                    {link.value}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </menu>
+
+          <ul className="social-links">
+            {socialLinks.map(link => (
               <li key={link.value}>
-                <a href={link.url} title={link.value}>
-                  {link.value}
+                <a
+                  href={link.url}
+                  title={link.value}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  {link.icon}
                 </a>
               </li>
             ))}
           </ul>
-        </menu>
-
-        <ul className="social-links">
-          {socialLinks.map(link => (
-            <li key={link.value}>
-              <a
-                href={link.url}
-                title={link.value}
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                {link.icon}
-              </a>
-            </li>
-          ))}
-        </ul>
+        </div>
       </header>
     </React.Fragment>
   )

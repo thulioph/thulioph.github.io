@@ -13,13 +13,19 @@
     
     img {
       max-width: 100%;
+
+      transition: filter .25s linear 0s;
+
+      &:hover {
+        filter: grayscale(1);
+      }
     }
   }
   
   p {
     color: $black;
     font-family: $ff-secondary;
-    font-size: 36px;
+    font-size: 26px;
     text-align: center;
     margin-bottom: 10px;
     text-shadow: 0 1px 0 rgba(0, 0, 0, .4);
@@ -27,5 +33,15 @@
     &:last-child {
       margin-bottom: 0;
     }
+
+    @media (min-width: $medium-devices) {
+      font-size: 36px;
+    }
+  }
+
+  a {
+    text-decoration: underline;
+    color: $black;
+    font-weight: 400;
   }
 }

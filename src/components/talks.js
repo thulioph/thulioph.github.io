@@ -2,6 +2,7 @@ import React from 'react'
 
 import withGrid from './withGrid'
 import Loading from './loading'
+import Link from './link'
 import { useTalks } from '../hooks/use-talks'
 
 const Talks = () => {
@@ -12,17 +13,7 @@ const Talks = () => {
       <Loading when={!talks || !talks.length}>
         <ul className="talks-list">
           {talks && talks.map(({ id, link, title, pubDate }) => (
-            <li key={id}>
-              <a
-                href={link}
-                title={title}
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <p>{title}</p>
-                <span>{pubDate}</span>
-              </a>
-            </li>
+            <Link key={id} href={link} title={title} pubDate={pubDate} />
           ))}
         </ul>
       </Loading>
