@@ -12,7 +12,7 @@ const About = () => {
         <img src={image} alt={title} />
       </figure>
 
-      <p>{description}</p>
+      <p dangerouslySetInnerHTML={{ __html: description }} />
     </React.Fragment>
   )
 }
