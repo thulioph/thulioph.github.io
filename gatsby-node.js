@@ -9,7 +9,7 @@ const getTalksData = () => {
     {
       id: "1",
       title: "css na era dos componentes",
-      pubDate: "Dec 19, 2012",
+      pubDate: "Dec 19, 2019",
       link: "https://speakerdeck.com/thulioph/css-na-era-dos-componentes",
     },
     {
@@ -33,21 +33,21 @@ const getWritingsData = () => {
   const writings = [
     {
       id: "1",
-      title: "recompose",
-      pubDate: "Mar 19, 2019",
-      link: "https://speakerdeck.com/thulioph/recompose",
+      title: "agile front-end techniques",
+      pubDate: "Oct 16, 2019",
+      link: "https://labcodes.com.br/blog/pt/articles/3-tecnicas-fundamentais-da-metodologia-agil-no-front-end.html",
     },
     {
       id: "2",
-      title: "components with vue.js",
-      pubDate: "Sep 20, 2018",
-      link: "https://speakerdeck.com/thulioph/recompose",
+      title: "recompose",
+      pubDate: "Mar 19, 2019",
+      link: "https://labcodes.com.br/blog/articles/functional-components-with-recompose.html",
     },
     {
       id: "3",
       title: "web security 101",
       pubDate: "Aug 3, 2017",
-      link: "https://speakerdeck.com/thulioph/recompose",
+      link: "https://labcodes.com.br/blog/pt/articles/seguranca-de-aplicacoes-web-101.html",
     },
   ]
 
