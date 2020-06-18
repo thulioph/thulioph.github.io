@@ -41,11 +41,7 @@ $ npm run serve
 
 ### deploy
 
-To **deploy the build version** to gh-pages, run:
-
-```bash
-$ npm run deploy
-```
+To **deploy the build version** just merge a PR with the static version to master branch.
 
 ## License
 
