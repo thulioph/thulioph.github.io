@@ -9,7 +9,7 @@ const getTalksData = () => {
     {
       id: "1",
       title: "css na era dos componentes",
-      pubDate: "Dec 19, 2012",
+      pubDate: "Dec 19, 2019",
       link: "https://speakerdeck.com/thulioph/css-na-era-dos-componentes",
     },
     {
@@ -21,7 +21,7 @@ const getTalksData = () => {
     {
       id: "3",
       title: "styled components",
-      pubDate: "Aug 2, 2017",
+      pubDate: "Aug 2, 2018",
       link: "https://speakerdeck.com/thulioph/styled-components",
     },
   ]
@@ -33,21 +33,21 @@ const getWritingsData = () => {
   const writings = [
     {
       id: "1",
-      title: "recompose",
-      pubDate: "Mar 19, 2019",
-      link: "https://speakerdeck.com/thulioph/recompose",
+      title: "agile front-end techniques",
+      pubDate: "Oct 16, 2019",
+      link: "https://labcodes.com.br/blog/pt/articles/3-tecnicas-fundamentais-da-metodologia-agil-no-front-end.html",
     },
     {
       id: "2",
-      title: "components with vue.js",
-      pubDate: "Sep 20, 2018",
-      link: "https://speakerdeck.com/thulioph/recompose",
+      title: "recompose",
+      pubDate: "Mar 19, 2019",
+      link: "https://labcodes.com.br/blog/articles/functional-components-with-recompose.html",
     },
     {
       id: "3",
       title: "web security 101",
       pubDate: "Aug 3, 2017",
-      link: "https://speakerdeck.com/thulioph/recompose",
+      link: "https://labcodes.com.br/blog/pt/articles/seguranca-de-aplicacoes-web-101.html",
     },
   ]
 
@@ -59,26 +59,29 @@ const getProjects = () => {
     {
       id: "1",
       title: "Twitter Realtime",
-      description: "Project description and additional information",
-      link: "https://github.com/thulioph/twitter-realtime",
-      mainImage: "https://picsum.photos/800/500",
-      techStack: ["react", "nodejs", "typescript"],
+      description: "Display tweets location in realtime",
+      link: "https://twitter-realtime.herokuapp.com/",
+      mainImage:
+        "https://raw.githubusercontent.com/thulioph/twitter-realtime/master/example.png",
+      techStack: ["angularjs", "nodejs", "css"]
     },
     {
       id: "2",
-      title: "Twitter Realtime",
-      description: "Project description and additional information",
-      link: "https://github.com/thulioph/twitter-realtime",
-      mainImage: "https://picsum.photos/800/500",
-      techStack: ["react", "nodejs", "typescript"],
+      title: "WhoSampled Scrapper",
+      description: "Samples information from an specific artist",
+      link: "https://github.com/thulioph/whosampled-scraper",
+      mainImage:
+        "https://raw.githubusercontent.com/thulioph/whosampled-scraper/master/demo.gif",
+      techStack: ["nodejs", "typescript"]
     },
     {
       id: "3",
-      title: "Twitter Realtime",
-      description: "Project description and additional information",
-      link: "https://github.com/thulioph/twitter-realtime",
-      mainImage: "https://picsum.photos/800/500",
-      techStack: ["react", "nodejs", "typescript"],
+      title: "Greensock",
+      description: "Icon animations using GreenSock",
+      link: "https://greensock.netlify.com/",
+      mainImage:
+        "https://raw.githubusercontent.com/thulioph/greensock/master/demo.gif",
+      techStack: ["html", "css", "javascript"]
     },
   ]
 
