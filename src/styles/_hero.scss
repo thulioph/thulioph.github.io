@@ -1,11 +1,10 @@
-.hero {  
-  .wrapper {
+.hero {
+  .container {
     height: calc(100vh - 180px);
+    align-items: center;
+  }
 
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-
+  .wrapper {
     a {
       color: $black;
     }
