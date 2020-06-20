@@ -28,6 +28,7 @@ const Writings = ({ data }) => {
               pubDate={post.frontmatter.date}
               href={post.frontmatter.path}
               target="_self"
+              lang={post.frontmatter.lang}
             />
           ))}
         </ul>
@@ -49,6 +50,7 @@ export const pageQuery = graphql`
             title
             date(formatString: "MMMM DD, YYYY")
             path
+            lang
           }
         }
       }
