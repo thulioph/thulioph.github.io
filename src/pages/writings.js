@@ -17,21 +17,23 @@ const Writings = ({ data }) => {
 
         <SectionIntro
           title="Writings"
-          description={`until now are ${posts.length} posts and counting.`}
+          description={`I wrote ${posts.length} posts and counting.`}
         />
 
-        <ul className="writings-list">
-          {posts.map(({ node: post }) => (
-            <Link
-              key={post.id}
-              title={post.frontmatter.title}
-              pubDate={post.frontmatter.date}
-              href={post.frontmatter.path}
-              target="_self"
-              lang={post.frontmatter.lang}
-            />
-          ))}
-        </ul>
+        <section className="page-container">
+          <ul className="writings-list">
+            {posts.map(({ node: post }) => (
+              <Link
+                key={post.id}
+                title={post.frontmatter.title}
+                pubDate={post.frontmatter.date}
+                href={post.frontmatter.path}
+                target="_self"
+                lang={post.frontmatter.lang}
+              />
+            ))}
+          </ul>
+        </section>
       </Layout>
     </React.Fragment>
   )
@@ -48,7 +50,7 @@ export const pageQuery = graphql`
           id
           frontmatter {
             title
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "ll")
             path
             lang
           }
