@@ -6,7 +6,6 @@ import Link from '../components/link'
 import SectionIntro from '../components/sectionIntro'
 
 import Layout from "../templates/page"
-import img from '../images/writings-bg.jpg'
 
 const Writings = ({ data }) => {
   const posts = data.allMarkdownRemark.edges.filter(post => post.node.frontmatter.title.length > 0)
