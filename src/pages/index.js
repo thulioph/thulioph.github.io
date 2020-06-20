@@ -1,5 +1,4 @@
 import React from "react"
-import { graphql } from "gatsby"
 
 import Layout from "../templates/page"
 
@@ -9,10 +8,7 @@ import Talks from "../components/talks"
 import Projects from "../components/projects"
 import Writings from "../components/writings"
 
-const IndexPage = ({ data }) => {
-  const posts = data.allMarkdownRemark.edges.map(
-    ({ node }) => node.frontmatter
-  )
+const IndexPage = () => {
 
   return (
     <Layout>
@@ -26,21 +22,3 @@ const IndexPage = ({ data }) => {
 }
 
 export default IndexPage
-
-export const pageQuery = graphql`
-  query IndexQuery {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
-      edges {
-        node {
-          excerpt(pruneLength: 250)
-          id
-          frontmatter {
-            title
-            date(formatString: "MMMM DD, YYYY")
-            path
-          }
-        }
-      }
-    }
-  }
-`
