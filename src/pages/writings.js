@@ -3,8 +3,10 @@ import { graphql } from "gatsby"
 
 import SEO from '../components/seo'
 import Link from '../components/link'
+import SectionIntro from '../components/sectionIntro'
 
 import Layout from "../templates/page"
+import img from '../images/writings-bg.jpg'
 
 const Writings = ({ data }) => {
   const posts = data.allMarkdownRemark.edges.filter(post => post.node.frontmatter.title.length > 0)
@@ -14,7 +16,10 @@ const Writings = ({ data }) => {
       <Layout>
         <SEO title="Writings" />
 
-        {/* Image or title/hero here */}
+        <SectionIntro
+          title="Writings"
+          description={`until now are ${posts.length} posts and counting.`}
+        />
 
         <ul className="writings-list">
           {posts.map(({ node: post }) => (
@@ -23,6 +28,7 @@ const Writings = ({ data }) => {
               title={post.frontmatter.title}
               pubDate={post.frontmatter.date}
               href={post.frontmatter.path}
+              target="_self"
             />
           ))}
         </ul>
