@@ -3,7 +3,7 @@ import React from 'react'
 import withGrid from './withGrid'
 import Loading from './loading'
 import { useProjects } from '../hooks/use-projects'
-import getTechIcon from './getTechIcon'
+import { getTechIcon } from './getTechIcon'
 
 const Projects = () => {
   const { projects } = useProjects()

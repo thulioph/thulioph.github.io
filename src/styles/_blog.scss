@@ -11,13 +11,18 @@
   }
 
   .blog-post-content {
-    max-width: 980px;
+    width: 80%;
     margin: 0 auto;
+
+    @media (min-width: $medium-devices) {
+      max-width: 980px;
+    }
   }
 
   a {
     color: $black;
     text-decoration: underline;
+    word-break: break-all;
   }
 
   p {
