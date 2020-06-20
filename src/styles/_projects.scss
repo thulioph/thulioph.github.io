@@ -14,8 +14,12 @@
   }
 
   .project-title {
-    font-size: 30px;
+    font-size: 25px;
     margin: 0 0 20px 0;
+
+    @media (min-width: $medium-devices) {
+      font-size: 30px;
+    }
   }
 
   .project-image {
@@ -24,6 +28,10 @@
 
     img {
       max-width: 100%;
+
+      @media (min-width: $large-devices) {
+        max-width: 800px;
+      }
     }
   }
 
@@ -71,6 +79,11 @@
       overflow: hidden;
       margin-right: 15px;
       border: 1px solid $gray-darker;
+      background-color: $gray-darker;
+    }
+
+    img {
+      max-width: 100%;
     }
   }
 }
