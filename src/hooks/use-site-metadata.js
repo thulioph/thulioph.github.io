@@ -16,6 +16,20 @@ export const useSiteMetadata = () => {
             twitter
             github
             linkedin
+            extraSocial {
+              openProcessing
+              stackOverflow
+              soundCloud
+              unsplash
+              wakatime
+              lastFm
+              genius
+              goodReads
+              strava
+              codepen
+              codeSandBox
+              medium
+            }
           }
         }
       }
