@@ -7,4 +7,18 @@ module.exports = {
   twitter: `@thulioph_`,
   github: `thulioph`,
   linkedin: `thulioph`,
+  extraSocial: {
+    openProcessing: "https://www.openprocessing.org/user/169834",
+    stackOverflow: "https://stackoverflow.com/users/4008711/thulioph",
+    soundCloud: "https://soundcloud.com/thulio-ph",
+    unsplash: "https://unsplash.com/@thulioph",
+    wakatime: "https://wakatime.com/@thulioph",
+    lastFm: "https://www.last.fm/pt/user/Thulioph",
+    genius: "https://genius.com/thulioph",
+    goodReads: "https://goodreads.com/thulioph",
+    strava: "https://www.strava.com/athletes/13011724",
+    codepen: "https://codepen.io/thulioph",
+    codeSandBox: "https://codesandbox.io/u/thulioph",
+    medium: "https://medium.com/@thulioph_"
+  },
 }
