@@ -33,7 +33,7 @@ To build a **production** version, run:
 $ npm run build
 ```
 
-To **serve the production** version, run
+To **serve the production** version, run:
 
 ```bash
 $ npm run serve
@@ -41,11 +41,7 @@ $ npm run serve
 
 ### deploy
 
-To **deploy the build version** to gh-pages, run:
-
-```bash
-$ npm run deploy
-```
+To **deploy the build version** just update master branch with static version.
 
 ## License
 
