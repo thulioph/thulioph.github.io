@@ -1,10 +1,60 @@
 // Blog and Blog Posts
 
 .blog-post-container {
-  background-color: #CCC;
+  background-color: $white;
+  width: 100%;
+  margin-bottom: 200px;
 
   h1 {
     @extend .section-title;
-    margin-top: 100px;
+    margin-top: 50px;
+  }
+
+  .blog-post-content {
+    max-width: 980px;
+    margin: 0 auto;
+  }
+
+  a {
+    color: $black;
+    text-decoration: underline;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 36px;
+    display: inline;
+  }
+
+  h3 {
+    margin: 40px 0 20px 0;
+  }
+
+  em {
+    font-size: 12px;
+    font-style: normal;
+    display: block;
+    text-align: center;
+  }
+
+  h4 {
+    margin: 40px 0 20px 0;
+  }
+
+  hr {
+    margin: 100px 0 50px 0;
+  }
+
+  img {
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+  }
+
+  blockquote {
+    background: $gray-darker;
+    display: block;
+    margin-left: 0;
+    padding: 20px 0 20px 50px;
   }
 }

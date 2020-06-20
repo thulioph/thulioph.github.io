@@ -7,6 +7,7 @@ import Image from '../components/image'
 
 const Template = ({ data }) => {
   const { markdownRemark: post } = data
+  const hasImage = post.frontmatter.imageSlug
 
   return (
     <React.Fragment>
@@ -15,10 +16,12 @@ const Template = ({ data }) => {
           <SEO title={`Your Blog Name - ${post.frontmatter.title}`} />
 
           <div className="blog-post">
-            <Image
-              alt={post.frontmatter.caption}
-              filename={post.frontmatter.imageSlug}
-            />
+            {hasImage && (
+              <Image
+                alt={post.frontmatter.caption}
+                filename={post.frontmatter.imageSlug}
+              />)
+            }
 
             <h1>{post.frontmatter.title}</h1>
 
@@ -44,7 +47,6 @@ export const pageQuery = graphql`
         path
         title
         imageSlug
-        caption
       }
     }
   }
