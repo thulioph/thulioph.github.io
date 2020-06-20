@@ -63,5 +63,14 @@
     font-size: 18px;
     font-weight: 300;
     text-align: right;
+
+    &.post-lang {
+      background-color: $gray-darker;
+      padding: 5px;
+      font-size: 12px;
+      display: inline-block;
+      margin-left: 20px;
+      vertical-align: middle;
+    }
   }
 }
