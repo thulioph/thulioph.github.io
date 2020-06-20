@@ -1,8 +1,9 @@
 ---
 path: "/writings/recompose"
 date: 2020-06-08T23:11:50
-title: "Functional Components with Recompose"
+title: "Recompose"
 imageSlug: "posts/recompose-cover.jpg"
+lang: 'en'
 ---
 
 This article will show you a different way to create React components. We’ll discuss responsibilities, HOCs, functional components and Recompose.
