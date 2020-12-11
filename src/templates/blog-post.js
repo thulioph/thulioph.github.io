@@ -13,7 +13,7 @@ const Template = ({ data }) => {
     <React.Fragment>
       <Layout>
         <section className="blog-post-container">
-          <SEO title={`Your Blog Name - ${post.frontmatter.title}`} />
+          <SEO title={`Writings - ${post.frontmatter.title}`} />
 
           <div className="blog-post">
             {hasImage && (
