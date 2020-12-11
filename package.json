@@ -36,12 +36,12 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
-    "dev": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "ghpages": "gh-pages -d public",
+    "build": "node_modules/.bin/gatsby build",
+    "dev": "node_modules/.bin/gatsby develop",
+    "format": "node_modules/.bin/prettier --write \"**/*.{js,jsx,json,md}\"",
+    "serve": "node_modules/.bin/gatsby serve",
+    "clean": "node_modules/.bin/gatsby clean",
+    "ghpages": "node_modules/.bin/gh-pages -d public",
     "deploy": "npm run build && npm run ghpages"
   },
   "repository": {
