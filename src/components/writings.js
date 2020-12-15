@@ -24,5 +24,5 @@ const Writings = () => {
 export default withGrid(Writings, {
   id: 'writings',
   title: 'Writings',
-  seeAll: 'https://medium.com/@thulioph_'
+  seeAll: 'writings'
 })
