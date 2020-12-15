@@ -17,7 +17,7 @@ const Writings = ({ data }) => {
 
         <SectionIntro
           title="Writings"
-          description={`I wrote ${posts.length} posts and counting.`}
+          description={`I wrote ${posts.length} articles and there are a few more under draft.`}
         />
 
         <section className="page-container">
