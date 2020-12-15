@@ -4,6 +4,7 @@ const withGrid = (WrappedComponent, state) => {
   return class Grid extends React.Component {
     render() {
       const { id, title, seeAll } = state
+      const shouldOpenInANewPage = seeAll && seeAll.includes("http")
 
       return (
         <React.Fragment>
@@ -19,7 +20,7 @@ const withGrid = (WrappedComponent, state) => {
                     className="see-all"
                     href={seeAll}
                     rel="noopener noreferrer"
-                    target="_blank"
+                    target={shouldOpenInANewPage ? '_blank' : ''}
                   >
                     see all
                   </a>
