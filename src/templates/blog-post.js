@@ -7,23 +7,30 @@ import Image from '../components/image'
 
 const Template = ({ data }) => {
   const { markdownRemark: post } = data
+
+  const { date, imageSlug, title, caption } = post.frontmatter
+
+  const readingTime = post.fields.readingTime.text
   const hasImage = post.frontmatter.imageSlug
 
   return (
     <React.Fragment>
       <Layout>
         <section className="blog-post-container">
-          <SEO title={`Writings - ${post.frontmatter.title}`} />
+          <SEO title={`Writings - ${title}`} />
 
           <div className="blog-post">
             {hasImage && (
               <Image
-                alt={post.frontmatter.caption}
-                filename={post.frontmatter.imageSlug}
+                alt={caption}
+                filename={imageSlug}
               />)
             }
 
-            <h1>{post.frontmatter.title}</h1>
+            <section class="blog-post-header">
+              <h5>{date} | {readingTime}</h5>
+              <h1>{title}</h1>
+            </section>
 
             <div
               className="blog-post-content"
@@ -47,6 +54,11 @@ export const pageQuery = graphql`
         path
         title
         imageSlug
+      }
+      fields {
+        readingTime {
+          text
+        }
       }
     }
   }
