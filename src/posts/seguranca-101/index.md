@@ -1,5 +1,5 @@
 ---
-path: "/writings/security-101"
+path: "/writings/pt/security-101"
 date: 2017-08-03T04:20:00
 title: "Segurança em aplicações web - 101"
 imageSlug: "posts/security-cover.png"

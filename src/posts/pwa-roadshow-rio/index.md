@@ -1,5 +1,5 @@
 ---
-path: "/writings/pwa-roadshow-rio"
+path: "/writings/pt/pwa-roadshow-rio"
 date: 2017-04-12T16:20:00
 title: "Progressive Web App Roadshow"
 imageSlug: "posts/pwa-roadshow-rio-cover.jpeg"

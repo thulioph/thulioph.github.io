@@ -1,5 +1,5 @@
 ---
-path: "/writings/frontend-agil"
+path: "/writings/pt/frontend-agil"
 date: 2019-10-16T16:20:00
 title: "Metodologia Ágil no Frontend"
 imageSlug: "posts/frontend-agil-cover.png"

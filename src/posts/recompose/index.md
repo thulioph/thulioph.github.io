@@ -1,5 +1,5 @@
 ---
-path: "/writings/recompose"
+path: "/writings/en/recompose"
 date: 2020-06-08T23:11:50
 title: "Recompose"
 imageSlug: "posts/recompose-cover.jpg"
