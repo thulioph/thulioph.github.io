@@ -128,6 +128,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           node {
             frontmatter {
               path
+              title
             }
           }
         }
@@ -140,11 +141,19 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return
   }
 
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+  const posts = result.data.allMarkdownRemark.edges
+
+  posts.forEach(({ node }, index) => {
+    const path = node.frontmatter.path
+
     createPage({
-      path: node.frontmatter.path,
+      path,
       component: blogPostTemplate,
-      context: {}, // additional data can be passed via context
+      context: { // additional data can be passed via context
+        pathSlug: path,
+        prev: index === 0 ? null : posts[index - 1].node,
+        next: index === (posts.length - 1) ? null : posts[index + 1].node,
+      },
     })
   })
 }

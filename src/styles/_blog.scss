@@ -40,6 +40,15 @@
     }
   }
 
+  h2 {
+    padding-bottom: 5px;
+    border-bottom: 2px solid $gray-darker;
+  }
+
+  h3 {
+    text-transform: uppercase;
+  }
+
   h3, h2 {
     margin: 40px 0 20px 0;
   }
@@ -89,5 +98,37 @@
         margin-bottom: 0;
       }
     }
+  }
+}
+
+.blog-post-actions {
+  display: flex;
+  flex-flow: row;
+  
+  .actions-link {
+    background-color: $gray-darker;
+    flex: 1;
+    padding: 24px;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-right: 24px;
+    border: 1px solid $gray;
+
+    transition: background-color .25s linear 0s;
+
+    &:hover {
+      background-color: $gray;
+      border-color: $gray-darker;
+    }
+  }
+
+  .label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .title {
+    font-weight: 800;
+    margin-bottom: 0;
   }
 }
