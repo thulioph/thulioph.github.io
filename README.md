@@ -47,7 +47,6 @@ To **generate and deploy a new static version**, run:
 $ npm run deploy
 ```
 
-I've changed the base `gh-pages` branch to `master` and in order to **deploy the build version** just update master branch with static version. 
 Feel free to take a look at [gh-pages package](https://github.com/tschaub/gh-pages#command-line-utility) to get more details about it.
 
 
