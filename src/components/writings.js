@@ -1,12 +1,37 @@
 import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
 
 import withGrid from './withGrid'
 import Loading from './loading'
 import Link from './link'
-import { useWritings } from '../hooks/use-writings'
+import { formatWritings } from '../formatters'
 
 const Writings = () => {
-  const { writings } = useWritings()
+  const data = useStaticQuery(
+    graphql`
+      query {
+        allMarkdownRemark(
+          sort: { order: DESC, fields: [frontmatter___date] },
+          limit: 3
+        ) {
+          edges {
+            node {
+              excerpt(pruneLength: 250)
+              id
+              frontmatter {
+                title
+                date(formatString: "ll")
+                path
+                lang
+              }
+            }
+          }
+        }
+      }
+    `
+  )
+
+  const writings = formatWritings(data.allMarkdownRemark.edges)
 
   return (
     <React.Fragment>
