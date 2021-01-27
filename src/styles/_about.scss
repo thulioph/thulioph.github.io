@@ -1,0 +1,78 @@
+// About
+// component and page
+
+.about {
+  figure {
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    overflow: hidden;
+    border: 1px solid $gray-darker;
+    margin: 0 auto 20px auto;
+    
+    @media (min-width: $medium-devices) {
+      margin-bottom: 80px;
+    }
+    
+    img {
+      max-width: 100%;
+
+      transition: filter .25s linear 0s;
+
+      &:hover {
+        filter: grayscale(1);
+      }
+    }
+  }
+  
+  p {
+    color: $black;
+    font-family: $ff-secondary;
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 10px;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, .4);
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $medium-devices) {
+      font-size: 36px;
+      letter-spacing: 1px;
+    }
+  }
+
+  a {
+    text-decoration: underline;
+    color: $black;
+    font-weight: 400;
+  }
+}
+
+.extra-social {
+  margin: 60px 0;
+
+  li {
+    display: flex;
+    flex-flow: column;
+    margin-bottom: 20px;
+  }
+
+  a {
+    display: inherit;
+    align-items: center;
+  }
+
+  p {
+    color: $black;
+  }
+
+  .icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    overflow: hidden;
+    margin: 0 20px 0 0;
+  }
+}

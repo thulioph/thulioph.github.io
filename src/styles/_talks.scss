@@ -1,0 +1,77 @@
+.talks, .writings, .projects {
+  .wrapper {
+    height: calc(100vh - 180px);
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    
+    @media (min-width: $medium-devices) {
+      height: calc(100vh - 180px);
+    }
+  }
+  
+  .see-all {
+    color: $black;
+    text-decoration: underline;
+    font-size: 18px;
+  }
+}
+
+.talks-list, .writings-list {
+  width: 100%;
+  
+  @media (min-width: $medium-devices) {
+    width: 60%;
+    margin: 0 auto;
+  }
+ 
+  li {
+    list-style-type: none;
+    border-bottom: 1px solid $gray-darker;
+    padding: 15px 0;
+    margin-bottom: 15px;
+    
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+  
+  a {
+    color: $black;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-flow: column;
+    
+    @media (min-width: $medium-devices) {
+      flex-flow: row;
+      font-size: 28px;
+    }
+  }
+  
+  p {
+    display: inline;
+    text-align: left;
+  }
+  
+  span {
+    font-size: 18px;
+    font-weight: 300;
+    text-align: right;
+
+    &.post-lang {
+      background-color: $gray-darker;
+      padding: 5px;
+      font-size: 12px;
+      display: inline-block;
+      margin-left: 20px;
+      vertical-align: middle;
+    }
+  }
+}
