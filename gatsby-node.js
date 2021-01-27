@@ -29,31 +29,6 @@ const getTalksData = () => {
   return talks
 }
 
-const getWritingsData = () => {
-  const writings = [
-    {
-      id: "1",
-      title: "agile front-end techniques",
-      pubDate: "Oct 16, 2019",
-      link: "https://labcodes.com.br/blog/pt/articles/3-tecnicas-fundamentais-da-metodologia-agil-no-front-end.html",
-    },
-    {
-      id: "2",
-      title: "recompose",
-      pubDate: "Mar 19, 2019",
-      link: "https://labcodes.com.br/blog/articles/functional-components-with-recompose.html",
-    },
-    {
-      id: "3",
-      title: "web security 101",
-      pubDate: "Aug 3, 2017",
-      link: "https://labcodes.com.br/blog/pt/articles/seguranca-de-aplicacoes-web-101.html",
-    },
-  ]
-
-  return writings
-}
-
 const getProjects = () => {
   const projects = [
     {
@@ -93,7 +68,6 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
 
   const myData = {
     talks: getTalksData(),
-    writings: getWritingsData(),
     projects: getProjects()
   }
 

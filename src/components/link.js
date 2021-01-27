@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Link = ({ href, title, pubDate, target = '_blank', lang = null }) => {
+const Link = ({ href, title, pubDate, target = '_self', lang = null }) => {
   return (
     <React.Fragment>
       <li>
