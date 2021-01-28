@@ -41,13 +41,17 @@ $ npm run serve
 
 ### deploy
 
-To **generate and deploy a new static version**, run:
+#### from local environment
+
+In case you want to deploy your local code, we're using [gh-pages](https://github.com/tschaub/gh-pages#command-line-utility), and you need to run:
 
 ```bash
 $ npm run deploy
 ```
 
-Feel free to take a look at [gh-pages package](https://github.com/tschaub/gh-pages#command-line-utility) to get more details about it.
+#### from github actions
+
+Once your changes were merged into `master` branch, it will automatically trigger [github-pages-action](https://github.com/marketplace/actions/github-pages-action) and after a few minutes it will be available.
 
 
 ## License
