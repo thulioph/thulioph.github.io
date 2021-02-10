@@ -1,5 +1,12 @@
 // Blog and Blog Posts
 
+%common-bloquote {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  font-size: 60px;
+}
+
 .blog-post-container {
   background-color: $white;
   width: 100%;
@@ -25,8 +32,15 @@
 
   a {
     color: $black;
-    text-decoration: underline;
     word-break: break-all;
+    padding: 2px 5px;
+    border-bottom: 4px solid $gray-darker;
+
+    transition: background .25s linear 0s;
+
+    &:hover {
+      background-color: $gray-darker;
+    }
   }
 
   p {
@@ -77,11 +91,31 @@
   blockquote {
     background: $gray-darker;
     display: block;
-    margin-left: 0;
-    padding: 20px 10px 20px 50px;
+    padding: 20px 30px;
+    position: relative;
+    text-align: center;
+    margin: 60px auto;
+    width: 60%;
+
+    &::before {
+      content: "“";
+      left: 0;
+      top: 0;
+      @extend %common-bloquote;
+    }
+
+    &::after {
+      content: "”";
+      right: 0;
+      bottom: 0;
+      @extend %common-bloquote;
+    }
 
     p {
       margin-bottom: 0;
+      word-spacing: 5px;
+      font-size: 26px;
+      font-family: $ff-secondary;
     }
   }
 
@@ -130,5 +164,17 @@
   .title {
     font-weight: 800;
     margin-bottom: 0;
+  }
+}
+
+.gatsby-image-wrapper {
+  height: auto;
+
+  @media (min-width: $medium-devices) {
+    height: 500px;
+  }
+
+  @media (max-width: $xlarge-devices) {
+    height: auto;
   }
 }

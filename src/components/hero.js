@@ -1,8 +1,26 @@
 import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
 
 import withGrid from './withGrid'
 
 const Hero = () => {
+  const { site } = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            jobTitle
+            author
+            currentCompany {
+              label
+              website
+            }
+          }
+        }
+      }
+    `
+  )
+
   return (
     <React.Fragment>
       <h2>
@@ -12,19 +30,19 @@ const Hero = () => {
           <span>Thulio Philipe</span>, a.k.a
         </div> {``}
 
-        <span>thulioph</span>.
+        <span>{site.siteMetadata.author}</span>.
       </h2>
 
       <h4>
-        Consultant Developer at {``}
+        {site.siteMetadata.jobTitle} at {``}
 
         <span>
           <a
-            href="https://www.thoughtworks.com/"
+            href={site.siteMetadata.currentCompany.website}
             rel="noopener noreferrer"
             target="_blank"
           >
-            ThoughtWorks
+            {site.siteMetadata.currentCompany.label}
           </a>
         </span>
       </h4>
