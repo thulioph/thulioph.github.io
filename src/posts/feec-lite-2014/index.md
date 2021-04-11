@@ -1,7 +1,7 @@
 ---
-path: "/writings/pt/feec-lite"
+path: "/writings/pt/feec-lite-2014"
 date: 2014-11-10T04:20:00
-title: "Feec Lite"
+title: "Feec Lite 2014"
 imageSlug: "posts/feec-lite-2014.jpg"
 lang: 'pt'
 ---
