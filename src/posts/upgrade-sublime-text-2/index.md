@@ -65,7 +65,10 @@ O painel lateral do sublime, não destaca folders dos arquivos; Com esta opção
 Novamente.. Quando seu código está grande demais, você pode se perder na identação, se ajude inserindo uma cor na linha onde se encontra a identação;
 
 ```js
-"indent_guide_options”: ['draw_normal', 'draw_active']
+"indent_guide_options": [
+    "draw_normal",
+    "draw_active"
+]
 ```
 
 ## Salve sem querer
@@ -105,7 +108,16 @@ Acho ele útil por questão de organização e alinhamento, habilitando esta op�
 Na pasta do seu projeto existem uns arquivos que você não quer visualiza-los no sublime, passe a extensão dos arquivos como um array e acabe com isso. Cola esse código lá e volte ao trabalho!
 
 ```js
-"file_exclude_patterns": ["*.lib",".DS_Store","*~","*.db","*.eot","*.ttf","*.woff","*.tmp"]
+"file_exclude_patterns": [
+    "*.lib",
+    ".DS_Store",
+    "*~",
+    "*.db",
+    "*.eot",
+    "*.ttf",
+    "*.woff",
+    "*.tmp"
+]
 ```
 
 ## Ignorar Pastas
@@ -113,7 +125,10 @@ Na pasta do seu projeto existem uns arquivos que você não quer visualiza-los n
 Não basta ignorar os arquivos, tem um pasta que você não quer visualiza-la no projeto?
 
 ```js
-"folder_exclude_patterns": ["arquivos","$RECYCLE.BIN"]
+"folder_exclude_patterns": [
+    "arquivos",
+    "$RECYCLE.BIN"
+]
 ```
 
 *****

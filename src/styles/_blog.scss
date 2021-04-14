@@ -35,6 +35,7 @@
     word-break: break-all;
     padding: 2px 5px;
     border-bottom: 4px solid $gray-darker;
+    line-height: 30px;
 
     transition: background .25s linear 0s;
 
@@ -136,7 +137,11 @@
 
 .blog-post-actions {
   display: flex;
-  flex-flow: row;
+  flex-flow: column;
+
+  @media (min-width: $medium-devices) {
+    flex-flow: row;
+  }
   
   .actions-link {
     background-color: $gray-darker;
@@ -144,14 +149,20 @@
     padding: 24px;
     text-decoration: none;
     border-radius: 8px;
-    margin-right: 24px;
     border: 1px solid $gray;
+
+    margin-bottom: 20px;
 
     transition: background-color .25s linear 0s;
 
     &:hover {
       background-color: $gray;
       border-color: $gray-darker;
+    }
+
+    @media (min-width: $medium-devices) {
+      margin-bottom: 0;
+      margin-right: 24px;
     }
   }
 

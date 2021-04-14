@@ -125,8 +125,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       component: blogPostTemplate,
       context: { // additional data can be passed via context
         pathSlug: path,
-        prev: index === 0 ? null : posts[index - 1].node,
-        next: index === (posts.length - 1) ? null : posts[index + 1].node,
+        next: index === 0 ? null : posts[index - 1].node,
+        prev: index === (posts.length - 1) ? null : posts[index + 1].node,
       },
     })
   })
