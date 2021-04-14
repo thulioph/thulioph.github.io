@@ -1,6 +1,6 @@
 module.exports = {
-  title: "Thulio Philipe, Software Developer",
-  jobTitle: "Software Developer",
+  title: "Thulio Philipe, Senior Software Developer",
+  jobTitle: "Senior Software Developer",
   currentCompany: {
     label: "ThoughtWorks",
     website: "https://www.thoughtworks.com/"
