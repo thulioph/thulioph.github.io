@@ -19,7 +19,7 @@
   }
 }
 
-.talks-list, .writings-list {
+.talks-list, .writings-list, .projects-list {
   width: 100%;
   
   @media (min-width: $medium-devices) {
@@ -79,4 +79,29 @@
       }
     }
   }
+}
+
+.projects-list a {
+  flex-flow: column;
+
+  &:hover {
+    span {
+      background: $black;
+      color: $white;
+    }
+
+    p {
+      font-weight: 400;
+    }
+  }
+}
+
+.projects-list h3 {
+  margin-bottom: 20px;
+}
+
+.projects-list p {
+  display: block;
+  font-size: 16px;
+  font-weight: 100;
 }
