@@ -1,50 +1,34 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 import withGrid from './withGrid'
 import Loading from './loading'
-import { useProjects } from '../hooks/use-projects'
-import { getTechIcon } from './getTechIcon'
+import Link from './link'
+
+import { getUserRepos } from '../hooks/use-projects'
+import { formatDate } from '../formatters'
 
 const Projects = () => {
-  const { projects } = useProjects()
+  const [projects, setProjects] = useState([])
+
+	useEffect(() => {
+		async function getRepos() {
+			const data = await getUserRepos('thulioph')
+			setProjects(data.slice(0, 3))
+		}
+
+		if (!projects || !projects.length) {
+			getRepos()
+		}
+	}, [projects, setProjects])
 
   return (
     <React.Fragment>
       <Loading when={!projects || !projects.length}>
-        {projects &&
-          projects.map(
-            ({ id, title, description, link, mainImage, techStack }) => (
-              <aside className="project-item" key={id}>
-                <h5 className="project-title">{title}</h5>
-                <a
-                  href={link}
-                  title={title}
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  view site
-                </a>
-
-                <div className="project-image">
-                  <figure>
-                    <img src={mainImage} alt={title} />
-                  </figure>
-                </div>
-
-                <div className="stack-list">
-                  <ul>
-                    {techStack.map((tech, idx) => (
-                      <li key={idx}>
-                        <img src={getTechIcon(tech)} alt={tech} title={tech} />
-                      </li>
-                    ))}
-                  </ul>
-
-                  <p>{description}</p>
-                </div>
-              </aside>
-            )
-          )}
+        <ul className="writings-list">
+          {projects && projects.map(({ id, html_url, name, updated_at }) => (
+            <Link key={id} href={html_url} title={name} pubDate={formatDate(updated_at)} target="_blank" />
+          ))}
+        </ul>
       </Loading>
     </React.Fragment>
   )
@@ -53,5 +37,22 @@ const Projects = () => {
 export default withGrid(Projects, {
   id: 'projects',
   title: 'Projects',
-  seeAll: 'https://github.com/thulioph'
+  seeAll: 'projects'
 })
+
+export const Project = (props) => {
+  const { href, title, language, description } = props
+
+  return (
+    <React.Fragment>
+      <li>
+        <a href={href} title={title} rel="noopener noreferrer" target="_blank">
+          <h3>
+            {title} {language && <span className="post-lang">{language}</span>}
+          </h3>
+          <p>{description}</p>
+        </a>
+      </li>
+    </React.Fragment>
+  )
+}
