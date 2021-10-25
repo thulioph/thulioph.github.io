@@ -2,6 +2,8 @@
 // component and page
 
 .about {
+  text-align: center;
+
   figure {
     width: 120px;
     height: 120px;
@@ -44,9 +46,15 @@
   }
 
   a {
-    text-decoration: underline;
     color: $black;
     font-weight: 400;
+    margin-top: 80px;
+    display: inline-block;
+    font-size: 18px;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 
@@ -74,5 +82,47 @@
     border-radius: 100%;
     overflow: hidden;
     margin: 0 20px 0 0;
+  }
+}
+
+.description-list {
+  list-style-type: disc;
+  padding-left: 60px;
+}
+
+.presentation {
+  font-family: $ff-default;
+  font-size: 70px;
+  margin-bottom: 40px;
+
+  a {
+    color: $black;
+    text-decoration: underline;
+  }
+}
+
+.text {
+  @extend .description-text;
+  font-size: 32px !important;
+}
+
+.topic {
+  border-bottom: 1px solid $gray-darker;
+  font-size: 28px;
+  text-transform: uppercase;
+  font-weight: 100;
+  letter-spacing: 6px;
+}
+
+.box {
+  margin-bottom: 80px;
+}
+
+.about-list {
+  @extend .writings-list;
+  width: 100% !important;
+
+  li {
+    border-bottom: none !important;
   }
 }
