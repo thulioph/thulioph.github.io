@@ -18,8 +18,6 @@ const About = () => {
 
         <section className="page-container">
           <h1 className="presentation">
-            Hi!
-            <br />
             I'm {name}, {jobTitle}, based in <a href={location.link} rel="noopener noreferrer" target="_blank">{location.city}, {location.country}</a>.
             Currently, working at <a rel="noopener noreferrer" target="_blank" href={currentCompany.website}>{currentCompany.label}</a>,  {headline}.
           </h1>
