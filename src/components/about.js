@@ -4,7 +4,7 @@ import withGrid from './withGrid'
 import { useSiteMetadata } from '../hooks/use-site-metadata'
 
 const About = () => {
-  const { image, title, description } = useSiteMetadata()
+  const { image, title, bio } = useSiteMetadata()
 
   return (
     <React.Fragment>
@@ -12,7 +12,9 @@ const About = () => {
         <img src={image} alt={title} />
       </figure>
 
-      <p dangerouslySetInnerHTML={{ __html: description }} />
+      <p dangerouslySetInnerHTML={{ __html: bio.summary }} />
+
+      <a href="/about">more about me</a>
     </React.Fragment>
   )
 }

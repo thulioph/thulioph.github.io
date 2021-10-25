@@ -10,6 +10,18 @@ export const useSiteMetadata = () => {
       query SiteMetaData {
         site {
           siteMetadata {
+            name
+            jobTitle
+            location {
+              city
+              country
+              link
+            }
+            headline
+            currentCompany {
+              label
+              website
+            }
             title
             description
             image
@@ -17,18 +29,27 @@ export const useSiteMetadata = () => {
             github
             linkedin
             extraSocial {
-              openProcessing
               stackOverflow
-              soundCloud
-              unsplash
-              wakatime
-              lastFm
-              genius
-              goodReads
-              strava
               codepen
               codeSandBox
               medium
+            }
+            bio {
+              summary
+              experience
+              toolbox
+              longTerm
+            }
+            experience {
+              title
+              period
+              website
+            }
+            education {
+              title
+              period
+              field
+              website
             }
           }
         }
