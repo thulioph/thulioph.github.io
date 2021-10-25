@@ -30,7 +30,7 @@
   p {
     color: $black;
     font-family: $ff-secondary;
-    font-size: 26px;
+    font-size: 20px;
     text-align: center;
     margin-bottom: 10px;
     text-shadow: 0 1px 0 rgba(0, 0, 0, .4);
@@ -48,12 +48,18 @@
   a {
     color: $black;
     font-weight: 400;
-    margin-top: 80px;
+    margin-top: 20px;
     display: inline-block;
     font-size: 18px;
+    text-decoration: underline;
 
     &:hover {
       text-decoration: underline;
+    }
+
+    @media (min-width: $medium-devices) {
+      margin-top: 80px;
+      text-decoration: none;
     }
   }
 }
@@ -92,8 +98,12 @@
 
 .presentation {
   font-family: $ff-default;
-  font-size: 70px;
+  font-size: 30px;
   margin-bottom: 40px;
+
+  @media (min-width: $medium-devices) {
+    font-size: 70px;
+  }
 
   a {
     color: $black;
@@ -103,15 +113,26 @@
 
 .text {
   @extend .description-text;
-  font-size: 32px !important;
+
+  font-size: 22px !important;
+  font-weight: 100;
+  font-family: $ff-default !important;
+
+  @media (min-width: $medium-devices) {
+    font-size: 30px !important;
+  }
 }
 
 .topic {
   border-bottom: 1px solid $gray-darker;
-  font-size: 28px;
+  font-size: 20px;
   text-transform: uppercase;
   font-weight: 100;
   letter-spacing: 6px;
+
+  @media (min-width: $medium-devices) {
+    font-size: 28px;
+  }
 }
 
 .box {
