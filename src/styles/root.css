@@ -1,0 +1,17 @@
+:root {
+	--black: #000000;
+	--white: #FFFFFF;
+	--gray: #FAFBFC;
+	--gray-darker: #EAEAEA;
+
+	--default-mg: 20px;
+	--default-pd: 20px;
+
+	--ff-default: 'Roboto', sans-serif;
+	--ff-secondary: 'Shadows Into Light Two', cursive;
+
+	--small-devices: 576px;
+	--medium-devices: 768px;
+	--large-devices: 992px;
+	--xlarge-devices: 1200px;
+}

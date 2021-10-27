@@ -7,3 +7,4 @@
 // You can delete this file if you're not using it
 
 require("./src/styles/prism-theme.css")
+require("./src/styles/root.css")

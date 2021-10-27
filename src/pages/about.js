@@ -7,6 +7,7 @@ import Layout from '../templates/page'
 import { useSiteMetadata } from '../hooks/use-site-metadata'
 
 import image from '../images/about/myself.jpg'
+import { Presentation, Box, TitleSection, Paragraph  } from '../components/shared'
 
 const About = () => {
   const { title, bio, extraSocial, name, jobTitle, location, currentCompany, headline, experience, education } = useSiteMetadata()
@@ -17,42 +18,39 @@ const About = () => {
         <SEO title="About" />
 
         <section className="page-container">
-          <h1 className="presentation">
+          <Presentation>
             I'm {name}, {jobTitle}, based in <a href={location.link} rel="noopener noreferrer" target="_blank">{location.city}, {location.country}</a>.
             Currently, working at <a rel="noopener noreferrer" target="_blank" href={currentCompany.website}>{currentCompany.label}</a>,  {headline}.
-          </h1>
+          </Presentation>
 
           <figure>
             <img src={image} alt={title} />
           </figure>
 
-          <div className="box">
-            <h2 className="topic">Introduction</h2>
+          <Box>
+            <TitleSection>Introduction</TitleSection>
 
-            <p className="text">{bio.summary}</p>
-            <br />
-            <br />
+            <Paragraph>{bio.summary}</Paragraph>
+            <br /><br />
 
-            <p className="text">{bio.experience}</p>
-            <br />
-            <br />
+            <Paragraph>{bio.experience}</Paragraph>
+            <br /><br />
 
-            <p className="text">My toolbox includes:</p>
+            <Paragraph>My toolbox includes:</Paragraph>
             <ul className="description-list">
               {bio.toolbox.map(el => (
                 <li key={el}>
-                  <p className="text">{el}</p>
+                  <Paragraph>{el}</Paragraph>
                 </li>
               ))}
             </ul>
-            <br />
-            <br />
+            <br /><br />
 
-            <p className="text">{bio.longTerm}</p>
-          </div>
+            <Paragraph>{bio.longTerm}</Paragraph>
+          </Box>
 
-          <div className="box">
-            <h2 className="topic">Experience</h2>
+          <Box>
+            <TitleSection>Experience</TitleSection>
 
             <ul className="about-list">
               {experience.map((el) => (
@@ -64,10 +62,10 @@ const About = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </Box>
 
-          <div className="box">
-            <h2 className="topic">Education</h2>
+          <Box>
+            <TitleSection>Education</TitleSection>
 
             <ul className="about-list">
               {education.map((el) => (
@@ -79,10 +77,10 @@ const About = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </Box>
 
-          <div className="box">
-            <h2 className="topic">Social</h2>
+          <Box>
+            <TitleSection>Social</TitleSection>
 
             <ul className="extra-social">
               {Object.keys(extraSocial).map(k => (
@@ -98,7 +96,7 @@ const About = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </Box>
         </section>
       </Layout>
     </React.Fragment>

@@ -96,49 +96,6 @@
   padding-left: 60px;
 }
 
-.presentation {
-  font-family: $ff-default;
-  font-size: 30px;
-  margin-bottom: 40px;
-
-  @media (min-width: $medium-devices) {
-    font-size: 70px;
-  }
-
-  a {
-    color: $black;
-    text-decoration: underline;
-  }
-}
-
-.text {
-  @extend .description-text;
-
-  font-size: 22px !important;
-  font-weight: 100;
-  font-family: $ff-default !important;
-
-  @media (min-width: $medium-devices) {
-    font-size: 30px !important;
-  }
-}
-
-.topic {
-  border-bottom: 1px solid $gray-darker;
-  font-size: 20px;
-  text-transform: uppercase;
-  font-weight: 100;
-  letter-spacing: 6px;
-
-  @media (min-width: $medium-devices) {
-    font-size: 28px;
-  }
-}
-
-.box {
-  margin-bottom: 80px;
-}
-
 .about-list {
   @extend .writings-list;
   width: 100% !important;
