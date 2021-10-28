@@ -97,10 +97,6 @@
 }
 
 .about-list {
-  @extend .writings-list;
-  width: 100% !important;
-
-  li {
-    border-bottom: none !important;
-  }
+  width: 100%;
+  margin: 0 auto;
 }

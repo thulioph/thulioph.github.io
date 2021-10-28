@@ -1,16 +1,28 @@
 import React from "react"
 
-import SEO from "../components/seo"
-import { getExtraSocialIcon } from '../components/getTechIcon'
-
 import Layout from '../templates/page'
 import { useSiteMetadata } from '../hooks/use-site-metadata'
 
+import SEO from "../components/seo"
+import { Presentation, Box, TitleSection, Paragraph, ProfileImage  } from '../components/shared'
+import ListBlockLink from "../components/ListBlockLink"
+import SocialMediaLink from "../components/SocialMediaLink"
+
 import image from '../images/about/myself.jpg'
-import { Presentation, Box, TitleSection, Paragraph  } from '../components/shared'
 
 const About = () => {
-  const { title, bio, extraSocial, name, jobTitle, location, currentCompany, headline, experience, education } = useSiteMetadata()
+  const {
+    title,
+    bio,
+    extraSocial,
+    name,
+    jobTitle,
+    location,
+    currentCompany,
+    headline,
+    experience,
+    education
+  } = useSiteMetadata()
 
   return (
     <React.Fragment>
@@ -23,9 +35,9 @@ const About = () => {
             Currently, working at <a rel="noopener noreferrer" target="_blank" href={currentCompany.website}>{currentCompany.label}</a>,  {headline}.
           </Presentation>
 
-          <figure>
+          <ProfileImage>
             <img src={image} alt={title} />
-          </figure>
+          </ProfileImage>
 
           <Box>
             <TitleSection>Introduction</TitleSection>
@@ -37,6 +49,7 @@ const About = () => {
             <br /><br />
 
             <Paragraph>My toolbox includes:</Paragraph>
+
             <ul className="description-list">
               {bio.toolbox.map(el => (
                 <li key={el}>
@@ -53,13 +66,8 @@ const About = () => {
             <TitleSection>Experience</TitleSection>
 
             <ul className="about-list">
-              {experience.map((el) => (
-                <li key={el.title}>
-                  <a href={el.website} title={el.title} rel="noopener noreferrer" target={"_blank"}>
-                    <p>{el.title}</p>
-                    <span>{el.period}</span>
-                  </a>
-                </li>
+              {experience.map(({ title, website, period }) => (
+                <ListBlockLink key={title} title={title} link={website} period={period} />
               ))}
             </ul>
           </Box>
@@ -68,13 +76,8 @@ const About = () => {
             <TitleSection>Education</TitleSection>
 
             <ul className="about-list">
-              {education.map((el) => (
-                <li key={el.title}>
-                  <a href={el.website} title={el.title} rel="noopener noreferrer" target={"_blank"}>
-                    <p>{el.title} <span className="post-lang">{el.field}</span></p>
-                    <span>{el.period}</span>
-                  </a>
-                </li>
+              {education.map(({ title, website, field, period }) => (
+                <ListBlockLink key={title} title={title} link={website} period={period} field={field} />
               ))}
             </ul>
           </Box>
@@ -84,16 +87,7 @@ const About = () => {
 
             <ul className="extra-social">
               {Object.keys(extraSocial).map(k => (
-                <li key={k}>
-                  <a
-                    href={extraSocial[k]}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img className="icon" src={getExtraSocialIcon(k)} alt={k} />
-                    <p>{k}</p>
-                  </a>
-                </li>
+                <SocialMediaLink key={k} link={extraSocial[k]} title={k} />
               ))}
             </ul>
           </Box>
