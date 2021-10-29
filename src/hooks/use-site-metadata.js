@@ -29,10 +29,16 @@ export const useSiteMetadata = () => {
             github
             linkedin
             extraSocial {
+              linkedin
+              github
+              twitter
               stackOverflow
               codepen
               codeSandBox
               medium
+              lastFm
+              unsplash
+              wakatime
             }
             bio {
               summary

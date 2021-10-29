@@ -5,18 +5,16 @@ import javascript from "../images/tech-stack/javascript.svg"
 import nodejs from "../images/tech-stack/nodejs.svg"
 import typescript from "../images/tech-stack/typescript.svg"
 
-import openProcessing from '../images/extra-social/openProcessing.png'
 import stackOverflow from "../images/extra-social/stackOverflow.svg"
-import soundCloud from "../images/extra-social/soundCloud.png"
 import unsplash from "../images/extra-social/unsplash.png"
-import wakatime from "../images/extra-social/wakatime.svg"
+import wakatime from "../images/extra-social/wakatime.png"
 import lastFm from "../images/extra-social/lastFm.png"
-import genius from "../images/extra-social/genius.jpg"
-import strava from "../images/extra-social/strava.svg"
-import goodReads from "../images/extra-social/goodReads.png"
 import codepen from "../images/extra-social/codepen.png"
 import medium from "../images/extra-social/medium.png"
 import codeSandBox from "../images/extra-social/codeSandBox.png"
+import linkedin from "../images/extra-social/linkedin.png"
+import github from "../images/extra-social/github.png"
+import twitter from "../images/extra-social/twitter.png"
 
 export const getTechIcon = (tech) => {
   const stackMapper = {
@@ -33,18 +31,16 @@ export const getTechIcon = (tech) => {
 
 export const getExtraSocialIcon = (social )=> {
   const socialMapper = {
-    'openProcessing': openProcessing,
     'stackOverflow': stackOverflow,
-    'soundCloud': soundCloud,
     'unsplash': unsplash,
     'wakatime': wakatime,
     'lastFm': lastFm,
-    'genius': genius,
-    'strava': strava,
-    'goodReads': goodReads,
     'codepen': codepen,
     'medium': medium,
-    'codeSandBox': codeSandBox
+    'codeSandBox': codeSandBox,
+    'linkedin': linkedin,
+    'github': github,
+    'twitter': twitter,
   }
 
   return socialMapper[social]
