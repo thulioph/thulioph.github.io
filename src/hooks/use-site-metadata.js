@@ -25,9 +25,6 @@ export const useSiteMetadata = () => {
             title
             description
             image
-            twitter
-            github
-            linkedin
             extraSocial {
               linkedin
               github
