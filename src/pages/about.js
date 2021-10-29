@@ -39,6 +39,7 @@ const About = () => {
             <img src={image} alt={title} />
           </ProfileImage>
 
+          {/* Introduction */}
           <Box>
             <TitleSection>Introduction</TitleSection>
 
@@ -62,6 +63,7 @@ const About = () => {
             <Paragraph>{bio.longTerm}</Paragraph>
           </Box>
 
+          {/* Experience */}
           <Box>
             <TitleSection>Experience</TitleSection>
 
@@ -72,6 +74,7 @@ const About = () => {
             </ul>
           </Box>
 
+          {/* Education */}
           <Box>
             <TitleSection>Education</TitleSection>
 
@@ -82,6 +85,7 @@ const About = () => {
             </ul>
           </Box>
 
+          {/* Social */}
           <Box>
             <TitleSection>Social</TitleSection>
 
