@@ -18,22 +18,17 @@ module.exports = {
   image:
     "https://avatars2.githubusercontent.com/u/2343288?s=460&u=34b95449c5414b41560dd5b41c97cf414bad8c8c&v=4",
   author: "thulioph",
-  twitter: `@thulioph_`,
-  github: `thulioph`,
-  linkedin: `thulioph`,
   extraSocial: {
-    openProcessing: "https://www.openprocessing.org/user/169834",
     stackOverflow: "https://stackoverflow.com/users/4008711/thulioph",
-    soundCloud: "https://soundcloud.com/thulio-ph",
     unsplash: "https://unsplash.com/@thulioph",
     wakatime: "https://wakatime.com/@thulioph",
     lastFm: "https://www.last.fm/pt/user/Thulioph",
-    genius: "https://genius.com/thulioph",
-    goodReads: "https://goodreads.com/thulioph",
-    strava: "https://www.strava.com/athletes/13011724",
     codepen: "https://codepen.io/thulioph",
     codeSandBox: "https://codesandbox.io/u/thulioph",
-    medium: "https://medium.com/@thulioph_"
+    medium: "https://medium.com/@thulioph_",
+    linkedin: "https://linkedin.com/in/thulioph",
+    github: "https://github.com/thulioph",
+    twitter: "https://twitter.com/@thulioph_",
   },
   bio: {
     summary: 'I have been working with the web for one decade, acting through different layers and processes of software development. I started my journey as a designer but I quickly realized that the front-end was my passion. I like to work between the design and engineering teams, focusing on quality, security, performance, and usability. I am a multidisciplinary professional and creative who believes in continuous improvement and is passionate about challenging myself to leverage all expectations.',
