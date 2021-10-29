@@ -38,9 +38,9 @@ export const TitleSection = styled.h2`
 `;
 
 export const Paragraph = styled.p`
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 100;
-  line-height: 44px;
+  line-height: 34px;
   font-family: 'Roboto', sans-serif;
   color: ${props => props.theme.colors.fonts};
 
@@ -51,7 +51,8 @@ export const Paragraph = styled.p`
   }
 
   @media (min-width: 768px) {
-    font-size: 30px;
+    font-size: 24px;
+    line-height: 44px;
   }
 `
 

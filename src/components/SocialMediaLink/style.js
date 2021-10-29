@@ -13,6 +13,7 @@ export const SocialListLink = styled.a`
 
 export const SocialListText = styled.p`
 	color: ${props => props.theme.colors.fonts} !important;
+	text-transform: capitalize;
 `
 
 export const SocialListIcon = styled.img`
