@@ -18,7 +18,7 @@ const Footer = () => {
                 <p>Sharing knowledge.</p>
               </Link>
 
-              <Link to="/#projects">
+              <Link to="/projects">
                 <h4>Projects</h4>
                 <p>Open-Source experiments.</p>
               </Link>
