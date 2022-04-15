@@ -14,3 +14,50 @@ a {
 * {
   box-sizing: border-box;
 }
+
+/* Page Transition Animation */
+.page {
+  animation: fadeIn 0.5s both;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.help-cursor {
+  cursor: help;
+}
+
+/* Header */
+.global-header {
+  padding: 20px;
+}
+
+.global-header ul {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  margin: 0;
+}
+
+.global-header li {
+  margin-right: 40px;
+  list-style-type: none;
+}
+
+.global-header a {
+  padding: 6px 12px;
+  display: block;
+}
+
+.global-header li.active a,
+.global-header a:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
