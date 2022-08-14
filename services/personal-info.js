@@ -51,8 +51,7 @@ const professionalInfo = {
       website: "https://www.thoughtworks.com/",
       description: `
         I worked as a full-stack web developer for a giant Canadian company from the Telecommunication industry. Working on different layers, from UI to server, since product selection, cart, and then checkout. I worked on remote teams with 3 to 20 people.
-        <br /> <br />
-
+        <br />         
         I acted as a tech anchor, helping the tech lead with things regarding the team, decision making, analysis, mapping and distribution of activities to be done, unblocking impediments, refining processes, and collaborating across different teams.
       `,
       achievements: [
@@ -83,7 +82,7 @@ const professionalInfo = {
       website: "https://labcodes.com.br/",
       description: `
         I worked on a diverse domain of projects, mostly focused on the front-end, close to the design team, creating design systems, researching with the customer, defining good practices, creating boilerplates, using different resources to improve the experience, performance, and accessibility of the products. I worked on teams with 5 to 20 people.
-        <br /> <br />
+        <br />
 
         I had the opportunity to share my knowledge and experience through articles and talks in meetups, for my coworkers, and in different cities around my country.
       `,
@@ -112,7 +111,7 @@ const professionalInfo = {
       website: "https://www.epitrack.tech/",
       description: `
         I worked as a front-end engineer, developing a platform for vigilance surveillance, building dashboards for monitoring, and systems to help the detection of diseases using digital tools. I worked on a remote team with 6 to 15 people.
-        <br /> <br />
+        <br />
 
         In addition to that, I had the opportunity to be part of a startup since the beginning, working close to doctors, researchers, biologists, teachers, and so on. From the technical perspective, I also developed strong abilities on maps, location, real-time applications, internationalization, and mobile devices, working on a solution to be used by the population from Brazil, the USA, Canada, and Porto Rico.
       `,
@@ -142,7 +141,7 @@ const professionalInfo = {
       website: "https://guava.software/",
       description: `
         I worked on projects in different domains, always focused on the front-end and close to the design team. I was responsible for organizing the codebase, settings conventions, patterns, good practices for HTML and CSS when possible using animations to improve the experience of the products we were building. I worked on a team with 6 to 10 people.
-        <br /> <br />
+        <br />
 
         I was introduced to a completely different way to work and visualize software, in addition to that it was my first contact with the remote culture, teams from different regions with different languages, and build software on a large scale.
       `,
@@ -155,7 +154,7 @@ const professionalInfo = {
       website: "https://www.boldcomunicacao.com.br/",
       description: `
         I worked on a variety of projects for the web, since games for social networks, landing pages, animations using flash, dashboards, and complex interfaces, always focused on the front-end layer. I acted close to the design team, aligning the possibilities given the technical limitations and the end date of the project. I worked on a team with 6 to 15 people.
-        <br /> <br />
+        <br />
 
         I became a more dynamic professional, aligning what the customer needs with technology, applying good practices and concepts like progressive enhancement and responsive design on a daily basis.
       `,

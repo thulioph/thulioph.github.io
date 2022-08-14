@@ -1,38 +1,30 @@
 import React from "react";
 import Image from "next/image";
 
+import AppNav from "@/components/navbar";
 import AppHeader from "@/components/header";
-import Introduction from "@/components/introduction";
 
 import { getAbout } from "@/services/index";
 import image from "@/public/myself.jpeg";
 
 const About = ({ about }) => {
-  const { personalInfo, professionalInfo, educationInfo, socialInfo } = about;
+  const { professionalInfo, educationInfo, socialInfo } = about;
 
   return (
     <React.Fragment>
       <AppHeader>About</AppHeader>
+      <AppNav />
 
-      <main className="page">
-        <section>
-          <h1>About Page!</h1>
-        </section>
-
+      <div className="page about-page">
         <section className="personal">
-          <Introduction
-            name={personalInfo.name}
-            jobTitle={personalInfo.jobTitle}
-            headline={personalInfo.headline}
-            location={personalInfo.location}
-            currentCompany={professionalInfo.currentCompany}
-          />
-
           <Image src={image} priority={true} alt="Myself" layout="responsive" />
         </section>
 
         <section className="professional">
-          <h2>Introduction</h2>
+          <a id="introduction" href="#introduction">
+            <h2>Introduction</h2>
+          </a>
+
           <p>{professionalInfo.bio.summary}</p>
           <p>{professionalInfo.bio.experience}</p>
 
@@ -47,13 +39,15 @@ const About = ({ about }) => {
         </section>
 
         <section className="experience">
-          <h2>Experience</h2>
+          <a id="experience" href="#experience">
+            <h2>experience</h2>
+          </a>
 
-          <ul>
+          <ul className="global-list">
             {professionalInfo.experience.map((el) => (
               <li key={el.title}>
                 <a href={el.website} target="_blank" title={el.title}>
-                  {el.title} | {el.period}
+                  {el.title} <span>{el.period}</span>
                 </a>
 
                 <p dangerouslySetInnerHTML={{ __html: el.description }} />
@@ -73,7 +67,9 @@ const About = ({ about }) => {
         </section>
 
         <section className="education">
-          <h2>Education</h2>
+          <a id="education" href="#education">
+            <h2>education</h2>
+          </a>
 
           <ul>
             {educationInfo.education.map((el) => (
@@ -87,7 +83,9 @@ const About = ({ about }) => {
         </section>
 
         <section className="social">
-          <h2>Social</h2>
+          <a id="social" href="#social">
+            <h2>social</h2>
+          </a>
 
           <ul>
             {socialInfo.extraSocial.map((el) => (
@@ -99,15 +97,7 @@ const About = ({ about }) => {
             ))}
           </ul>
         </section>
-
-        <section className="goals">
-          <h2>Goals</h2>
-
-          <ul>
-            <li>List of goals!</li>
-          </ul>
-        </section>
-      </main>
+      </div>
     </React.Fragment>
   );
 };

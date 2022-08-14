@@ -1,51 +1,73 @@
+import Link from "next/link";
+
 import AppHeader from "@/components/header";
 import styles from "@/styles/Home.module.css";
+import { getAbout } from "@/services/index";
+import { mainRoutes } from "@/components/navbar";
 
-export default function Home() {
+export default function Home({ about }) {
+  const { jobTitle, name, nickname } = about.personalInfo;
+  const { currentCompany, bio } = about.professionalInfo;
+
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} page`}>
       <AppHeader>Home</AppHeader>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+        <section className={styles.introduction}>
+          <h1 className={styles.mainTitle}>
+            Hi! I'm {name}, <span>a.k.a</span> {nickname}.
+          </h1>
+        </section>
 
-        <p className={styles.description}>
-          Get started by editing{" "}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
+        <section className={styles.moreInfo}>
+          <aside className={styles.box}>
+            <p className={styles.paragraph}>
+              I am currently working as a {jobTitle} at{" "}
+              <a
+                className={styles.link}
+                href={currentCompany.website}
+                target="_blank"
+              >
+                {currentCompany.label}
+              </a>
+              .
             </p>
-          </a>
-        </div>
+          </aside>
+
+          <aside className={styles.box}>
+            <p className={`${styles.paragraph} summary`}>
+              <Link href="/about">
+                <a className={styles.link}>{bio.summary.split(".")[3]}</a>
+              </Link>
+            </p>
+          </aside>
+
+          <aside className={styles.box}>
+            <ul className={styles.listBtn}>
+              {mainRoutes.map(({ label, value, description }) => (
+                <li key={label}>
+                  <Link href={value}>
+                    <a className={styles.linkBtn} data-title={description}>
+                      {label} {"  "}
+                    </a>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </aside>
+        </section>
       </main>
     </div>
   );
+}
+
+export async function getStaticProps() {
+  const about = await getAbout();
+
+  return {
+    props: {
+      about,
+    },
+  };
 }
