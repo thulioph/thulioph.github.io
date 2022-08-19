@@ -13,6 +13,7 @@ export const routes = [
 ];
 
 export const mainRoutes = [routes[0]];
+const navbarRoutes = [];
 
 const AppNav = () => {
   const router = useRouter();
@@ -29,7 +30,7 @@ const AppNav = () => {
 
       <div className="box">
         <ul>
-          {mainRoutes.map(({ label, value }) => (
+          {navbarRoutes.map(({ label, value }) => (
             <li
               key={label}
               className={router.pathname == value ? "active" : ""}

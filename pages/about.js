@@ -46,7 +46,12 @@ const About = ({ about }) => {
           <ul className="global-list">
             {professionalInfo.experience.map((el) => (
               <li key={el.title}>
-                <a href={el.website} target="_blank" title={el.title}>
+                <a
+                  href={el.website}
+                  title={el.title}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   {el.title} <span>{el.period}</span>
                 </a>
 
@@ -74,7 +79,12 @@ const About = ({ about }) => {
           <ul>
             {educationInfo.education.map((el) => (
               <li key={el.title}>
-                <a href={el.website} target="_blank" title={el.title}>
+                <a
+                  href={el.website}
+                  title={el.title}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   {el.title} - {el.field} | {el.period}
                 </a>
               </li>
@@ -90,7 +100,12 @@ const About = ({ about }) => {
           <ul>
             {socialInfo.extraSocial.map((el) => (
               <li key={el.title}>
-                <a href={el.website} target="_blank" title={el.title}>
+                <a
+                  href={el.website}
+                  title={el.title}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   {el.title}
                 </a>
               </li>

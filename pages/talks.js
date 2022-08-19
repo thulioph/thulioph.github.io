@@ -15,7 +15,12 @@ const Talks = ({ talks }) => {
           <ul>
             {talks.map((el) => (
               <li key={el.title}>
-                <a href={el.link} target="_blank" title={el.title}>
+                <a
+                  href={el.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  title={el.title}
+                >
                   {el.title} | <span>{el.date}</span>
                   <p>{el.description}</p>
                   <span>{el.language}</span>
