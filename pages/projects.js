@@ -14,7 +14,12 @@ const Projects = ({ projects }) => {
         <ul>
           {projects.sort().map((el) => (
             <li key={el.id}>
-              <a href={el.html_url} target="_blank" title={el.name}>
+              <a
+                href={el.html_url}
+                target="_blank"
+                rel="noreferrer"
+                title={el.name}
+              >
                 <span>{el.name}</span>
                 <p>{el.description}</p>
               </a>

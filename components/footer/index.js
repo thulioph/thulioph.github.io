@@ -10,6 +10,7 @@ const AppFooter = () => {
         <a
           href="https://web.archive.org/web/20130328062741/http://about.me/thulioph"
           target="_blank"
+          rel="noreferrer"
           className="help-cursor"
         >
           2012

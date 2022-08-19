@@ -10,12 +10,12 @@ const Introduction = ({
   return (
     <React.Fragment>
       <h2>
-        I'm {name}, {jobTitle}, based in{" "}
-        <a href={location.link} target="_blank">
+        I&#39;m {name}, {jobTitle}, based in{" "}
+        <a href={location.link} target="_blank" rel="noreferrer">
           {location.city}, {location.country}
         </a>
         . Currently, working at{" "}
-        <a href={currentCompany.website} target="_blank">
+        <a href={currentCompany.website} target="_blank" rel="noreferrer">
           {currentCompany.label}
         </a>
         , {headline}.

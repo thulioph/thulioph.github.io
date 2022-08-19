@@ -16,7 +16,7 @@ export default function Home({ about }) {
       <main className={styles.main}>
         <section className={styles.introduction}>
           <h1 className={styles.mainTitle}>
-            Hi! I'm {name}, <span>a.k.a</span> {nickname}.
+            Hi! I&#39;m {name}, <span>a.k.a</span> {nickname}.
           </h1>
         </section>
 
@@ -28,6 +28,7 @@ export default function Home({ about }) {
                 className={styles.link}
                 href={currentCompany.website}
                 target="_blank"
+                rel="noreferrer"
               >
                 {currentCompany.label}
               </a>
