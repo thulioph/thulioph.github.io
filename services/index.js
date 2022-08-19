@@ -32,7 +32,7 @@ export const getAbout = async () => {
 
 export const getProjects = async () => {
   const res = await fetch(
-    "https://api.github.com/users/thulioph/repos?per_page=100"
+    "https://api.github.com/users/thulioph/repos?per_page=100&sort=updated&direction=desc&type=owner"
   );
 
   const projects = await res.json();

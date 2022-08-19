@@ -1,39 +1,40 @@
 import React from "react";
 
 import AppHeader from "@/components/header";
+import AppNav from "@/components/navbar";
 import { getProjects } from "@/services/index";
 
 const Projects = ({ projects }) => {
   return (
     <React.Fragment>
       <AppHeader>Projects</AppHeader>
+      <AppNav />
 
-      <main className="page">
-        <h1>Projects Page!</h1>
-
-        <ul>
-          {projects.sort().map((el) => (
-            <li key={el.id}>
-              <a
-                href={el.html_url}
-                target="_blank"
-                rel="noreferrer"
-                title={el.name}
-              >
-                <span>{el.name}</span>
-                <p>{el.description}</p>
-              </a>
-            </li>
-          ))}
-        </ul>
+      <main className="page about-page projects-page">
+        <section>
+          <h1>Work, Hobby and Open-Source.</h1>
+          <p>
+            Sometimes I like to code something from my mind as a hobby or to
+            help the open-source community.
+          </p>
+        </section>
 
         <section>
-          {/* change this content */}
-          <h4>
-            “My ability to compromise and maintain a positive attitude along
-            with a true passion in providing the best results on my work - has
-            allowed me to complete projects successfully.”
-          </h4>
+          <ul>
+            {projects.map((el) => (
+              <li key={el.id}>
+                <a
+                  href={el.html_url}
+                  target="_blank"
+                  rel="noreferrer"
+                  title={el.name}
+                >
+                  <span>{el.name}</span>
+                  <p>{el.description}</p>
+                </a>
+              </li>
+            ))}
+          </ul>
         </section>
       </main>
     </React.Fragment>
@@ -44,10 +45,11 @@ export default Projects;
 
 export async function getStaticProps() {
   const projects = await getProjects();
+  const filteredProjects = projects.filter(({ fork }) => fork === false);
 
   return {
     props: {
-      projects,
+      projects: filteredProjects,
     },
   };
 }

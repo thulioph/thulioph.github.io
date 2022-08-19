@@ -12,8 +12,8 @@ export const routes = [
   { label: "Blog", value: "/blog", description: "Tech articles" },
 ];
 
-export const mainRoutes = [routes[0]];
-const navbarRoutes = [];
+export const mainRoutes = [routes[0], routes[1]];
+const navbarRoutes = [...mainRoutes];
 
 const AppNav = () => {
   const router = useRouter();

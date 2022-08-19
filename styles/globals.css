@@ -154,3 +154,29 @@ li {
   margin: 0;
   list-style-type: none;
 }
+
+/* projects page */
+
+.projects-page ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.projects-page li {
+  margin-bottom: 2rem;
+}
+
+.projects-page li:hover {
+  background-color: #faf7f7;
+}
+
+.projects-page p {
+  font-weight: 300;
+  margin: 1rem 0 0;
+}
+
+.projects-page a {
+  display: block;
+  padding: 1rem 0;
+}
