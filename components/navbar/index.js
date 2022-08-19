@@ -12,7 +12,7 @@ export const routes = [
   { label: "Blog", value: "/blog", description: "Tech articles" },
 ];
 
-export const mainRoutes = [routes[0], routes[1]];
+export const mainRoutes = [routes[0], routes[1], routes[2]];
 const navbarRoutes = [...mainRoutes];
 
 const AppNav = () => {

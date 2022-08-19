@@ -1,15 +1,20 @@
 import React from "react";
 
 import AppHeader from "@/components/header";
+import AppNav from "@/components/navbar";
 import { getTalks } from "@/services/index";
 
 const Talks = ({ talks }) => {
   return (
     <React.Fragment>
       <AppHeader>Talks</AppHeader>
+      <AppNav />
 
-      <main className="page">
-        <h1>Talks Page!</h1>
+      <main className="page about-page projects-page">
+        <section>
+          <h1>Talks</h1>
+          <p>I believe when you share your knowledge you are learning twice.</p>
+        </section>
 
         <section>
           <ul>
@@ -21,13 +26,10 @@ const Talks = ({ talks }) => {
                   rel="noreferrer"
                   title={el.title}
                 >
-                  {el.title} | <span>{el.date}</span>
+                  {el.title}
                   <p>{el.description}</p>
                   <span>{el.language}</span>
                 </a>
-
-                <br />
-                <br />
               </li>
             ))}
           </ul>
