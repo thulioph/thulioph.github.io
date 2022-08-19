@@ -2,21 +2,29 @@ import React from "react";
 import ReactMarkdown from "react-markdown";
 
 import AppHeader from "@/components/header";
+import AppNav from "@/components/navbar";
 import { getPosts } from "@/services/index";
 
 const Post = ({ title, date, markdown, author }) => {
   return (
     <React.Fragment>
       <AppHeader>Blog | {title}</AppHeader>
+      <AppNav />
 
-      <article>
-        <h1>{title}</h1>
-        <h4>@{author}</h4>
+      <main className="page about-page projects-page">
+        <article>
+          <section>
+            <h1>{title}</h1>
+            <h4>@{author}</h4>
 
-        <time>{date}</time>
+            <time>{date}</time>
+          </section>
 
-        <ReactMarkdown>{markdown}</ReactMarkdown>
-      </article>
+          <section>
+            <ReactMarkdown>{markdown}</ReactMarkdown>
+          </section>
+        </article>
+      </main>
     </React.Fragment>
   );
 };
