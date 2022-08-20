@@ -23,8 +23,8 @@ const AppNav = () => {
   return (
     <header className={styles.globalHeader}>
       <div className="box logo">
-        <Link href="/" passHref={true}>
-          <a className>
+        <Link href="/">
+          <a>
             <h1>Thulio Philipe</h1>
           </a>
         </Link>

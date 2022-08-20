@@ -17,9 +17,9 @@ const Post = ({ title, date, markdown, author, image, imageLink }) => {
 
       <main className="page about-page blog-page">
         <article>
-          <section>
+          <section className="article-intro">
             <h1>{title}</h1>
-            <h4>@{author}</h4>
+            {/* <h4>@{author}</h4> */}
             <time>{date}</time>
 
             {image && (
