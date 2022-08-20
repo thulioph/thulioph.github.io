@@ -271,3 +271,91 @@ a {
 }
 
 /* ========== */
+/* blog */
+
+.blog-page img {
+  background-color: #f1f1f1;
+  margin: 1rem 0;
+  display: inline-block;
+
+  filter: none;
+  -webkit-filter: grayscale(0);
+
+  transition: all 0.25s linear 0s;
+}
+
+.blog-page img:hover {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+}
+
+.blog-page code {
+  padding: 0.2rem;
+  display: inline-block;
+}
+
+.blog-page pre {
+  background-color: #f1f1f1;
+  padding: 1rem;
+}
+
+.blog-page p {
+  font-weight: 300;
+  margin: 1rem 0;
+}
+
+.blog-page a {
+  display: inline-block;
+  padding: 0;
+}
+
+.blog-page figcaption {
+  margin: 1rem 0;
+}
+
+.blog-page figcaption a {
+  font-weight: 300;
+  display: block;
+  text-align: center;
+  border-bottom-color: transparent;
+  color: #dedede;
+}
+
+.blog-page figcaption a:hover {
+  color: #000000;
+}
+
+.blog-page blockquote {
+  padding: 1rem;
+  text-align: center;
+  width: 60%;
+  margin: 2rem auto;
+  position: relative;
+}
+
+.blog-page blockquote::after {
+  content: "\201C";
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  font-size: 60px;
+}
+
+.blog-page blockquote::before {
+  content: "\201D";
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  right: 0;
+  font-size: 60px;
+}
+
+.blog-page blockquote::first-letter {
+  font-weight: 700;
+  font-size: 32px;
+}

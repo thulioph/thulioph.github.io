@@ -11,7 +11,7 @@ const Blog = ({ posts }) => {
       <AppHeader>Blog</AppHeader>
       <AppNav />
 
-      <main className="page about-page projects-page">
+      <main className="page about-page blog-page">
         <section>
           <h1>Blog</h1>
           <p>
