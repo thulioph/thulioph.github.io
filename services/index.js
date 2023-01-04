@@ -63,16 +63,6 @@ export const getCurrentListeningTrack = async () => {
 
   const data = await res.json();
 
-  if (!data.recenttracks) {
-    return {
-      currentTrack: {
-        artist: "The Notorious B.I.G.",
-        song: "I Love the Dough",
-        url: "https://www.last.fm/music/The+Notorious+B.I.G./_/I+Love+the+Dough+(feat.+Jay-Z+&+Angela+Winbush)+-+2014+Remaster",
-      },
-    };
-  }
-
   const currentTrack = data.recenttracks.track[0];
 
   return {
