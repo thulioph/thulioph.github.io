@@ -18,78 +18,44 @@
   https://getbootstrap.com/docs/4.0/layout/grid/#grid-options
 */
 
+/* Mobile */
 .container {
   padding: 0 2rem;
-  /* 50px === footer height */
-  /* height: calc(100vh - 50px); */
-  height: 100%;
+  height: calc(100vh - 50px);
 }
-
-.introduction {
-  /* background-color: pink; */
-  margin: 2rem 0;
-}
-
-/* @media (min-width: 720px) {
-  .introduction {
-    margin: 0;
-  }
-} */
 
 .moreInfo {
-  /* background-color: orange; */
   display: flex;
   flex-flow: column;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-@media (min-width: 720px) {
-  .moreInfo {
-    flex-flow: row;
-  }
 }
 
 .footer {
-  /* background-color: green; */
-  visibility: hidden;
-  display: flex;
-  flex-flow: row;
-  justify-content: center;
-  align-items: baseline;
-}
-
-@media (min-width: 720px) {
-  .footer {
-    visibility: visible;
-  }
+  display: none;
 }
 
 .main {
-  /* background: orange; */
+  padding-top: 20px;
   display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-}
-
-@media (min-width: 720px) {
-  .main {
-    max-width: 80%;
-  }
+  flex-flow: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 .box {
-  /* background-color: purple; */
-  margin-left: 0;
-  margin: 1rem;
+  margin: 1rem 0;
 }
 
-@media (min-width: 720px) {
-  .box {
-    margin: 0;
-    padding: 2rem;
-    margin-left: 4rem;
-  }
+.box:nth-child(1) {
+  order: 3;
+}
+
+.box:nth-child(2) {
+  order: 1;
+}
+
+.box:nth-child(3) {
+  order: 2;
 }
 
 .mainTitle {
@@ -103,24 +69,8 @@
   font-style: italic;
 }
 
-@media (min-width: 720px) {
-  .mainTitle {
-    font-size: 7rem;
-  }
-}
-
-@media (min-width: 960px) {
-  .mainTitle {
-    font-size: 9rem;
-  }
-}
-
-.wrapper {
-  /* background: oldlace; */
-  /* height: 100vh; */
-  display: flex;
-  flex-flow: column;
-  justify-content: space-around;
+.mainTitle span:first-child {
+  text-decoration: line-through;
 }
 
 .paragraph {
@@ -143,6 +93,10 @@
   display: flex;
 }
 
+.listBtn li {
+  margin: 0;
+}
+
 .linkBtn {
   display: inline-block;
   background-color: #000000;
@@ -161,4 +115,64 @@
   color: #000000;
   background-color: #ffffff;
   border-color: #000000;
+}
+
+/* Tablets */
+@media (min-width: 720px) {
+  .moreInfo {
+    flex-flow: wrap;
+    align-items: center;
+  }
+
+  .footer {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: baseline;
+  }
+
+  .box {
+    flex: 1;
+    margin: 20px;
+  }
+
+  .box:nth-child(1) {
+    order: 1;
+  }
+
+  .box:nth-child(2) {
+    order: 2;
+  }
+
+  .box:nth-child(3) {
+    order: 3;
+    flex: 0;
+  }
+
+  .mainTitle {
+    font-size: 7rem;
+    line-height: 7rem;
+  }
+
+  .listBtn {
+    justify-content: right;
+  }
+}
+
+/* Desktops */
+
+@media (min-width: 960px) {
+  .box:nth-child(1) {
+    flex: 2;
+    text-align: right;
+  }
+
+  .mainTitle span:last-child {
+    letter-spacing: -18px;
+  }
+
+  .mainTitle {
+    font-size: 12rem;
+    line-height: 12rem;
+  }
 }
