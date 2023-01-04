@@ -27,7 +27,7 @@ function MyApp({ Component, pageProps }) {
   }, []);
 
   return (
-    <section className={styles.wrapper}>
+    <React.Fragment>
       <Component {...pageProps} />
 
       <AppFooter />
@@ -40,7 +40,7 @@ function MyApp({ Component, pageProps }) {
           gtag('js', new Date());
           gtag('config', 'G-EF22391293');`}
       </Script>
-    </section>
+    </React.Fragment>
   );
 }
 

@@ -2,12 +2,14 @@ import Link from "next/link";
 
 import AppHeader from "@/components/header";
 import styles from "@/styles/Home.module.css";
-import { getAbout } from "@/services/index";
+import { getAbout, getCurrentListeningTrack } from "@/services/index";
 import { mainRoutes } from "@/components/navbar";
 
-export default function Home({ about }) {
-  const { jobTitle, name, nickname } = about.personalInfo;
+export default function Home({ about, currentTrack }) {
+  const { name, nickname } = about.personalInfo;
   const { currentCompany, bio } = about.professionalInfo;
+
+  const { artist, song, url } = currentTrack;
 
   return (
     <div className={`${styles.container} page`}>
@@ -16,14 +18,26 @@ export default function Home({ about }) {
       <main className={styles.main}>
         <section className={styles.introduction}>
           <h1 className={styles.mainTitle}>
-            Hi! I&#39;m {name}, <span>a.k.a</span> {nickname}.
+            Hi! I&#39;m <span>{name}</span>, <span>a.k.a</span>{" "}
+            <span>{nickname}</span>.
           </h1>
         </section>
 
         <section className={styles.moreInfo}>
           <aside className={styles.box}>
             <p className={styles.paragraph}>
-              I am currently working as a {jobTitle} at{" "}
+              Listening to{" "}
+              <span>
+                <a
+                  className={styles.link}
+                  href={url}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {artist}, {song}
+                </a>
+              </span>
+              , while working at{" "}
               <a
                 className={styles.link}
                 href={currentCompany.website}
@@ -39,7 +53,10 @@ export default function Home({ about }) {
           <aside className={styles.box}>
             <p className={`${styles.paragraph} summary`}>
               <Link href="/about">
-                <a className={styles.link}>{bio.summary.split(".")[3]}</a>
+                <a className={styles.link}>
+                  {bio.summary.split(".")[3]}
+                  {"."}
+                </a>
               </Link>
             </p>
           </aside>
@@ -65,10 +82,12 @@ export default function Home({ about }) {
 
 export async function getStaticProps() {
   const about = await getAbout();
+  const { currentTrack } = await getCurrentListeningTrack();
 
   return {
     props: {
       about,
+      currentTrack,
     },
   };
 }
