@@ -43,33 +43,3 @@ export const getProjects = async () => {
 export const getTalks = async () => {
   return talks;
 };
-
-export const getCurrentListeningTrack = async () => {
-  const options = {
-    method: "GET",
-    headers: {
-      Authorization: "",
-    },
-  };
-
-  const USER = "thulioph";
-  const LIMIT = "1";
-  const API_KEY = "f178b7dd74355329912bcd0025ba9ea4";
-
-  const res = await fetch(
-    `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${USER}&limit=${LIMIT}&api_key=${API_KEY}&format=json`,
-    options
-  );
-
-  const data = await res.json();
-
-  const currentTrack = data.recenttracks.track[0];
-
-  return {
-    currentTrack: {
-      artist: currentTrack.artist["#text"],
-      song: currentTrack.name,
-      url: currentTrack.url,
-    },
-  };
-};
