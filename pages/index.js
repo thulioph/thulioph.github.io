@@ -2,14 +2,13 @@ import Link from "next/link";
 
 import AppHeader from "@/components/header";
 import styles from "@/styles/Home.module.css";
-import { getAbout, getCurrentListeningTrack } from "@/services/index";
+import { getAbout } from "@/services/index";
 import { mainRoutes } from "@/components/navbar";
+import Player from "@/components/player";
 
-export default function Home({ about, currentTrack }) {
+export default function Home({ about }) {
   const { name, nickname } = about.personalInfo;
   const { currentCompany, bio } = about.professionalInfo;
-
-  const { artist, song, url } = currentTrack;
 
   return (
     <div className={`${styles.container} page`}>
@@ -26,18 +25,7 @@ export default function Home({ about, currentTrack }) {
         <section className={styles.moreInfo}>
           <aside className={styles.box}>
             <p className={styles.paragraph}>
-              Listening to{" "}
-              <span>
-                <a
-                  className={styles.link}
-                  href={url}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {artist}, {song}
-                </a>
-              </span>
-              , while working at{" "}
+              <Player />, while working at{" "}
               <a
                 className={styles.link}
                 href={currentCompany.website}
@@ -82,12 +70,10 @@ export default function Home({ about, currentTrack }) {
 
 export async function getStaticProps() {
   const about = await getAbout();
-  const { currentTrack } = await getCurrentListeningTrack();
 
   return {
     props: {
       about,
-      currentTrack,
     },
   };
 }
