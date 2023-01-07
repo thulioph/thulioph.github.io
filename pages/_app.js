@@ -8,8 +8,6 @@ import "../styles/globals.css";
 
 import AppFooter from "@/components/footer";
 
-import styles from "@/styles/Home.module.css";
-
 function MyApp({ Component, pageProps }) {
   React.useEffect(() => {
     const handleRouteStart = () => NProgress.start();

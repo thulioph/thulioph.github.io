@@ -3,9 +3,9 @@ import Image from "next/image";
 
 import AppNav from "@/components/navbar";
 import AppHeader from "@/components/header";
-
 import { getAbout } from "@/services/index";
 import image from "@/public/myself.jpeg";
+import styles from "@/styles/About.module.css";
 
 const About = ({ about }) => {
   const { professionalInfo, educationInfo, socialInfo } = about;
@@ -15,12 +15,19 @@ const About = ({ about }) => {
       <AppHeader>About</AppHeader>
       <AppNav />
 
-      <div className="page about-page">
-        <section className="personal">
-          <Image src={image} priority={true} alt="Myself" layout="responsive" />
+      <div className={`page ${styles.aboutPage}`}>
+        <section className="hero">
+          <aside className="hero-image">
+            <Image
+              src={image}
+              priority={true}
+              alt="Myself"
+              layout="responsive"
+            />
+          </aside>
         </section>
 
-        <section className="professional">
+        <section className="internal-grid professional">
           <a id="introduction" href="#introduction">
             <h2>Introduction</h2>
           </a>
@@ -38,7 +45,7 @@ const About = ({ about }) => {
           <p>{professionalInfo.bio.longTerm}</p>
         </section>
 
-        <section className="experience">
+        <section className="internal-grid experience">
           <a id="experience" href="#experience">
             <h2>experience</h2>
           </a>
@@ -71,7 +78,7 @@ const About = ({ about }) => {
           </ul>
         </section>
 
-        <section className="education">
+        <section className="internal-grid education">
           <a id="education" href="#education">
             <h2>education</h2>
           </a>
@@ -92,7 +99,7 @@ const About = ({ about }) => {
           </ul>
         </section>
 
-        <section className="social">
+        <section className="internal-grid social">
           <a id="social" href="#social">
             <h2>social</h2>
           </a>

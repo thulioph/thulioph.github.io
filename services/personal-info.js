@@ -224,7 +224,7 @@ const socialInfo = {
     },
     {
       title: "LinkedIn",
-      website: "https://linkedi.com/in/thulioph",
+      website: "https://linkedin.com/in/thulioph",
     },
     {
       title: "Github",
