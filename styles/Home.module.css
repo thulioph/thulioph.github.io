@@ -86,38 +86,8 @@
   border-bottom-style: dashed;
 }
 
-.listBtn {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  display: flex;
-}
-
-.listBtn li {
-  margin: 0;
-}
-
-.linkBtn {
-  display: inline-block;
-  background-color: #000000;
-  color: #ffffff;
-  font-weight: 700;
-  padding: 0.5rem;
-  font-size: 1rem;
-  border-radius: 6px;
-  margin-left: 10px;
-  text-transform: lowercase;
-  border: 1px solid #ffffff;
-  position: relative;
-}
-
-.linkBtn:hover {
-  color: #000000;
-  background-color: #ffffff;
-  border-color: #000000;
-}
-
 /* Tablets */
+
 @media (min-width: 720px) {
   .moreInfo {
     flex-flow: wrap;
@@ -152,10 +122,6 @@
   .mainTitle {
     font-size: 7rem;
     line-height: 7rem;
-  }
-
-  .listBtn {
-    justify-content: right;
   }
 }
 

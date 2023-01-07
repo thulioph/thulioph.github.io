@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 
+import styles from "@/styles/Header.module.css";
+
 export const routes = [
   { label: "About", value: "/about", description: "A little bit about me" },
   {
@@ -19,9 +21,9 @@ const AppNav = () => {
   const router = useRouter();
 
   return (
-    <header className="global-header">
+    <header className={styles.globalHeader}>
       <div className="box logo">
-        <Link href="/">
+        <Link href="/" passHref={true}>
           <a className>
             <h1>Thulio Philipe</h1>
           </a>
@@ -29,14 +31,17 @@ const AppNav = () => {
       </div>
 
       <div className="box">
-        <ul>
+        <ul className="listBtn">
           {navbarRoutes.map(({ label, value }) => (
-            <li
-              key={label}
-              className={router.pathname == value ? "active" : ""}
-            >
+            <li key={label}>
               <Link href={value} title={label}>
-                <a>{label}</a>
+                <a
+                  className={
+                    router.pathname == value ? "linkBtn active" : "linkBtn"
+                  }
+                >
+                  {label}
+                </a>
               </Link>
             </li>
           ))}

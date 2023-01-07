@@ -18,7 +18,7 @@ export default function Home({ about }) {
         <section className={styles.introduction}>
           <h1 className={styles.mainTitle}>
             Hi! I&#39;m <span>{name}</span>, <span>a.k.a</span>{" "}
-            <span>{nickname}</span>.
+            <span className="text-border">{nickname}</span>.
           </h1>
         </section>
 
@@ -50,11 +50,11 @@ export default function Home({ about }) {
           </aside>
 
           <aside className={styles.box}>
-            <ul className={styles.listBtn}>
+            <ul className="listBtn">
               {mainRoutes.map(({ label, value, description }) => (
                 <li key={label}>
                   <Link href={value}>
-                    <a className={styles.linkBtn} data-title={description}>
+                    <a className="linkBtn" data-title={description}>
                       {label} {"  "}
                     </a>
                   </Link>
