@@ -1,6 +1,8 @@
 ---
 title: Hello World
 author: "Thulio Philipe"
+image: ""
+imageLink:
 date: "14/04/2022"
 ---
 

@@ -3,7 +3,7 @@ import Link from "next/link";
 import AppHeader from "@/components/header";
 import styles from "@/styles/Home.module.css";
 import { getAbout } from "@/services/index";
-import { mainRoutes } from "@/components/navbar";
+import routes from "@/components/navbar/routes";
 import Player from "@/components/player";
 
 export default function Home({ about }) {
@@ -51,15 +51,17 @@ export default function Home({ about }) {
 
           <aside className={styles.box}>
             <ul className="listBtn">
-              {mainRoutes.map(({ label, value, description }) => (
-                <li key={label}>
-                  <Link href={value}>
-                    <a className="linkBtn" data-title={description}>
-                      {label} {"  "}
-                    </a>
-                  </Link>
-                </li>
-              ))}
+              {routes
+                .slice(1, routes.length)
+                .map(({ label, value, description }) => (
+                  <li key={label}>
+                    <Link href={value}>
+                      <a className="linkBtn" data-title={description}>
+                        {label} {"  "}
+                      </a>
+                    </Link>
+                  </li>
+                ))}
             </ul>
           </aside>
         </section>

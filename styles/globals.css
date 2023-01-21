@@ -169,15 +169,12 @@ a {
 
 /* ========== */
 
-/* li {
-  margin-bottom: 1rem;
-} */
-
 .page h2 {
   font-family: "Inter", sans-serif;
   border-bottom: 2px solid #dedede;
   padding-bottom: 5px;
   text-transform: capitalize;
+  margin-top: 60px;
 }
 
 .page p {
@@ -271,3 +268,180 @@ a {
 }
 
 /* ========== */
+/* blog */
+
+.blog-page img {
+  background-color: #f1f1f1;
+  margin: 1rem 0;
+  display: inline-block;
+  width: 100%;
+
+  filter: none;
+  -webkit-filter: grayscale(0);
+
+  transition: all 0.25s linear 0s;
+}
+
+.blog-page img:hover {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+}
+
+.blog-page code {
+  padding: 0.2rem;
+  display: inline-block;
+}
+
+.blog-page code:not([class]) {
+  background-color: #f1f1f1;
+  padding: 0 5px;
+  margin: 0 5px;
+}
+
+.blog-page pre {
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+
+.blog-page p {
+  font-weight: 300;
+  margin: 1rem 0;
+}
+
+.blog-page a {
+  display: inline-block;
+  padding: 0;
+}
+
+.blog-page figcaption {
+  margin: 1rem 0;
+}
+
+.blog-page figcaption a {
+  font-weight: 300;
+  display: block;
+  text-align: center;
+  border-bottom-color: transparent;
+  color: #dedede;
+}
+
+.blog-page figcaption a:hover {
+  color: #000000;
+}
+
+.blog-page blockquote {
+  padding: 1rem;
+  text-align: center;
+  margin: 2rem auto;
+  position: relative;
+}
+
+@media (min-width: 960px) {
+  .blog-page blockquote {
+    width: 40%;
+  }
+}
+
+.blog-page blockquote::after {
+  content: "\201C";
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  font-size: 60px;
+}
+
+.blog-page blockquote::before {
+  content: "\201D";
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  right: 0;
+  font-size: 60px;
+}
+
+.blog-page blockquote::first-letter {
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.article-intro {
+  display: block;
+  text-align: center;
+}
+
+.article-intro h1 {
+  font-size: 30px;
+  margin-bottom: 0;
+  text-transform: initial;
+}
+
+@media (min-width: 720px) {
+  .article-intro h1 {
+    font-size: 50px;
+  }
+}
+
+.article-intro time {
+  display: inline-block;
+  margin: 1rem 0;
+}
+
+/* article content */
+
+.article-content {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.article-content li {
+  margin-bottom: 20px;
+}
+
+@media (min-width: 960px) {
+  .article-content {
+    width: 60%;
+  }
+}
+
+.title-link a {
+  border-bottom: 0;
+}
+
+/* prev/next posts sections */
+.more-posts {
+  width: 80%;
+  margin: 60px auto;
+  min-height: 200px;
+}
+
+@media (min-width: 960px) {
+  .more-posts {
+    width: 60%;
+  }
+}
+
+.more-posts-container {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 60px auto;
+}
+
+@media (min-width: 720px) {
+  .more-posts-container {
+    justify-content: space-between;
+  }
+}
+
+.more-posts a {
+  text-transform: uppercase;
+  background-color: #f1f1f1;
+  padding: 20px;
+  margin-bottom: 20px;
+}
