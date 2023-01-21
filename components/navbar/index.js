@@ -24,7 +24,9 @@ const AppNav = () => {
               <Link href={value} title={label}>
                 <a
                   className={
-                    router.pathname == value ? "linkBtn active" : "linkBtn"
+                    router.pathname.includes(value)
+                      ? "linkBtn active"
+                      : "linkBtn"
                   }
                 >
                   {label}
