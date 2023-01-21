@@ -351,7 +351,7 @@ Veja o [código completo aqui](https://gist.github.com/thulioph/8153570)!
 
 ## Referências
 
-- [https://developers.google.com/maps/documentation/javascript/tutorial?hl=pt-br](https://developers.google.com/maps/documentation/javascript/tutorial?hl=pt-br/)
+- [Google Developers - Maps documentation](https://developers.google.com/maps/documentation/javascript/tutorial?hl=pt-br/)
 
 ---
 

@@ -169,15 +169,12 @@ a {
 
 /* ========== */
 
-/* li {
-  margin-bottom: 1rem;
-} */
-
 .page h2 {
   font-family: "Inter", sans-serif;
   border-bottom: 2px solid #dedede;
   padding-bottom: 5px;
   text-transform: capitalize;
+  margin-top: 60px;
 }
 
 .page p {
@@ -302,7 +299,7 @@ a {
 
 .blog-page pre {
   background-color: #f1f1f1;
-  padding: 1rem;
+  padding: 10px;
 }
 
 .blog-page p {
@@ -334,9 +331,14 @@ a {
 .blog-page blockquote {
   padding: 1rem;
   text-align: center;
-  width: 60%;
   margin: 2rem auto;
   position: relative;
+}
+
+@media (min-width: 960px) {
+  .blog-page blockquote {
+    width: 40%;
+  }
 }
 
 .blog-page blockquote::after {
@@ -372,9 +374,15 @@ a {
 }
 
 .article-intro h1 {
-  font-size: 50px;
+  font-size: 30px;
   margin-bottom: 0;
   text-transform: initial;
+}
+
+@media (min-width: 720px) {
+  .article-intro h1 {
+    font-size: 50px;
+  }
 }
 
 .article-intro time {
@@ -387,6 +395,10 @@ a {
 .article-content {
   margin: 0 auto;
   width: 80%;
+}
+
+.article-content li {
+  margin-bottom: 20px;
 }
 
 @media (min-width: 960px) {
