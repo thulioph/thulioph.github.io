@@ -31,11 +31,13 @@ const HeadComponent = ({ title, image, slug, description }) => {
 const Post = ({ previousPost, currentPost, nextPost }) => {
   const { title, date, markdown, image, imageLink, slug } = currentPost;
 
+  const imagePath = getImagePath(image);
+
   return (
     <React.Fragment>
       <HeadComponent
         title={title}
-        image={image}
+        image={imagePath}
         slug={slug}
         description={title}
       />
@@ -53,7 +55,7 @@ const Post = ({ previousPost, currentPost, nextPost }) => {
               <React.Fragment>
                 <Image
                   layout="responsive"
-                  src={getImagePath(image)}
+                  src={imagePath}
                   width={800}
                   height={450}
                 />
