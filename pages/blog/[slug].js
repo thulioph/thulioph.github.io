@@ -14,11 +14,32 @@ const extractUniqueId = (node) => {
   return node.children[0].value.toLowerCase().replace(/ /g, "-").trim();
 };
 
+const HeadComponent = ({ title, image, slug, description }) => {
+  return (
+    <React.Fragment>
+      <meta property="og:title" content={title} />
+      <meta property="og:type" content="article" />
+      <meta property="og:image" content={image} />
+      <meta property="og:url" content={`www.thulioph.com/blog/${slug}`} />
+      <meta name="twitter:card" content="summary_large_image" />
+
+      <meta property="og:description" content={description} />
+    </React.Fragment>
+  );
+};
+
 const Post = ({ previousPost, currentPost, nextPost }) => {
-  const { title, date, markdown, image, imageLink } = currentPost;
+  const { title, date, markdown, image, imageLink, slug } = currentPost;
 
   return (
     <React.Fragment>
+      <HeadComponent
+        title={title}
+        image={image}
+        slug={slug}
+        description={title}
+      />
+
       <AppHeader>Blog | {title}</AppHeader>
       <AppNav />
 
