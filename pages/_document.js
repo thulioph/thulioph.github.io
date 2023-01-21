@@ -10,6 +10,9 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;700&display=swap"
           rel="stylesheet"
         />
+
+        <meta property="og:site_name" content="Thulio Philipe" />
+        <meta name="twitter:site" content="@thulioph_" />
       </Head>
       <body>
         <Main />
