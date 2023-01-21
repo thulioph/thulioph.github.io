@@ -37,11 +37,13 @@ const Post = ({ previousPost, currentPost, nextPost }) => {
                   height={450}
                 />
 
-                <figcaption>
-                  <a href={imageLink} target="_blank" rel="noreferrer">
-                    Photo: Unsplash
-                  </a>
-                </figcaption>
+                {imageLink && (
+                  <figcaption>
+                    <a href={imageLink} target="_blank" rel="noreferrer">
+                      Photo: Unsplash
+                    </a>
+                  </figcaption>
+                )}
               </React.Fragment>
             )}
           </section>
