@@ -2,8 +2,10 @@ import React from "react";
 import Link from "next/link";
 
 import AppHeader from "@/components/header";
+import Hero from "@/components/hero";
 import AppNav from "@/components/navbar";
 import { getPosts } from "@/services/index";
+import image from "@/public/blog.jpg";
 
 const Blog = ({ posts }) => {
   return (
@@ -11,17 +13,11 @@ const Blog = ({ posts }) => {
       <AppHeader>Blog</AppHeader>
       <AppNav />
 
-      <main className="page about-page blog-page">
-        <section>
-          <h1>Blog</h1>
-          <p>
-            I like to write about technical stuff and sometimes about any other
-            thought.
-          </p>
-        </section>
+      <main className="page">
+        <Hero image={image}>Blog</Hero>
 
-        <section>
-          <ul>
+        <section className="internal-grid">
+          <ul className="list-items">
             {posts.map((el) => (
               <li key={el.slug}>
                 <Link href={`/blog/${el.slug}`}>{el.title}</Link>

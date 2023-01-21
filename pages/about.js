@@ -3,6 +3,7 @@ import Image from "next/image";
 
 import AppNav from "@/components/navbar";
 import AppHeader from "@/components/header";
+import Hero from "@/components/hero";
 import { getAbout } from "@/services/index";
 import image from "@/public/myself.jpeg";
 import styles from "@/styles/About.module.css";
@@ -15,17 +16,8 @@ const About = ({ about }) => {
       <AppHeader>About</AppHeader>
       <AppNav />
 
-      <div className={`page ${styles.aboutPage}`}>
-        <section className="hero">
-          <aside className="hero-image">
-            <Image
-              src={image}
-              priority={true}
-              alt="Myself"
-              layout="responsive"
-            />
-          </aside>
-        </section>
+      <main className={`page ${styles.aboutPage}`}>
+        <Hero image={image}>{""}</Hero>
 
         <section className="internal-grid professional">
           <a id="introduction" href="#introduction">
@@ -119,7 +111,7 @@ const About = ({ about }) => {
             ))}
           </ul>
         </section>
-      </div>
+      </main>
     </React.Fragment>
   );
 };

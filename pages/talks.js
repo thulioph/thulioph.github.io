@@ -1,8 +1,8 @@
 import React from "react";
-import Image from "next/image";
 
 import AppHeader from "@/components/header";
 import AppNav from "@/components/navbar";
+import Hero from "@/components/hero";
 import { getTalks } from "@/services/index";
 import image from "@/public/talks.jpg";
 
@@ -13,23 +13,12 @@ const Talks = ({ talks }) => {
       <AppNav />
 
       <main className="page">
-        <section className="hero">
-          <aside className="hero-image">
-            <Image
-              src={image}
-              priority={true}
-              alt="Talks"
-              layout="responsive"
-            />
-          </aside>
-
-          <aside className="hero-text">
-            <h1>Talks</h1>
-            <p>
-              I believe when you share your knowledge you are learning twice.
-            </p>
-          </aside>
-        </section>
+        <Hero
+          image={image}
+          description={"When you share your knowledge, you learn twice."}
+        >
+          Talks
+        </Hero>
 
         <section className="internal-grid">
           <ul className="list-items">
