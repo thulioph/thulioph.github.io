@@ -458,13 +458,6 @@ a {
   }
 }
 
-.more-posts a {
-  text-transform: uppercase;
-  background-color: #f1f1f1;
-  padding: 20px;
-  margin-bottom: 20px;
-}
-
 /* post card component */
 
 .post-card {
