@@ -32,6 +32,7 @@ const Post = ({ previousPost, currentPost, nextPost }) => {
   const { title, date, markdown, image, imageLink, slug } = currentPost;
 
   const imagePath = getImagePath(image);
+  const formattedDate = new Date(date).toDateString();
 
   return (
     <React.Fragment>
@@ -49,7 +50,7 @@ const Post = ({ previousPost, currentPost, nextPost }) => {
         <article>
           <section className="article-intro">
             <h1>{title}</h1>
-            <time>{date}</time>
+            <time dateTime={formattedDate}>{formattedDate}</time>
 
             {image && (
               <React.Fragment>
