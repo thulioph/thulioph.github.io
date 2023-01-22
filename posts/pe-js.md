@@ -3,7 +3,7 @@ title: 2º Encontro Pernambuco.JS
 author: "Thulio Philipe"
 image: ""
 imageLink: ""
-date: "23/09/2013"
+date: "09/23/2013"
 ---
 
 Queria ter registrado a uns dias atrás, o resumo sobre o Meeting do Pernambuco.JS que rolou, tinha escrito algo mas estava salvo em rascunho, só que tenho 32 rascunhos e só hoje parei para ver um por um até que achei esse "perdido" rsrs, pois bem!

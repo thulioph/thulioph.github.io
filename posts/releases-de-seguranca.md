@@ -3,7 +3,7 @@ title: Releases de Segurança
 author: "Thulio Philipe"
 image: "release-seguranca.jpg"
 imageLink: ""
-date: "18/07/2017"
+date: "07/18/2017"
 ---
 
 > Com o Node e Webpack não foi diferente.

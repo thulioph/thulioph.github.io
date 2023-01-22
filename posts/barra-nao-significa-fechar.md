@@ -3,7 +3,7 @@ title: A barra não significa fechar
 author: "Thulio Philipe"
 image: "barra-nao-significa-fechar.jpeg"
 imageLink: https://unsplash.com/photos/FOuNRe4I_Fc
-date: "31/12/2013"
+date: "12/31/2013"
 ---
 
 A "/" não significa fechar né?

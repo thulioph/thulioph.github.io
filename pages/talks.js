@@ -3,6 +3,7 @@ import React from "react";
 import AppHeader from "@/components/header";
 import AppNav from "@/components/navbar";
 import Hero from "@/components/hero";
+import PostCard from "@/components/post-card";
 import { getTalks } from "@/services/index";
 import image from "@/public/talks.jpg";
 
@@ -21,19 +22,12 @@ const Talks = ({ talks }) => {
         </Hero>
 
         <section className="internal-grid">
-          <ul className="list-items">
+          <ul className="list-items-card">
             {talks.map((el) => (
               <li key={el.title}>
-                <a
-                  href={el.link}
-                  target="_blank"
-                  rel="noreferrer"
-                  title={el.title}
-                >
+                <PostCard date={el.date} link={el.link}>
                   {el.title}
-                  <p>{el.description}</p>
-                  <span>{el.language}</span>
-                </a>
+                </PostCard>
               </li>
             ))}
           </ul>

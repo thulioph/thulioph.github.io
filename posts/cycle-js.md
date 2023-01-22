@@ -3,7 +3,7 @@ title: Cycle JS
 author: "Thulio Philipe"
 image: "cycle-js.jpeg"
 imageLink: https://unsplash.com/photos/xTV-kwxowcI
-date: "26/09/2013"
+date: "09/26/2013"
 ---
 
 Hoje tirei o dia para falar do “meu amigo” [Cycle](http://jquery.malsup.com/cycle/).

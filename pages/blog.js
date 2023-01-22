@@ -1,9 +1,9 @@
 import React from "react";
-import Link from "next/link";
 
 import AppHeader from "@/components/header";
 import Hero from "@/components/hero";
 import AppNav from "@/components/navbar";
+import PostCard from "@/components/post-card";
 import { getPosts } from "@/services/index";
 import image from "@/public/blog.jpg";
 
@@ -17,10 +17,12 @@ const Blog = ({ posts }) => {
         <Hero image={image}>Blog</Hero>
 
         <section className="internal-grid">
-          <ul className="list-items">
+          <ul className="list-items-card">
             {posts.map((el) => (
               <li key={el.slug}>
-                <Link href={`/blog/${el.slug}`}>{el.title}</Link>
+                <PostCard date={el.date} image={el.image} slug={el.slug}>
+                  {el.title}
+                </PostCard>
               </li>
             ))}
           </ul>
@@ -37,7 +39,11 @@ export async function getStaticProps() {
 
   return {
     props: {
-      posts,
+      posts: posts
+        .map((el) => ({ ...el, date: new Date(el.date).toDateString() }))
+        .sort(
+          (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+        ),
     },
   };
 }

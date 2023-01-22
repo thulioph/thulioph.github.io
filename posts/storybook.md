@@ -3,7 +3,7 @@ title: Storybook como controle de qualidade da UI
 author: "Thulio Philipe"
 image: ""
 imageLink: ""
-date: "27/03/2018"
+date: "03/27/2018"
 ---
 
 # Storybook como Controle de Qualidade da UI

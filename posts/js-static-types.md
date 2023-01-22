@@ -3,7 +3,7 @@ title: Tipagem Estática
 author: "Thulio Philipe"
 image: ""
 imageLink: ""
-date: "30/03/2018"
+date: "03/30/2018"
 ---
 
 ## O que é type-checking?

@@ -3,7 +3,7 @@ title: O trabalho da faculdade que mudou tudo
 author: "Thulio Philipe"
 image: "trabalho-faculdade.jpg"
 imageLink: ""
-date: "22/04/2015"
+date: "04/22/2015"
 ---
 
 Hoje recebi um e-mail da [000webhost](http://www.000webhost.com/) informando que meu domínio seria removido, pois o mesmo não conseguiu atingir a média de 10 visitas nos últimos 30 dias, logo de cara imaginei ser spam ou vírus porém, lá no fundo uma voz me dizia: "abre o e-mail". Ao abrir tive uma surpresa/espanto em saber que se tratava de um [trabalho do curso que fiz em 2012](https://github.com/thulioph/doe-mais) e que aquele e-mail não era spam.

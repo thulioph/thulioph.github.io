@@ -3,7 +3,7 @@ title: i18next para internacionalização
 author: "Thulio Philipe"
 image: "i18next.jpg"
 imageLink: ""
-date: "20/10/2014"
+date: "10/20/2014"
 ---
 
 Eu nunca me importei até que em um belo dia, um cliente teve essa necessidade e foi aí que precisei pensar, pesquisar e aprender sobre internacionalização.

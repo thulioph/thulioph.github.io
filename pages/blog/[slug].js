@@ -1,11 +1,11 @@
 import React from "react";
-import Link from "next/link";
 import Image from "next/image";
 import ReactMarkdown from "react-markdown";
 import rehypeHighlight from "rehype-highlight";
 
 import AppHeader from "@/components/header";
 import AppNav from "@/components/navbar";
+import PostCard from "@/components/post-card";
 import { getPosts } from "@/services/index";
 
 const getImagePath = (image) => `/images/posts/${image}`;
@@ -32,6 +32,7 @@ const Post = ({ previousPost, currentPost, nextPost }) => {
   const { title, date, markdown, image, imageLink, slug } = currentPost;
 
   const imagePath = getImagePath(image);
+  const formattedDate = new Date(date).toDateString();
 
   return (
     <React.Fragment>
@@ -49,7 +50,7 @@ const Post = ({ previousPost, currentPost, nextPost }) => {
         <article>
           <section className="article-intro">
             <h1>{title}</h1>
-            <time>{date}</time>
+            <time dateTime={formattedDate}>{formattedDate}</time>
 
             {image && (
               <React.Fragment>
@@ -99,15 +100,13 @@ const Post = ({ previousPost, currentPost, nextPost }) => {
 
           <aside className="more-posts-container">
             {previousPost && (
-              <Link href={previousPost?.slug} title={previousPost?.title}>
+              <PostCard slug={previousPost?.slug}>
                 {previousPost?.title}
-              </Link>
+              </PostCard>
             )}
 
             {nextPost && (
-              <Link href={nextPost?.slug} title={nextPost?.title}>
-                {nextPost?.title}
-              </Link>
+              <PostCard slug={nextPost?.slug}>{nextPost?.title}</PostCard>
             )}
           </aside>
         </section>

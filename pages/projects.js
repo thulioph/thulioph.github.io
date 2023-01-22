@@ -3,6 +3,7 @@ import React from "react";
 import AppHeader from "@/components/header";
 import AppNav from "@/components/navbar";
 import Hero from "@/components/hero";
+import PostCard from "@/components/post-card";
 import { getProjects } from "@/services/index";
 import image from "@/public/projects.jpg";
 
@@ -18,18 +19,15 @@ const Projects = ({ projects }) => {
         </Hero>
 
         <section className="internal-grid">
-          <ul className="list-items">
+          <ul className="list-items-card">
             {projects.map((el) => (
               <li key={el.id}>
-                <a
-                  href={el.html_url}
-                  target="_blank"
-                  rel="noreferrer"
-                  title={el.name}
+                <PostCard
+                  date={new Date(el.updated_at).toDateString()}
+                  link={el.html_url}
                 >
-                  <span>{el.name}</span>
-                  <p>{el.description}</p>
-                </a>
+                  {el.name}
+                </PostCard>
               </li>
             ))}
           </ul>
