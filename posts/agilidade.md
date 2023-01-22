@@ -3,7 +3,7 @@ title: Agilidade
 author: "Thulio Philipe"
 image: ""
 imageLink: ""
-date: "16/10/2019"
+date: "10/16/2019"
 ---
 
 Com a evolução de produtos digitais para web, é cada vez mais importante desenvolver um código que atenda a requisitos dinâmicos, permitindo a evolução na arquitetura do sistema para algo mais robusto ao mesmo tempo em que mantém um código simples e compreensível.

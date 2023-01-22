@@ -3,7 +3,7 @@ title: Web-Components with Vuejs
 author: "Thulio Philipe"
 image: "vuejs.jpg"
 imageLink: ""
-date: "20/09/2018"
+date: "09/20/2018"
 ---
 
 # Pointed as an alternative to develop web applications, Vuejs is a framework which focuses on the view layer, helping the development of applications based on components.

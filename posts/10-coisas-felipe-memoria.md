@@ -3,7 +3,7 @@ title: 10 Coisas por Felipe Memoria
 author: "Thulio Philipe"
 image: "10-coisas-felipe-memoria.jpeg"
 imageLink: https://unsplash.com/photos/RLw-UC03Gwc
-date: "20/09/2013"
+date: "09/20/2013"
 ---
 
 Antes de lançar este blog, li sobre o [Felipe Memória](http://www.fmemoria.com/). Mestre em Design, atualmente mora em Nova York, trabalhou na Globo.com, admirável pelos ótimos trabalhos que fez para a CNN, PEPSI, HBO, etc.. Autor de um livro chamado [“Design para Internet – Projetando a Experiência Perfeita”](http://www.buscape.com.br/design-para-a-internet-felipe-memoria-8535218769.html#precos). Caso tenha interesse, segue link para o [sumário](http://www.experienciaperfeita.org/portal/images/sumario_design_para_a_internet.pdf) e [introdução](www.experienciaperfeita.org/portal/images/introducao_design_para_a_internet.pdf).

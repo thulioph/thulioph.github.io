@@ -3,7 +3,7 @@ title: Front In Recife
 author: "Thulio Philipe"
 image: ""
 imageLink: ""
-date: "16/12/2013"
+date: "12/16/2013"
 ---
 
 Sábado dia 14/12 rolou o primeiro [Front In Recife](http://www.frontinrecife.com.br/) na [Faculdade Marista](http://faculdademarista.com.br/) e fechou o ano com chave de ouro. Todos que subiram no palco para palestrar estão de parabéns, conteúdos diversos onde foram abordados de forma simples e de fácil entendimento. Apesar do atraso no início do evento, ocorreu tudo da melhor forma possível com um ambiente agradável e um sábado super produtivo para todos.
