@@ -1,31 +1,11 @@
 import React from "react";
-import Link from "next/link";
 
 import AppHeader from "@/components/header";
 import Hero from "@/components/hero";
 import AppNav from "@/components/navbar";
+import PostCard from "@/components/post-card";
 import { getPosts } from "@/services/index";
 import image from "@/public/blog.jpg";
-
-const PostCard = ({ date, image, slug, children }) => {
-  return (
-    <aside className="post-card">
-      {image && (
-        <img className="post-card-image" src={`/images/posts/${image}`} />
-      )}
-
-      <h3 className="post-card-title">{children}</h3>
-
-      <time className="post-card-time" dateTime={date}>
-        {date}
-      </time>
-
-      <Link className="post-card-link" href={`/blog/${slug}`}>
-        read
-      </Link>
-    </aside>
-  );
-};
 
 const Blog = ({ posts }) => {
   return (
