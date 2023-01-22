@@ -236,12 +236,6 @@ a {
   list-style-type: none;
 }
 
-@media (min-width: 720px) {
-  .list-items-card {
-    justify-content: flex-start;
-  }
-}
-
 .list-items-card li {
   margin: 20px;
 }
