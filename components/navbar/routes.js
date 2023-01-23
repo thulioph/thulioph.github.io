@@ -7,6 +7,7 @@ export const routes = [
   },
   { label: "Talks", value: "/talks", description: "Sharing knowledge" },
   { label: "Blog", value: "/blog", description: "Tech articles" },
+  { label: "Rides", value: "/rides", description: "rides" },
 ];
 
 export default routes;
