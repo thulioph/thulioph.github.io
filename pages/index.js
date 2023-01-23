@@ -1,10 +1,13 @@
 import Link from "next/link";
+import Image from "next/image";
 
 import AppHeader from "@/components/header";
 import styles from "@/styles/Home.module.css";
 import { getAbout } from "@/services/index";
 import routes from "@/components/navbar/routes";
 import Player from "@/components/player";
+
+import image from "@/public/memoji.jpeg";
 
 export default function Home({ about }) {
   const { name, nickname } = about.personalInfo;
@@ -20,6 +23,15 @@ export default function Home({ about }) {
             Hi! I&#39;m <span>{name}</span>, <span>a.k.a</span>{" "}
             <span className="text-border">{nickname}</span>.
           </h1>
+
+          <figure className={styles.avatar}>
+            <Image
+              src={image}
+              priority={true}
+              alt="memoji"
+              layout="responsive"
+            />
+          </figure>
         </section>
 
         <section className={styles.moreInfo}>
