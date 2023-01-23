@@ -23,12 +23,12 @@ const formatFiles = (files) => {
   return JSON.stringify(newFiles);
 };
 
-const Activity = ({ files }) => {
+const Rides = ({ files }) => {
   const newFiles = JSON.parse(files);
 
   return (
     <React.Fragment>
-      <AppHeader>Activity</AppHeader>
+      <AppHeader>Rides</AppHeader>
       <AppNav />
 
       <main className="page">
@@ -36,7 +36,7 @@ const Activity = ({ files }) => {
           image={image}
           description="Most of the activities here are by bike."
         >
-          Activity
+          Rides
         </Hero>
 
         <section className="internal-grid">
@@ -59,7 +59,7 @@ const Activity = ({ files }) => {
   );
 };
 
-export default Activity;
+export default Rides;
 
 export async function getStaticProps() {
   const files = await getGpxFiles();
