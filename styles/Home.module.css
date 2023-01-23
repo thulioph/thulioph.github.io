@@ -73,6 +73,19 @@
   text-decoration: line-through;
 }
 
+.avatar {
+  width: 360px;
+  margin: 0;
+  padding: 0;
+  display: none;
+}
+
+@media (min-width: 720px) {
+  .avatar {
+    display: inline-block;
+  }
+}
+
 .paragraph {
   line-height: 1.5rem;
 }
