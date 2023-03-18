@@ -11,7 +11,10 @@ import { getPosts } from "@/services/index";
 const getImagePath = (image) => `/images/posts/${image}`;
 
 const extractUniqueId = (node) => {
-  return node.children[0].value.toLowerCase().replace(/ /g, "-").trim();
+  return node.children[0].value
+    .toLowerCase()
+    .replace(/[^a-zA-Z0-9]/g, "-")
+    .trim();
 };
 
 const HeadComponent = ({ title, image, slug, description }) => {
