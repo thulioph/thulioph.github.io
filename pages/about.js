@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 
 import AppNav from "@/components/navbar";
 import AppHeader from "@/components/header";
@@ -8,8 +7,12 @@ import { getAbout } from "@/services/index";
 import image from "@/public/myself.jpeg";
 import styles from "@/styles/About.module.css";
 
+const orderByTitle = (arr) =>
+  arr.sort((a, b) => a.title.localeCompare(b.title));
+
 const About = ({ about }) => {
   const { professionalInfo, educationInfo, socialInfo } = about;
+  const orderedSocial = orderByTitle(socialInfo.extraSocial);
 
   return (
     <React.Fragment>
@@ -97,7 +100,7 @@ const About = ({ about }) => {
           </a>
 
           <ul>
-            {socialInfo.extraSocial.map((el) => (
+            {orderedSocial.map((el) => (
               <li key={el.title}>
                 <a
                   href={el.website}
