@@ -28,7 +28,7 @@ const About = ({ about }) => {
           <p>{professionalInfo.bio.experience}</p>
 
           <p>My toolbox includes:</p>
-          <ul>
+          <ul className={styles.professionalList}>
             {professionalInfo.bio.toolbox.map((el) => (
               <li key={el}>{el}</li>
             ))}

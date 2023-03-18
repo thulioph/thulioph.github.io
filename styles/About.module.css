@@ -4,3 +4,22 @@
   width: 100%;
   margin: 0 auto;
 }
+
+.professionalList {
+  display: flex;
+  flex-flow: wrap;
+  list-style: none;
+  justify-content: space-between;
+}
+
+.professionalList li {
+  margin: 10px;
+  padding: 30px;
+  text-align: center;
+  border-radius: 6px;
+  border: 1px solid rgba(191, 191, 191, 0.5);
+}
+
+.professionalList li:hover {
+  border-color: #3298ff;
+}
