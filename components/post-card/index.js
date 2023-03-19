@@ -19,14 +19,22 @@ const PostCard = ({ date, image, slug, link, children }) => {
       )}
 
       {link && (
-        <a target="_blank" rel="noreferrer" title={children} href={link}>
+        <a
+          className={style.postCardLink}
+          target="_blank"
+          rel="noreferrer"
+          title={children}
+          href={link}
+        >
           open
         </a>
       )}
 
       {slug && (
-        <Link className={style.postCardLink} href={`/blog/${slug}`}>
-          read
+        <Link legacyBehavior href={`/blog/${slug}`}>
+          <a className={style.postCardLink} title={children}>
+            read
+          </a>
         </Link>
       )}
     </aside>

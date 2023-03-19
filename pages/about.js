@@ -45,7 +45,7 @@ const About = ({ about }) => {
             <h2>experience</h2>
           </a>
 
-          <ul className="global-list">
+          <ul className={styles.experienceList}>
             {professionalInfo.experience.map((el) => (
               <li key={el.title}>
                 <a
@@ -66,7 +66,12 @@ const About = ({ about }) => {
                 </ul>
 
                 {el.stack.length ? (
-                  <p>Tech Stack: {el.stack.join(", ")}</p>
+                  <p className={styles.experienceTechStach}>
+                    Tech Stack:{" "}
+                    {el.stack.map((el) => (
+                      <span>{el}</span>
+                    ))}
+                  </p>
                 ) : null}
               </li>
             ))}

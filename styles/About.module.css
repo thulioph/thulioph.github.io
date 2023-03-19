@@ -5,6 +5,7 @@
   margin: 0 auto;
 }
 
+/* Professional */
 .professionalList {
   display: flex;
   flex-flow: wrap;
@@ -22,4 +23,32 @@
 
 .professionalList li:hover {
   border-color: #3298ff;
+}
+
+/* Experience */
+
+.experienceTechStach span {
+  background-color: #dfdfdf;
+  margin-right: 5px;
+  padding: 4px;
+  font-family: monospace;
+}
+
+.experienceList {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.experienceList a {
+  display: flex;
+  text-transform: uppercase;
+  justify-content: space-between;
+  border-bottom: 5px solid rgba(191, 191, 191, 0.5);
+  padding: 5px;
+}
+
+.experienceList a:hover {
+  border-color: #000;
+  border-style: solid;
 }

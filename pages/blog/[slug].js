@@ -49,8 +49,8 @@ const Post = ({ previousPost, currentPost, nextPost }) => {
       <AppHeader>Blog | {title}</AppHeader>
       <AppNav />
 
-      <main className="page about-page blog-page">
-        <article>
+      <main className="page">
+        <article className="blog-page">
           <section className="article-intro">
             <h1>{title}</h1>
             <time dateTime={formattedDate}>{formattedDate}</time>
