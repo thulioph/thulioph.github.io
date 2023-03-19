@@ -4,3 +4,54 @@
   width: 100%;
   margin: 0 auto;
 }
+
+/* Professional */
+.professionalList {
+  display: flex;
+  flex-flow: wrap;
+  list-style: none;
+  justify-content: space-between;
+}
+
+.professionalList li {
+  margin: 10px;
+  padding: 30px;
+  text-align: center;
+  border-radius: 6px;
+  border: 1px solid rgba(191, 191, 191, 0.5);
+}
+
+.professionalList li:hover {
+  border-color: #3298ff;
+}
+
+/* Experience */
+
+.experienceTechStach span {
+  background-color: #dfdfdf;
+  margin-right: 5px;
+  padding: 4px;
+  font-family: monospace;
+}
+
+.experienceList {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.experienceList aside {
+  margin-bottom: 40px;
+}
+
+.experienceList a {
+  display: flex;
+  text-transform: uppercase;
+  justify-content: space-between;
+  border-bottom: 5px solid rgba(191, 191, 191, 0.5);
+  padding: 5px;
+}
+
+.experienceList a:hover {
+  border-color: #3298ff;
+}

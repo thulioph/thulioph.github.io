@@ -1,30 +1,40 @@
 import React from "react";
 import Link from "next/link";
 
+import style from "@/components/post-card/style.module.css";
+
 const PostCard = ({ date, image, slug, link, children }) => {
   return (
-    <aside className="post-card">
+    <aside className={style.postCard}>
       {image && (
-        <img className="post-card-image" src={`/images/posts/${image}`} />
+        <img className={style.postCardImage} src={`/images/posts/${image}`} />
       )}
 
-      <h3 className="post-card-title">{children}</h3>
+      <h3 className={style.postCardTitle}>{children}</h3>
 
       {date && (
-        <time className="post-card-time" dateTime={date}>
+        <time className={style.postCardTime} dateTime={date}>
           {date}
         </time>
       )}
 
       {link && (
-        <a target="_blank" rel="noreferrer" title={children} href={link}>
+        <a
+          className={style.postCardLink}
+          target="_blank"
+          rel="noreferrer"
+          title={children}
+          href={link}
+        >
           open
         </a>
       )}
 
       {slug && (
-        <Link className="post-card-link" href={`/blog/${slug}`}>
-          read
+        <Link legacyBehavior href={`/blog/${slug}`}>
+          <a className={style.postCardLink} title={children}>
+            read
+          </a>
         </Link>
       )}
     </aside>

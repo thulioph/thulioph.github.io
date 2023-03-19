@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 
 import AppNav from "@/components/navbar";
 import AppHeader from "@/components/header";
@@ -8,8 +7,12 @@ import { getAbout } from "@/services/index";
 import image from "@/public/myself.jpeg";
 import styles from "@/styles/About.module.css";
 
+const orderByTitle = (arr) =>
+  arr.sort((a, b) => a.title.localeCompare(b.title));
+
 const About = ({ about }) => {
   const { professionalInfo, educationInfo, socialInfo } = about;
+  const orderedSocial = orderByTitle(socialInfo.extraSocial);
 
   return (
     <React.Fragment>
@@ -28,7 +31,7 @@ const About = ({ about }) => {
           <p>{professionalInfo.bio.experience}</p>
 
           <p>My toolbox includes:</p>
-          <ul>
+          <ul className={styles.professionalList}>
             {professionalInfo.bio.toolbox.map((el) => (
               <li key={el}>{el}</li>
             ))}
@@ -42,9 +45,9 @@ const About = ({ about }) => {
             <h2>experience</h2>
           </a>
 
-          <ul className="global-list">
+          <div className={styles.experienceList}>
             {professionalInfo.experience.map((el) => (
-              <li key={el.title}>
+              <aside key={el.title}>
                 <a
                   href={el.website}
                   title={el.title}
@@ -56,18 +59,23 @@ const About = ({ about }) => {
 
                 <p dangerouslySetInnerHTML={{ __html: el.description }} />
 
-                <ul>
+                <ul className="list-default">
                   {el.achievements.map((el) => (
                     <li key={el}>{el}</li>
                   ))}
                 </ul>
 
                 {el.stack.length ? (
-                  <p>Tech Stack: {el.stack.join(", ")}</p>
+                  <p className={styles.experienceTechStach}>
+                    Tech Stack:{" "}
+                    {el.stack.map((el) => (
+                      <span key={el}>{el}</span>
+                    ))}
+                  </p>
                 ) : null}
-              </li>
+              </aside>
             ))}
-          </ul>
+          </div>
         </section>
 
         <section className="internal-grid education">
@@ -75,7 +83,7 @@ const About = ({ about }) => {
             <h2>education</h2>
           </a>
 
-          <ul>
+          <ul className="list-default">
             {educationInfo.education.map((el) => (
               <li key={el.title}>
                 <a
@@ -96,8 +104,8 @@ const About = ({ about }) => {
             <h2>social</h2>
           </a>
 
-          <ul>
-            {socialInfo.extraSocial.map((el) => (
+          <ul className="list-default">
+            {orderedSocial.map((el) => (
               <li key={el.title}>
                 <a
                   href={el.website}
