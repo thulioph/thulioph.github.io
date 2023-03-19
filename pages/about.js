@@ -69,7 +69,7 @@ const About = ({ about }) => {
                   <p className={styles.experienceTechStach}>
                     Tech Stack:{" "}
                     {el.stack.map((el) => (
-                      <span>{el}</span>
+                      <span key={el}>{el}</span>
                     ))}
                   </p>
                 ) : null}
