@@ -42,6 +42,19 @@ a {
     1px 1px 0 #000;
 }
 
+.list-default {
+  margin: 0;
+}
+
+.list-default li {
+  margin-bottom: 5px;
+}
+
+.list-default a {
+  border-bottom: 2px solid #3298ff;
+  font-weight: 800;
+}
+
 /* Logo */
 .logo {
   margin-bottom: 10px;

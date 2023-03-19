@@ -40,6 +40,10 @@
   list-style-type: none;
 }
 
+.experienceList aside {
+  margin-bottom: 40px;
+}
+
 .experienceList a {
   display: flex;
   text-transform: uppercase;
@@ -49,6 +53,5 @@
 }
 
 .experienceList a:hover {
-  border-color: #000;
-  border-style: solid;
+  border-color: #3298ff;
 }

@@ -45,9 +45,9 @@ const About = ({ about }) => {
             <h2>experience</h2>
           </a>
 
-          <ul className={styles.experienceList}>
+          <div className={styles.experienceList}>
             {professionalInfo.experience.map((el) => (
-              <li key={el.title}>
+              <aside key={el.title}>
                 <a
                   href={el.website}
                   title={el.title}
@@ -59,7 +59,7 @@ const About = ({ about }) => {
 
                 <p dangerouslySetInnerHTML={{ __html: el.description }} />
 
-                <ul>
+                <ul className="list-default">
                   {el.achievements.map((el) => (
                     <li key={el}>{el}</li>
                   ))}
@@ -73,9 +73,9 @@ const About = ({ about }) => {
                     ))}
                   </p>
                 ) : null}
-              </li>
+              </aside>
             ))}
-          </ul>
+          </div>
         </section>
 
         <section className="internal-grid education">
@@ -83,7 +83,7 @@ const About = ({ about }) => {
             <h2>education</h2>
           </a>
 
-          <ul>
+          <ul className="list-default">
             {educationInfo.education.map((el) => (
               <li key={el.title}>
                 <a
@@ -104,7 +104,7 @@ const About = ({ about }) => {
             <h2>social</h2>
           </a>
 
-          <ul>
+          <ul className="list-default">
             {orderedSocial.map((el) => (
               <li key={el.title}>
                 <a
