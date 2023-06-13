@@ -5,6 +5,7 @@ import AppNav from "@/components/navbar";
 import Hero from "@/components/hero";
 import CoordsCard from "@/components/coords-card";
 import { getGpxFiles } from "@/services/index";
+import { splitByYear } from "@/utils/index";
 
 import image from "@/public/activities.jpg";
 
@@ -21,7 +22,9 @@ const formatFiles = (files) => {
     .flat()
     .sort((a, b) => b.date.localeCompare(a.date));
 
-  return JSON.stringify(newFiles);
+  const spplitedByYears = splitByYear(newFiles);
+
+  return JSON.stringify(spplitedByYears);
 };
 
 const Rides = ({ files }) => {
@@ -41,19 +44,24 @@ const Rides = ({ files }) => {
         </Hero>
 
         <section className="internal-grid">
-          <ol className="list-items-card">
-            {newFiles.map(({ tracks, date }, key) => (
-              <li key={key}>
-                <CoordsCard
-                  coords={extractCoords(tracks)}
-                  date={date}
-                  distance={tracks.distance.total}
-                >
-                  {tracks.name}
-                </CoordsCard>
-              </li>
-            ))}
-          </ol>
+          {newFiles.map(({ year, rides }) => (
+            <React.Fragment key={year}>
+              <h2>{year}</h2>
+              <ol className="list-items-card">
+                {rides.map(({ tracks, date }, key) => (
+                  <li key={key}>
+                    <CoordsCard
+                      coords={extractCoords(tracks)}
+                      date={date}
+                      distance={tracks.distance.total}
+                    >
+                      {tracks.name}
+                    </CoordsCard>
+                  </li>
+                ))}
+              </ol>
+            </React.Fragment>
+          ))}
         </section>
       </main>
     </React.Fragment>

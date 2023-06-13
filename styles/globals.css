@@ -224,7 +224,6 @@ a {
 .list-items-card {
   display: flex;
   flex-flow: wrap;
-  justify-content: center;
   align-items: flex-start;
   margin: 0;
   padding: 0;
