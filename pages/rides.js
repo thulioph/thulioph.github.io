@@ -12,6 +12,20 @@ const extractCoords = (tracks) => {
   return tracks?.points?.map(({ lat, lon }) => [lat, lon]);
 };
 
+const splitByYear = (rides) => {
+  const allDates = rides.map((el) => el.date);
+
+  const onlyYears = [
+    ...new Set(allDates.map((el) => new Date(el).getFullYear())),
+  ];
+
+  const abc = onlyYears.map((year) => ({
+    [year]: rides.filter((ride) => new Date(ride.date).getFullYear() === year),
+  }));
+
+  return abc;
+};
+
 const formatFiles = (files) => {
   const newFiles = files
     .map((el) => ({
@@ -20,6 +34,9 @@ const formatFiles = (files) => {
     }))
     .flat()
     .sort((a, b) => b.date.localeCompare(a.date));
+
+  const spplitedByYears = splitByYear(newFiles);
+  console.warn("spplitedByYears", spplitedByYears);
 
   return JSON.stringify(newFiles);
 };
