@@ -18,7 +18,8 @@ const formatFiles = (files) => {
       tracks: el.tracks[0],
       date: el.metadata.time,
     }))
-    .flat();
+    .flat()
+    .sort((a, b) => b.date.localeCompare(a.date));
 
   return JSON.stringify(newFiles);
 };
