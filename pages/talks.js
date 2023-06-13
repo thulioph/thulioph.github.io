@@ -6,8 +6,14 @@ import Hero from "@/components/hero";
 import PostCard from "@/components/post-card";
 import { getTalks } from "@/services/index";
 import image from "@/public/talks.jpg";
+import { splitByYear } from "@/utils/index";
 
-const Talks = ({ talks }) => {
+const formatTalks = (talks) => {
+  const talksByYear = splitByYear(talks, "talks");
+  return talksByYear;
+};
+
+const Talks = ({ talks: newTalks }) => {
   return (
     <React.Fragment>
       <AppHeader>Talks</AppHeader>
@@ -22,15 +28,20 @@ const Talks = ({ talks }) => {
         </Hero>
 
         <section className="internal-grid">
-          <ul className="list-items-card">
-            {talks.map((el) => (
-              <li key={el.title}>
-                <PostCard date={el.date} link={el.link}>
-                  {el.title}
-                </PostCard>
-              </li>
-            ))}
-          </ul>
+          {newTalks.map(({ year, talks }) => (
+            <React.Fragment key={year}>
+              <h2>{year}</h2>
+              <ol className="list-items-card">
+                {talks.map((el) => (
+                  <li key={el.title}>
+                    <PostCard date={el.date} link={el.link}>
+                      {el.title}
+                    </PostCard>
+                  </li>
+                ))}
+              </ol>
+            </React.Fragment>
+          ))}
         </section>
       </main>
     </React.Fragment>
@@ -51,7 +62,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      talks: sortedByDate,
+      talks: formatTalks(sortedByDate),
     },
   };
 }
