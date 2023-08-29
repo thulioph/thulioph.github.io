@@ -14,7 +14,7 @@ const PostCard = ({ date, image, slug, link, children }) => {
 
       {date && (
         <time className={style.postCardTime} dateTime={date}>
-          {date}
+          {new Date(date).toDateString()}
         </time>
       )}
 
