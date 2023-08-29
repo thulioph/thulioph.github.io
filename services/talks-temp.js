@@ -156,8 +156,8 @@ module.exports = {
     {
       title: "+97% of Time Reduction to Onboarding New Metrics",
       link: "https://speakerdeck.com/thulioph/plus-97-percent-of-time-reduction-to-onboarding-new-metrics",
-      date: "11/26/2020",
-      language: "pt-BR",
+      date: "08/25/2023",
+      language: "en-US",
       resourceId: "40328128365092435926139441814749",
       description:
         "I am presenting a successful showcase that has caused more than 97% timing reduction due to process automation. This automation was led by me when I worked on the Experimentation team. The slides will give you context for the talk, going through the problem, and explaining the solution, and outcomes.",
