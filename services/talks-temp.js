@@ -136,7 +136,7 @@ module.exports = {
         "In this talk, we'll learn concepts like composition, single responsibility, and how to build reusable and extensible components using Recompose.",
     },
     {
-      title: "CSS in the age of components",
+      title: "CSS in components age",
       link: "https://speakerdeck.com/thulioph/css-na-era-dos-componentes",
       date: "12/19/2019",
       language: "pt-BR",
@@ -152,6 +152,15 @@ module.exports = {
       resourceId: "2a6eb33548f54b8e89be3a9e4a7e25c3",
       description:
         "In this talk, we'll learn how we implemented cache in the past, how it is now, the limitations, strategies, and tools we can use to apply a cache layer in front-end.",
+    },
+    {
+      title: "+97% of Time Reduction to Onboarding New Metrics",
+      link: "https://speakerdeck.com/thulioph/plus-97-percent-of-time-reduction-to-onboarding-new-metrics",
+      date: "11/26/2020",
+      language: "pt-BR",
+      resourceId: "40328128365092435926139441814749",
+      description:
+        "I am presenting a successful showcase that has caused more than 97% timing reduction due to process automation. This automation was led by me when I worked on the Experimentation team. The slides will give you context for the talk, going through the problem, and explaining the solution, and outcomes.",
     },
   ],
 };
