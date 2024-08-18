@@ -20,7 +20,9 @@ const formatFiles = (files) => {
       date: el.metadata.time,
     }))
     .flat()
-    .sort((a, b) => b.date.localeCompare(a.date));
+    .sort((a, b) => {
+      return b?.date?.localeCompare(a?.date);
+    });
 
   const spplitedByYears = splitByYear(newFiles);
 
