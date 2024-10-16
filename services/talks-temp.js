@@ -162,5 +162,14 @@ module.exports = {
       description:
         "I am presenting a successful showcase that has caused more than 97% timing reduction due to process automation. This automation was led by me when I worked on the Experimentation team. The slides will give you context for the talk, going through the problem, and explaining the solution, and outcomes.",
     },
+    {
+      title: "CUI & Feature Flags",
+      link: "https://speakerdeck.com/thulioph/cui-and-feature-flags",
+      date: "09/30/2024",
+      language: "en-US",
+      resourceId: "",
+      description:
+        "In this talk, I present how my team uses Feature Flags. I led this implementation when I worked on the Pricing Experience team. These slides will give you a context for the talk, going through where we applied, the benefits and reasons, lessons learned, and challenges.",
+    },
   ],
 };
