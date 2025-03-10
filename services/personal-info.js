@@ -38,12 +38,65 @@ const professionalInfo = {
   },
   experience: [
     {
-      title: "HelloFresh",
-      period: "2022 - current",
-      website: "https://www.hellofresh.com/",
-      description: ``,
-      achievements: [],
-      stack: [],
+      title: "HelloFresh - Senior Software Engineer @ Benefits Management",
+      period: "2023 - present",
+      website: "https://www.hellofresh.de/",
+      description: `
+        I’m working as a full-stack web developer on the Benefits Management team, responsible for the main B2B platform that handles multiple products (Vouchers, Marketing Campaigns, Pricing Tests, and Discount Communications) within the HelloFresh group.
+        <br /><br />
+        My role involves the development of features and building internal tools to support the ecosystem of benefits. This position made me shift to a mindset focused on monitoring and quick recovery, supported by validating ideas with Proof of Concepts (PoC) before launching broadly. That results in deliveries that are easy to understand, diagnose, monitor, and reverse. This enabled the team to deliver with more confidence, quality, and lower risk. I work with hybrid teams of 5 to 10 people.
+      `,
+      achievements: [
+        "I led the adoption of Feature Flag development, from defining strategy and implementation to documenting processes and educating the team on their benefits. Used Statsig, Next.js, and Node.js.",
+        "I introduced new ways of working to improve collaboration and reduce risks, including Given-When-Then, Desk Checks, RAID logs, Proof of Concepts (PoCs), and Development with Feature Flag.",
+        "I led the strategy for scaling a feature that enabled pricing tests across all landing pages at HelloFresh, setting the tools to reduce risk while improving monitoring and tracking. Tools: Contentful, Cloudflare Workers, React.js, Honeycomb",
+        "I led technical improvements of the platform, from identifying problems and planning solutions to executing tasks and organizing teamwork, ensuring technical progress alongside delivering value to the business.",
+        "I led the Knowledge Sharing group, organizing topics, communication, agendas, and regular meetings to ensure continuous team learning. ",
+        "I led the team's monitoring and tracking topics, adding new capabilities and implementing tools, good practices, and automation and training the team. Tools: Grafana, Node.js, Sentry, Next.js, GitHub Actions.",
+      ],
+      stack: [
+        "Next.js",
+        "Node.js",
+        "Statsig",
+        "Feature Flags",
+        "Agile methodologies",
+        "Contentful",
+        "Cloudflare Workers",
+        "React.js",
+        "Honeycomb",
+        "Grafana",
+        "Sentry",
+        "GitHub Actions",
+      ],
+    },
+    {
+      title: "HelloFresh - Senior Software Engineer @ Experimentation Squad",
+      period: "2022 - 2023",
+      website: "https://www.hellofresh.de/",
+      description: `
+        I worked as a full-stack web developer in the Experimentation Squad, responsible for cultivating and scaling the experimentation culture across the HelloFresh group.
+        <br /><br />
+        My role involved the development of features and building internal tools to support various user experience research methods, such as A/B and A/A tests, for HelloFresh business units worldwide. Collaborating with Product Owners, Data Scientists, and other engineers across the different data stages, from ingestion and processing to data visualization. I work with hybrid teams of 5 to 10 people.
+      `,
+      achievements: [
+        "I led an automation initiative that reduced metric onboarding time by 97%, using tools like Airflow, S3, Athena, GitHub Actions, FastAPI, Next.js, and Sentry.",
+        "I drove the technical modernization of the primary experimentation analysis platform by defining testing strategies and quality assurance practices, establishing clear coding conventions and standards, improving the CI pipeline, and educating and mentoring the team to adopt new tools and best practices.",
+        "I mentored junior and mid-level engineers, facilitating knowledge sharing and professional growth.",
+        "I managed task analysis, mapping, and distribution, actively removing impediments, refining workflows, and facilitating cross-team collaboration.",
+        "I make complex problems into clear, incremental deliverables, ensuring continuous value delivery and consistent progress toward business goals.",
+      ],
+      stack: [
+        "Airflow",
+        "AWS S3",
+        "AWS Athena",
+        "FastAPI",
+        "Next.js",
+        "Sentry",
+        "Github Actions",
+        "Continuos Integration",
+        "Data visualization",
+        "Agile methodologies",
+      ],
     },
     {
       title: "Thoughtworks",
