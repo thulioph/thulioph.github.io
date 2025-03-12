@@ -47,7 +47,7 @@ const Post = ({ previousPost, currentPost, nextPost }) => {
         description={title}
       />
 
-      <AppHeader>Blog // {title}</AppHeader>
+      <AppHeader>{title}</AppHeader>
       <AppNav />
 
       <main className="page">
