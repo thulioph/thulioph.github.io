@@ -5,8 +5,9 @@ export const routes = [
     value: "/projects",
     description: "Open-source experiments",
   },
-  { label: "Talks", value: "/talks", description: "Sharing knowledge" },
   { label: "Blog", value: "/blog", description: "Tech articles" },
+  { label: "Talks", value: "/talks", description: "Sharing knowledge" },
+  { label: "Setup", value: "/setup", description: "Tools. Apps. Gear." },
   { label: "Rides", value: "/rides", description: "rides" },
 ];
 

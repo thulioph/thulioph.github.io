@@ -1,72 +1,65 @@
-import Link from "next/link";
+import React from "react";
 
 import AppHeader from "@/components/header";
+import AppNav from "@/components/navbar";
 import styles from "@/styles/Home.module.css";
 import { getAbout } from "@/services/index";
-import routes from "@/components/navbar/routes";
 import Player from "@/components/player";
 
 export default function Home({ about }) {
-  const { name, nickname } = about.personalInfo;
-  const { currentCompany, bio } = about.professionalInfo;
+  const { name, jobTitle, location } = about.personalInfo;
+  const { currentCompany } = about.professionalInfo;
 
   return (
-    <div className={`${styles.container} page`}>
+    <React.Fragment>
       <AppHeader>Home</AppHeader>
+      <AppNav />
 
-      <main className={styles.main}>
-        <section className={styles.introduction}>
-          <h1 className={styles.mainTitle}>
-            Hi! I&#39;m <span>{name}</span>, <span>a.k.a</span>{" "}
-            <span className="text-border">{nickname}</span>.
-          </h1>
-        </section>
+      <div className={`${styles.container} page`}>
+        <main className={styles.main}>
+          <section className="introduction">
+            <h1>I&#39;m {name}.</h1>
 
-        <section className={styles.moreInfo}>
-          <aside className={styles.box}>
-            <p className={styles.paragraph}>
-              <Player />, while working at{" "}
+            <h2>
+              <span>{jobTitle}</span> from{" "}
               <a
-                className={styles.link}
+                href={location[0].link}
+                title={location[0].city}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {location[0].city}
+              </a>{" "}
+              🇧🇷
+            </h2>
+
+            <h3>
+              Currently based in{" "}
+              <a
+                href={location[1].link}
+                target="_blank"
+                rel="noreferrer"
+                title={location[1].city}
+              >
+                <span>{location[1].city}</span>
+              </a>{" "}
+              🇩🇪 , working for{" "}
+              <a
                 href={currentCompany.website}
+                title={currentCompany.label}
                 target="_blank"
                 rel="noreferrer"
               >
                 {currentCompany.label}
               </a>
               .
-            </p>
-          </aside>
+            </h3>
 
-          <aside className={styles.box}>
-            <p className={`${styles.paragraph} summary`}>
-              <Link href="/about">
-                <a className={styles.link}>
-                  {bio.summary.split(".")[3]}
-                  {"."}
-                </a>
-              </Link>
-            </p>
-          </aside>
-
-          <aside className={styles.box}>
-            <ul className="listBtn">
-              {routes
-                .slice(1, routes.length)
-                .map(({ label, value, description }) => (
-                  <li key={label}>
-                    <Link href={value}>
-                      <a className="linkBtn" data-title={description}>
-                        {label} {"  "}
-                      </a>
-                    </Link>
-                  </li>
-                ))}
-            </ul>
-          </aside>
-        </section>
-      </main>
-    </div>
+            <Player />
+          </section>
+        </main>
+      </div>
+    </React.Fragment>
   );
 }
 

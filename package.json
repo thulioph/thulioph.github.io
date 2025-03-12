@@ -10,6 +10,7 @@
     "release": "next build && next export"
   },
   "dependencies": {
+    "disqus-react": "^1.1.6",
     "gpxparser": "^3.0.8",
     "gray-matter": "^4.0.3",
     "highlight.js": "^11.6.0",

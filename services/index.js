@@ -69,7 +69,11 @@ export const getGpxFiles = async () => {
 
       const gpxFile = gpxConverter(fileContents);
 
-      return gpxFile;
+      if (gpxFile?.tracks.length !== 0) {
+        return gpxFile;
+      }
+
+      return;
     })
   );
 };

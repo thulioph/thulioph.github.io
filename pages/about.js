@@ -1,11 +1,21 @@
 import React from "react";
 
+import Image from "next/image";
 import AppNav from "@/components/navbar";
 import AppHeader from "@/components/header";
-import Hero from "@/components/hero";
 import { getAbout } from "@/services/index";
-import image from "@/public/myself.jpeg";
 import styles from "@/styles/About.module.css";
+
+import imag1 from "@/public/images/about-pic-01.jpg";
+import imag2 from "@/public/images/about-pic-02.jpg";
+import imag3 from "@/public/images/about-pic-03.jpg";
+import imag5 from "@/public/images/about-pic-04.jpg";
+import imag6 from "@/public/images/about-pic-05.jpg";
+import imag7 from "@/public/images/about-pic-06.jpg";
+import imag8 from "@/public/images/about-pic-07.jpg";
+import imag9 from "@/public/images/about-pic-08.jpg";
+
+const imgs = [imag2, imag8, imag3, imag6, imag7, imag5, imag1, imag9];
 
 const orderByTitle = (arr) =>
   arr.sort((a, b) => a.title.localeCompare(b.title));
@@ -20,29 +30,42 @@ const About = ({ about }) => {
       <AppNav />
 
       <main className={`page ${styles.aboutPage}`}>
-        <Hero image={image}>{""}</Hero>
+        <section className="internal-grid bio">
+          <div className={styles.gridContainer}>
+            <div className={styles.gridContent}>
+              <h2>Bio</h2>
+              <p>{professionalInfo.bio.summary}</p>
+              <p>{professionalInfo.bio.experience}</p>
 
-        <section className="internal-grid professional">
-          <a id="introduction" href="#introduction">
-            <h2>Introduction</h2>
-          </a>
+              <ul className={styles.professionalList}>
+                {professionalInfo.bio.toolbox.map((el) => (
+                  <li key={el}>{el}</li>
+                ))}
+              </ul>
 
-          <p>{professionalInfo.bio.summary}</p>
-          <p>{professionalInfo.bio.experience}</p>
+              <p>{professionalInfo.bio.longTerm}</p>
+            </div>
+          </div>
+        </section>
 
-          <p>My toolbox includes:</p>
-          <ul className={styles.professionalList}>
-            {professionalInfo.bio.toolbox.map((el) => (
-              <li key={el}>{el}</li>
-            ))}
-          </ul>
-
-          <p>{professionalInfo.bio.longTerm}</p>
+        <section className="internal-grid photos">
+          {imgs.map((el, index) => (
+            <div key={index} className={"images-container"}>
+              <Image
+                src={el.src}
+                alt={el}
+                width={300}
+                height={300}
+                priority="true"
+                layout="responsive"
+              />
+            </div>
+          ))}
         </section>
 
         <section className="internal-grid experience">
           <a id="experience" href="#experience">
-            <h2>experience</h2>
+            <h2>Career</h2>
           </a>
 
           <div className={styles.experienceList}>

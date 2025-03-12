@@ -1,5 +1,5 @@
 export const splitByYear = (rides, mainKey = "rides") => {
-  const allDates = rides.map((el) => el.date);
+  const allDates = rides.map((el) => el.date || el.created_at);
 
   const onlyYears = [
     ...new Set(allDates.map((el) => new Date(el).getFullYear())),
@@ -8,7 +8,7 @@ export const splitByYear = (rides, mainKey = "rides") => {
   const abc = onlyYears.map((year) => ({
     year: year,
     [mainKey]: rides.filter(
-      (ride) => new Date(ride.date).getFullYear() === year
+      (ride) => new Date(ride.date || ride.created_at).getFullYear() === year
     ),
   }));
 

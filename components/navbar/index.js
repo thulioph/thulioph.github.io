@@ -12,7 +12,7 @@ const AppNav = () => {
       <div className="box logo">
         <Link href="/">
           <a>
-            <h1>Thulio Philipe</h1>
+            <h1>TP</h1>
           </a>
         </Link>
       </div>

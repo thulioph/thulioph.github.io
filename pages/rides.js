@@ -7,17 +7,16 @@ import CoordsCard from "@/components/coords-card";
 import { getGpxFiles } from "@/services/index";
 import { splitByYear } from "@/utils/index";
 
-import image from "@/public/activities.jpg";
-
 const extractCoords = (tracks) => {
   return tracks?.points?.map(({ lat, lon }) => [lat, lon]);
 };
 
 const formatFiles = (files) => {
   const newFiles = files
+    .filter((el) => el)
     .map((el) => ({
-      tracks: el.tracks[0],
-      date: el.metadata.time,
+      tracks: el?.tracks[0],
+      date: el?.metadata?.time,
     }))
     .flat()
     .sort((a, b) => {
@@ -38,12 +37,7 @@ const Rides = ({ files }) => {
       <AppNav />
 
       <main className="page">
-        <Hero
-          image={image}
-          description="Most of the activities here are by bike."
-        >
-          Rides
-        </Hero>
+        <Hero description="Bike trips">Rides</Hero>
 
         <section className="internal-grid">
           {newFiles.map(({ year, rides }) => (

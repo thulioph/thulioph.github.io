@@ -1,40 +1,41 @@
 const personalInfo = {
   name: "Thulio Philipe",
   nickname: "thulioph",
-  location: {
-    city: "Recife",
-    country: "Brazil",
-    link: "https://en.wikipedia.org/wiki/Recife",
-  },
+  location: [
+    {
+      city: "Recife",
+      country: "Brazil",
+      link: "https://en.wikipedia.org/wiki/Recife",
+      timezone: "BRT (UTC-3)",
+    },
+    {
+      living: true,
+      city: "Berlin",
+      country: "Germany",
+      link: "https://en.wikipedia.org/wiki/Berlin",
+      timezone: "CET (UTC+1)",
+    },
+  ],
   jobTitle: "Senior Software Engineer",
-  headline: "building high-quality software to change people's life",
-  description: `
-    I have been working as a software engineer for almost 10 years. I already worked with ad agencies, startups, software studios and as a consultant, always focused on the Front-End side (UI). I like to share my knowledge through <a href="https://speakerdeck.com/thulioph">talks</a>, <a href="https://medium.com/@thulioph_">articles</a> and all repositories on my <a href="https://github.com/thulioph">Github</a> are open. My current focus is on WebApps and some topics that guide my studies are Performance, Security, User Engagement and Code Quality.
-  `,
+  headline: "",
+  description: ``,
 };
 
 const professionalInfo = {
   bio: {
     summary:
-      "I have been working with the web for one decade, acting through different layers and processes of software development. I started my journey as a designer but I quickly realized that the front-end was my passion. I like to work between the design and engineering teams, focusing on quality, security, performance, and usability. I am a multidisciplinary professional and creative who believes in continuous improvement and is passionate about challenging myself to leverage all expectations.",
+      "I have +12 years of experience building scalable and strategic web solutions that directly impact business outcomes. As a multidisciplinary professional, I use a structured approach, prioritizing clarity, collaboration, and technical excellence in everything I do. I enjoy tackling complex problems, using creativity and data-driven methods to provide lasting technical solutions.",
     experience:
-      "I easily engage with teams in different structures and styles, from AD agencies, software studios, consulting, and products. I already worked for industries in Telecommunications, Health services, Financial Services, Retail, Food Delivery, and Education.",
-    toolbox: [
-      "Collaboration",
-      "Clean and direct communication",
-      "Solution Focused",
-      "Curiosity",
-      "Proactivity",
-      "Team-Oriented",
-    ],
+      "My experience covers all phases of engineering, from requirements clarification, design, development, testing, integration, and release. I have successfully optimized technical processes, improved test coverage and build performance, and actively mentored team members to support their professional growth.",
+    toolbox: [],
     longTerm:
-      "I am looking for opportunities to collaborate with teams whose goal is to develop software to change the world.",
+      "I strongly believe in creating a collaborative environment, encouraging open communication and continuous learning, always aiming to grow professionally and personally.",
   },
   image:
     "https://avatars2.githubusercontent.com/u/2343288?s=460&u=34b95449c5414b41560dd5b41c97cf414bad8c8c&v=4",
   currentCompany: {
     label: "HelloFresh",
-    website: "https://www.hellofresh.com/",
+    website: "https://www.hellofresh.de/",
   },
   experience: [
     {
@@ -274,18 +275,6 @@ const socialInfo = {
     {
       title: "CodeSandBox",
       website: "https://codesandbox.io/u/thulioph",
-    },
-    {
-      title: "LinkedIn",
-      website: "https://linkedin.com/in/thulioph",
-    },
-    {
-      title: "Github",
-      website: "https://github.com/thulioph",
-    },
-    {
-      title: "Twitter",
-      website: "https://twitter.com/@thulioph_",
     },
   ],
 };

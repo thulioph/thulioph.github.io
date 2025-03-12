@@ -67,7 +67,7 @@ const CoordsCard = ({ coords, date, distance, children }) => {
         <polyline
           points={newCoords}
           fill="none"
-          stroke="#000000"
+          stroke="#160c28"
           strokeWidth="8"
           strokeLinecap="round"
           strokeLinejoin="round"

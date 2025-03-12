@@ -8,7 +8,7 @@ const Hero = ({ image, children, description }) => {
         {image && (
           <Image
             src={image}
-            priority={true}
+            priority="true"
             alt={children}
             layout="responsive"
           />
