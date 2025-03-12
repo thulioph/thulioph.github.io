@@ -1,6 +1,5 @@
 import React from "react";
 
-import styles from "@/styles/Home.module.css";
 import config from "@/config/index.js";
 
 const extractData = ({ recenttracks }) => {
@@ -10,6 +9,7 @@ const extractData = ({ recenttracks }) => {
     artist: currentTrack.artist["#text"],
     song: currentTrack.name,
     url: currentTrack.url,
+    image: currentTrack.image.find((el) => el.size === "extralarge")["#text"],
   };
 };
 
@@ -61,19 +61,23 @@ const Player = () => {
   }
 
   if (!objIsFullyEmpty(track) && !isLoading) {
-    return <React.Fragment>Not listening to music </React.Fragment>;
+    return <React.Fragment>Not listening to music :(</React.Fragment>;
   }
 
-  const { url, artist, song } = track;
+  const { url, artist, song, image } = track;
 
   return (
     <React.Fragment>
-      Listening to{" "}
-      <span>
-        <a className={styles.link} href={url} target="_blank" rel="noreferrer">
-          {artist}, {song}
+      <section className="player-image">
+        <a
+          href={url}
+          target="_blank"
+          rel="noreferrer"
+          title={`Listening to ${artist}, ${song}`}
+        >
+          <img src={image} alt={`${artist}, ${song}`} />
         </a>
-      </span>
+      </section>
     </React.Fragment>
   );
 };

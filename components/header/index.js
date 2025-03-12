@@ -1,16 +1,18 @@
 import React from "react";
 import Head from "next/head";
 
+import * as data from "@/services/personal-info";
+
 const AppHeader = ({ children }) => {
-  const defaultTitle = "Thulio Philipe, Senior Software Engineer";
+  const defaultTitle = data.personalInfo.name;
+
+  const customTitle = `${children} // ${defaultTitle}`;
 
   return (
     <React.Fragment>
       <Head>
-        <title>
-          {children} | {defaultTitle}
-        </title>
-        <meta name="description" content={`${children} | ${defaultTitle}`} />
+        <title>{customTitle}</title>
+        <meta name="description" content={customTitle} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
     </React.Fragment>

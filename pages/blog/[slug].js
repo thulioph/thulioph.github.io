@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import ReactMarkdown from "react-markdown";
 import rehypeHighlight from "rehype-highlight";
+import { DiscussionEmbed } from "disqus-react";
 
 import AppHeader from "@/components/header";
 import AppNav from "@/components/navbar";
@@ -46,7 +47,7 @@ const Post = ({ previousPost, currentPost, nextPost }) => {
         description={title}
       />
 
-      <AppHeader>Blog | {title}</AppHeader>
+      <AppHeader>{title}</AppHeader>
       <AppNav />
 
       <main className="page">
@@ -112,6 +113,18 @@ const Post = ({ previousPost, currentPost, nextPost }) => {
               <PostCard slug={nextPost?.slug}>{nextPost?.title}</PostCard>
             )}
           </aside>
+        </section>
+
+        <section className="posts-comments">
+          <DiscussionEmbed
+            shortname="thulioph"
+            config={{
+              url: `https://www.thulioph.com/blog/${slug}`,
+              identifier: slug,
+              title: title,
+              language: "en_US",
+            }}
+          />
         </section>
       </main>
     </React.Fragment>

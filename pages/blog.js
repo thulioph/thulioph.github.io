@@ -1,11 +1,10 @@
 import React from "react";
+import Link from "next/link";
 
 import AppHeader from "@/components/header";
 import Hero from "@/components/hero";
 import AppNav from "@/components/navbar";
-import PostCard from "@/components/post-card";
 import { getPosts } from "@/services/index";
-import image from "@/public/blog.jpg";
 
 import { splitByYear } from "@/utils/index";
 
@@ -24,18 +23,27 @@ const Blog = ({ posts }) => {
       <AppNav />
 
       <main className="page">
-        <Hero image={image}>Blog</Hero>
+        <Hero
+          description={`Here you can find all ${posts.length} that I wrote.`}
+        >
+          Blog
+        </Hero>
 
         <section className="internal-grid">
           {posts.map(({ year, posts }) => (
             <React.Fragment key={year}>
               <h2>{year}</h2>
-              <ul className="list-items-card">
+              <ul className="posts-list">
                 {posts.map((el) => (
                   <li key={el.slug}>
-                    <PostCard date={el.date} image={el.image} slug={el.slug}>
-                      {el.title}
-                    </PostCard>
+                    <Link legacyBehavior href={`/blog/${el.slug}`} passHref>
+                      <React.Fragment>
+                        <a title={el.title} href={`/blog/${el.slug}`}>
+                          <p>{el.title}</p>
+                          <span>{el.date}</span>
+                        </a>
+                      </React.Fragment>
+                    </Link>
                   </li>
                 ))}
               </ul>

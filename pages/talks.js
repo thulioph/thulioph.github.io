@@ -3,9 +3,7 @@ import React from "react";
 import AppHeader from "@/components/header";
 import AppNav from "@/components/navbar";
 import Hero from "@/components/hero";
-import PostCard from "@/components/post-card";
 import { getTalks } from "@/services/index";
-import image from "@/public/talks.jpg";
 import { splitByYear } from "@/utils/index";
 
 const formatTalks = (talks) => {
@@ -20,10 +18,7 @@ const Talks = ({ talks: newTalks }) => {
       <AppNav />
 
       <main className="page">
-        <Hero
-          image={image}
-          description={"When you share your knowledge, you learn twice."}
-        >
+        <Hero description={"When you share your knowledge, you learn twice."}>
           Talks
         </Hero>
 
@@ -31,12 +26,18 @@ const Talks = ({ talks: newTalks }) => {
           {newTalks.map(({ year, talks }) => (
             <React.Fragment key={year}>
               <h2>{year}</h2>
-              <ol className="list-items-card">
+              <ol className="posts-list">
                 {talks.map((el) => (
                   <li key={el.title}>
-                    <PostCard date={el.date} link={el.link}>
-                      {el.title}
-                    </PostCard>
+                    <a
+                      title={el.title}
+                      href={el.link}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <p>{el.title}</p>
+                      <span>{el.date}</span>
+                    </a>
                   </li>
                 ))}
               </ol>
@@ -60,9 +61,14 @@ export async function getStaticProps() {
     return dateB - dateA;
   });
 
+  const newDates = sortedByDate.map((el) => ({
+    ...el,
+    date: new Date(el.date).toDateString(),
+  }));
+
   return {
     props: {
-      talks: formatTalks(sortedByDate),
+      talks: formatTalks(newDates),
     },
   };
 }

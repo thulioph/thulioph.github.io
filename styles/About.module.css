@@ -18,17 +18,17 @@
   padding: 30px;
   text-align: center;
   border-radius: 6px;
-  border: 1px solid rgba(191, 191, 191, 0.5);
+  border: 1px solid var(--primary);
 }
 
 .professionalList li:hover {
-  border-color: #3298ff;
+  border-color: var(--secondary);
 }
 
 /* Experience */
 
 .experienceTechStach span {
-  background-color: #dfdfdf;
+  background-color: var(--ternary);
   margin-right: 5px;
   padding: 4px;
   font-family: monospace;
@@ -48,10 +48,17 @@
   display: flex;
   text-transform: uppercase;
   justify-content: space-between;
-  border-bottom: 5px solid rgba(191, 191, 191, 0.5);
+  border-bottom: 5px solid var(--ternary);
   padding: 5px;
+  font-size: 1.4rem;
+  font-weight: 400;
 }
 
 .experienceList a:hover {
-  border-color: #3298ff;
+  border-color: var(--secondary);
+}
+
+.experienceList aside span {
+  font-weight: 200;
+  font-size: 1.2rem;
 }
