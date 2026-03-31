@@ -36,13 +36,23 @@ export const getAbout = async () => {
 };
 
 export const getProjects = async () => {
-  const res = await fetch(
-    "https://api.github.com/users/thulioph/repos?per_page=100&sort=updated&direction=desc&type=owner"
-  );
+  try {
+    const res = await fetch(
+      "https://api.github.com/users/thulioph/repos?per_page=100&sort=updated&direction=desc&type=owner"
+    );
 
-  const projects = await res.json();
+    const projects = await res.json();
 
-  return projects;
+    if (!Array.isArray(projects)) {
+      console.error("GitHub API error:", projects);
+      return [];
+    }
+
+    return projects;
+  } catch (error) {
+    console.error("Failed to fetch projects:", error);
+    return [];
+  }
 };
 
 export const getTalks = async () => {

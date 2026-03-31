@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import ReactMarkdown from "react-markdown";
 import rehypeHighlight from "rehype-highlight";
+import remarkGfm from "remark-gfm";
 import { DiscussionEmbed } from "disqus-react";
 
 import AppHeader from "@/components/header";
@@ -59,10 +60,11 @@ const Post = ({ previousPost, currentPost, nextPost }) => {
             {image && (
               <React.Fragment>
                 <Image
-                  layout="responsive"
                   src={imagePath}
+                  alt={title}
                   width={800}
                   height={450}
+                  style={{ width: "100%", height: "auto" }}
                 />
 
                 {imageLink && (
@@ -79,6 +81,7 @@ const Post = ({ previousPost, currentPost, nextPost }) => {
           <section className="article-content">
             <ReactMarkdown
               linkTarget="_blank"
+              remarkPlugins={[remarkGfm]}
               rehypePlugins={[rehypeHighlight]}
               components={{
                 h2: ({ node }) => {

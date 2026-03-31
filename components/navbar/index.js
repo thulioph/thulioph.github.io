@@ -11,9 +11,7 @@ const AppNav = () => {
     <header className={styles.globalHeader}>
       <div className="box logo">
         <Link href="/">
-          <a>
-            <h1>TP</h1>
-          </a>
+          <h1>TP</h1>
         </Link>
       </div>
 
@@ -21,16 +19,14 @@ const AppNav = () => {
         <ul className="listBtn">
           {routes.map(({ label, value }) => (
             <li key={label}>
-              <Link href={value} title={label}>
-                <a
-                  className={
-                    router.pathname.includes(value)
-                      ? "linkBtn active"
-                      : "linkBtn"
-                  }
-                >
-                  {label}
-                </a>
+              <Link
+                href={value}
+                title={label}
+                className={
+                  router.pathname.includes(value) ? "linkBtn active" : "linkBtn"
+                }
+              >
+                {label}
               </Link>
             </li>
           ))}

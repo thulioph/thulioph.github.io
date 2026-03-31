@@ -7,7 +7,11 @@ const PostCard = ({ date, image, slug, link, children }) => {
   return (
     <aside className={style.postCard}>
       {image && (
-        <img className={style.postCardImage} src={`/images/posts/${image}`} />
+        <img
+          className={style.postCardImage}
+          src={`/images/posts/${image}`}
+          alt={children}
+        />
       )}
 
       <h3 className={style.postCardTitle}>{children}</h3>
@@ -31,10 +35,8 @@ const PostCard = ({ date, image, slug, link, children }) => {
       )}
 
       {slug && (
-        <Link legacyBehavior href={`/blog/${slug}`}>
-          <a className={style.postCardLink} title={children}>
-            read
-          </a>
+        <Link href={`/blog/${slug}`} className={style.postCardLink} title={children}>
+          read
         </Link>
       )}
     </aside>
