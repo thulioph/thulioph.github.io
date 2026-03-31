@@ -59,10 +59,11 @@ const Post = ({ previousPost, currentPost, nextPost }) => {
             {image && (
               <React.Fragment>
                 <Image
-                  layout="responsive"
                   src={imagePath}
+                  alt={title}
                   width={800}
                   height={450}
+                  style={{ width: "100%", height: "auto" }}
                 />
 
                 {imageLink && (
