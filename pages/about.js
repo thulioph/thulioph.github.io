@@ -53,11 +53,11 @@ const About = ({ about }) => {
             <div key={index} className={"images-container"}>
               <Image
                 src={el.src}
-                alt={el}
+                alt={`Photo ${index + 1}`}
                 width={300}
                 height={300}
-                priority="true"
-                layout="responsive"
+                priority
+                style={{ width: "100%", height: "auto" }}
               />
             </div>
           ))}

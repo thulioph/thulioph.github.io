@@ -36,13 +36,9 @@ const Blog = ({ posts }) => {
               <ul className="posts-list">
                 {posts.map((el) => (
                   <li key={el.slug}>
-                    <Link legacyBehavior href={`/blog/${el.slug}`} passHref>
-                      <React.Fragment>
-                        <a title={el.title} href={`/blog/${el.slug}`}>
-                          <p>{el.title}</p>
-                          <span>{el.date}</span>
-                        </a>
-                      </React.Fragment>
+                    <Link href={`/blog/${el.slug}`} title={el.title}>
+                      <p>{el.title}</p>
+                      <span>{el.date}</span>
                     </Link>
                   </li>
                 ))}

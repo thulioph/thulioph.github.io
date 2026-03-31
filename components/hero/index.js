@@ -8,9 +8,11 @@ const Hero = ({ image, children, description }) => {
         {image && (
           <Image
             src={image}
-            priority="true"
+            priority
             alt={children}
-            layout="responsive"
+            width={800}
+            height={450}
+            style={{ width: "100%", height: "auto" }}
           />
         )}
       </aside>
