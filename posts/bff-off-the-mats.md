@@ -30,6 +30,8 @@ The architecture is intentionally minimal. A homepage calls an API, gets data, a
 BJJ Off The Mats  ⇒  Supabase Edge Functions  ⇒  Raindrop.io API  ⇒  Dynamic UI
 ```
 
+![BJJ Off The Mats layout](/images/posts/bff-off-the-mats.gif)
+
 ---
 
 ## Technical decisions worth explaining
@@ -58,8 +60,6 @@ Collection data is cached in `localStorage` with a one-hour TTL. Most visitors d
 ### Dynamic category ordering
 
 The homepage uses a bento grid — differently-sized boxes that create visual hierarchy. Rather than hardcoding which category gets the largest slot, the grid sorts dynamically by content count. The category with the most resources gets the most visual prominence. As I add content over time, the layout adapts automatically.
-
-![BJJ Off The Mats layout](/images/posts/bff-off-the-mats.gif)
 
 ### The voting system
 
