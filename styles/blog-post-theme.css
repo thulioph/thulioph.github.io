@@ -323,6 +323,45 @@
   color: inherit;
 }
 
+.blog-post-theme .article-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 32px 0;
+  border: 1px solid var(--border);
+}
+
+.blog-post-theme .article-content th,
+.blog-post-theme .article-content td {
+  padding: 14px 18px;
+  text-align: left;
+  border: 1px solid var(--border);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.blog-post-theme .article-content th {
+  background: var(--surface);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.blog-post-theme .article-content td {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.blog-post-theme .article-content td strong {
+  color: var(--accent);
+}
+
+.blog-post-theme .article-content tr:hover td {
+  background: var(--surface);
+}
+
 .blog-post-theme .post-navigation {
   max-width: 720px;
   margin: 80px auto 60px;

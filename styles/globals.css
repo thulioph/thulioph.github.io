@@ -684,31 +684,3 @@ a {
 .introduction a:hover {
   border-bottom-style: dashed;
 }
-
-/* Tables in blog posts */
-.blog-page table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 2rem 0;
-}
-
-.blog-page th,
-.blog-page td {
-  border: 1px solid var(--ternary);
-  padding: 12px 16px;
-  text-align: left;
-}
-
-.blog-page th {
-  background-color: var(--primary);
-  color: var(--default);
-  font-weight: 600;
-}
-
-.blog-page tr:nth-child(even) {
-  background-color: rgba(225, 239, 230, 0.3);
-}
-
-.blog-page tr:hover {
-  background-color: var(--ternary);
-}
