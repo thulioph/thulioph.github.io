@@ -13,8 +13,19 @@ import { getPosts } from "@/services/index";
 
 const getImagePath = (image) => `/images/posts/${image}`;
 
+const getTextContent = (node) => {
+  if (!node) return '';
+  if (typeof node === 'string') return node;
+  if (node.value) return node.value;
+  if (node.children) {
+    return node.children.map(getTextContent).join('');
+  }
+  return '';
+};
+
 const extractUniqueId = (node) => {
-  return node.children[0].value
+  const text = getTextContent(node);
+  return text
     .toLowerCase()
     .replace(/[^a-zA-Z0-9]/g, "-")
     .trim();
@@ -101,23 +112,23 @@ const Post = ({ previousPost, currentPost, nextPost, headings }) => {
                 remarkPlugins={[remarkGfm]}
                 rehypePlugins={[rehypeHighlight]}
                 components={{
-                  h2: ({ node }) => {
+                  h2: ({ node, children }) => {
                     const uniqueId = extractUniqueId(node);
 
                     return (
                       <h2 id={uniqueId} className="title-link">
                         <span>
-                          <a href={`#${uniqueId}`}>{node.children[0].value}</a>
+                          <a href={`#${uniqueId}`}>{children}</a>
                         </span>
                       </h2>
                     );
                   },
-                  h3: ({ node }) => {
+                  h3: ({ node, children }) => {
                     const uniqueId = extractUniqueId(node);
 
                     return (
                       <h3 id={uniqueId}>
-                        {node.children[0].value}
+                        {children}
                       </h3>
                     );
                   },
