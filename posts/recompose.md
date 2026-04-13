@@ -24,7 +24,7 @@ Other patterns, can be applied to different contexts like [Component Folder](htt
 
 > Reuse behavior through different components.
 
-## Stateless Functional Components** — **SFC
+## Stateless Functional Components — SFC
 
 These are components without local state or lifecycle and all their data is provided by properties. You can take a look at [this post](https://hackernoon.com/react-stateless-functional-components-nine-wins-you-might-have-overlooked-997b0d933dbc) to understand the pros and cons of **functional components**.
 
@@ -38,7 +38,7 @@ The human behind this tool is [Andrew Clark](https://twitter.com/acdlite), that 
 
 Here are some of the more important HOCs:
 
-### **withState()**
+### withState()
 
 This HOC allow us to add a state and a method to manipulate this state and an initial value. Everything will be available through properties.
 
