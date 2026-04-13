@@ -4,8 +4,9 @@ import Script from "next/script";
 import NProgress from "nprogress";
 
 import "nprogress/nprogress.css";
-import "highlight.js/styles/dark.css";
+import "highlight.js/styles/atom-one-dark.css";
 import "../styles/globals.css";
+import "../styles/blog-post-theme.css";
 
 import AppFooter from "@/components/footer";
 
