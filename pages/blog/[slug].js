@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import rehypeHighlight from "rehype-highlight";
 import remarkGfm from "remark-gfm";
@@ -7,7 +8,7 @@ import { DiscussionEmbed } from "disqus-react";
 
 import AppHeader from "@/components/header";
 import AppNav from "@/components/navbar";
-import PostCard from "@/components/post-card";
+import BlogLayout from "@/components/blog-layout";
 import { getPosts } from "@/services/index";
 
 const getImagePath = (image) => `/images/posts/${image}`;
@@ -17,6 +18,21 @@ const extractUniqueId = (node) => {
     .toLowerCase()
     .replace(/[^a-zA-Z0-9]/g, "-")
     .trim();
+};
+
+const extractHeadings = (markdown) => {
+  const headingRegex = /^(#{2,3})\s+(.+)$/gm;
+  const headings = [];
+  let match;
+
+  while ((match = headingRegex.exec(markdown)) !== null) {
+    const level = match[1].length;
+    const text = match[2];
+    const id = text.toLowerCase().replace(/[^a-zA-Z0-9]/g, "-").trim();
+    headings.push({ level, text, id });
+  }
+
+  return headings;
 };
 
 const HeadComponent = ({ title, image, slug, description }) => {
@@ -33,7 +49,7 @@ const HeadComponent = ({ title, image, slug, description }) => {
   );
 };
 
-const Post = ({ previousPost, currentPost, nextPost }) => {
+const Post = ({ previousPost, currentPost, nextPost, headings }) => {
   const { title, date, markdown, image, imageLink, slug } = currentPost;
 
   const imagePath = getImagePath(image);
@@ -51,85 +67,130 @@ const Post = ({ previousPost, currentPost, nextPost }) => {
       <AppHeader>{title}</AppHeader>
       <AppNav />
 
-      <main className="page">
-        <article className="blog-page">
-          <section className="article-intro">
-            <h1>{title}</h1>
-            <time dateTime={formattedDate}>{formattedDate}</time>
+      <BlogLayout headings={headings}>
+        <main className="page">
+          <article className="blog-page">
+            <section className="article-intro">
+              <h1>{title}</h1>
+              <time dateTime={formattedDate}>{formattedDate}</time>
 
-            {image && (
-              <React.Fragment>
-                <Image
-                  src={imagePath}
-                  alt={title}
-                  width={800}
-                  height={450}
-                  style={{ width: "100%", height: "auto" }}
-                />
+              {image && (
+                <React.Fragment>
+                  <Image
+                    src={imagePath}
+                    alt={title}
+                    width={800}
+                    height={450}
+                    style={{ width: "100%", height: "auto" }}
+                  />
 
-                {imageLink && (
-                  <figcaption>
-                    <a href={imageLink} target="_blank" rel="noreferrer">
-                      Photo: Unsplash
-                    </a>
-                  </figcaption>
-                )}
-              </React.Fragment>
-            )}
-          </section>
+                  {imageLink && (
+                    <figcaption>
+                      <a href={imageLink} target="_blank" rel="noreferrer">
+                        Photo: Unsplash
+                      </a>
+                    </figcaption>
+                  )}
+                </React.Fragment>
+              )}
+            </section>
 
-          <section className="article-content">
-            <ReactMarkdown
-              linkTarget="_blank"
-              remarkPlugins={[remarkGfm]}
-              rehypePlugins={[rehypeHighlight]}
-              components={{
-                h2: ({ node }) => {
-                  const uniqueId = extractUniqueId(node);
+            <section className="article-content">
+              <ReactMarkdown
+                linkTarget="_blank"
+                remarkPlugins={[remarkGfm]}
+                rehypePlugins={[rehypeHighlight]}
+                components={{
+                  h2: ({ node }) => {
+                    const uniqueId = extractUniqueId(node);
 
-                  return (
-                    <h2 id={uniqueId} className="title-link">
-                      <span>
-                        <a href={`#${uniqueId}`}>{node.children[0].value}</a>
-                      </span>
-                    </h2>
-                  );
-                },
+                    return (
+                      <h2 id={uniqueId} className="title-link">
+                        <span>
+                          <a href={`#${uniqueId}`}>{node.children[0].value}</a>
+                        </span>
+                      </h2>
+                    );
+                  },
+                  h3: ({ node }) => {
+                    const uniqueId = extractUniqueId(node);
+
+                    return (
+                      <h3 id={uniqueId}>
+                        {node.children[0].value}
+                      </h3>
+                    );
+                  },
+                  img: ({ src, alt }) => (
+                    <div className="img-note">
+                      <img src={src} alt={alt} />
+                    </div>
+                  ),
+                  hr: () => (
+                    <div className="divider">
+                      <span>{"///"}</span>
+                    </div>
+                  ),
+                  table: ({ children }) => (
+                    <div className="tools-grid">{children}</div>
+                  ),
+                  thead: ({ children }) => <>{children}</>,
+                  tbody: ({ children }) => <>{children}</>,
+                  tr: ({ children }) => <>{children}</>,
+                  th: ({ children }) => (
+                    <div className="tool-cell">
+                      <div className="tool-name">{children}</div>
+                    </div>
+                  ),
+                  td: ({ children }) => (
+                    <div className="tool-cell">
+                      <div className="tool-role">{children}</div>
+                    </div>
+                  ),
+                }}
+              >
+                {markdown}
+              </ReactMarkdown>
+            </section>
+          </article>
+
+          <nav className="post-navigation">
+            <p className="post-navigation-header">Continue reading</p>
+
+            <div className="post-navigation-grid">
+              {previousPost && (
+                <Link href={`/blog/${previousPost.slug}`} className="post-nav-item">
+                  <span className="post-nav-label">
+                    <span>←</span> Previous
+                  </span>
+                  <span className="post-nav-title">{previousPost.title}</span>
+                </Link>
+              )}
+
+              {nextPost && (
+                <Link href={`/blog/${nextPost.slug}`} className="post-nav-item post-nav-item--next">
+                  <span className="post-nav-label">
+                    Next <span>→</span>
+                  </span>
+                  <span className="post-nav-title">{nextPost.title}</span>
+                </Link>
+              )}
+            </div>
+          </nav>
+
+          <section className="posts-comments">
+            <DiscussionEmbed
+              shortname="thulioph"
+              config={{
+                url: `https://www.thulioph.com/blog/${slug}`,
+                identifier: slug,
+                title: title,
+                language: "en_US",
               }}
-            >
-              {markdown}
-            </ReactMarkdown>
+            />
           </section>
-        </article>
-
-        <section className="more-posts">
-          <h2 className="title-link">More posts:</h2>
-
-          <aside className="more-posts-container">
-            {previousPost && (
-              <PostCard slug={previousPost?.slug}>
-                {previousPost?.title}
-              </PostCard>
-            )}
-
-            {nextPost && (
-              <PostCard slug={nextPost?.slug}>{nextPost?.title}</PostCard>
-            )}
-          </aside>
-        </section>
-
-        <section className="posts-comments">
-          <DiscussionEmbed
-            shortname="thulioph"
-            config={{
-              url: `https://www.thulioph.com/blog/${slug}`,
-              identifier: slug,
-              title: title,
-              language: "en_US",
-            }}
-          />
-        </section>
-      </main>
+        </main>
+      </BlogLayout>
     </React.Fragment>
   );
 };
@@ -154,11 +215,14 @@ export const getStaticProps = async ({ params: { slug } }) => {
   const previousPost = posts[idxOfCurrentPost - 1] || null;
   const nextPost = posts[idxOfCurrentPost + 1] || null;
 
+  const headings = extractHeadings(currentPost.markdown);
+
   return {
     props: {
       previousPost,
       currentPost,
       nextPost,
+      headings,
     },
   };
 };
