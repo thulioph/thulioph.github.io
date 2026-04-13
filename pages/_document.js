@@ -14,6 +14,10 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;700&display=swap"
           rel="stylesheet"
         />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=IBM+Plex+Sans:wght@300;400;500&family=IBM+Plex+Mono:wght@400&display=swap"
+          rel="stylesheet"
+        />
 
         <meta property="og:site_name" content="Thulio Philipe" />
         <meta name="twitter:site" content="@thulioph_" />
