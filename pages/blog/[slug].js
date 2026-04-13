@@ -142,22 +142,6 @@ const Post = ({ previousPost, currentPost, nextPost, headings }) => {
                       <span>{"///"}</span>
                     </div>
                   ),
-                  table: ({ children }) => (
-                    <div className="tools-grid">{children}</div>
-                  ),
-                  thead: ({ children }) => <>{children}</>,
-                  tbody: ({ children }) => <>{children}</>,
-                  tr: ({ children }) => <>{children}</>,
-                  th: ({ children }) => (
-                    <div className="tool-cell">
-                      <div className="tool-name">{children}</div>
-                    </div>
-                  ),
-                  td: ({ children }) => (
-                    <div className="tool-cell">
-                      <div className="tool-role">{children}</div>
-                    </div>
-                  ),
                 }}
               >
                 {markdown}
