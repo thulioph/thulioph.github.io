@@ -11,12 +11,12 @@ const data = [
       {
         product: "Xiaomi Computer Monitor Light Bar",
         description: "",
-        link: "https://a.co/d/jakpUtt",
+        link: "https://www.mi.com/us/product/mi-computer-monitor-light-bar/",
       },
       {
-        product: "Macbook Pro (13', 2020)",
+        product: "MacBook Pro M4 - 14'' 2024",
         description: "",
-        link: "https://support.apple.com/en-us/111893",
+        link: "https://support.apple.com/en-us/121552",
       },
       {
         product: "Apple Magic Trackpad",
@@ -36,17 +36,22 @@ const data = [
       {
         product: "Dell P2421D Monitor",
         description: "",
-        link: "https://a.co/d/1ywUyhh",
+        link: "https://www.dell.com/support/product-details/en-us/product/dell-p2421d-monitor/",
+      },
+      {
+        product: "Dell S2725QC",
+        description: "",
+        link: "https://www.dell.com/pt-br/shop/cty/pdp/spd/s2725qc-monitor/m_s2725qc_usbr",
       },
       {
         product: "Fezibo Standing Desk",
         description: "",
-        link: "https://www.amazon.de/dp/B08GLC97VT",
+        link: "https://www.fezibo.com/products/fezibo-height-adjustable-electric-standing-desk-with-upper-double-drawers-for-home-office",
       },
       {
         product: "Goal 322G Interstuhl office swivel chair",
         description: "",
-        link: "https://www.einrichten-design.de/de/goal-buerodrehstuhl-interstuhl/interstuhl-goal-er11.html",
+        link: "https://www.interstuhl.com/I/ch-de/modelle.php?modell=322G",
       },
     ],
   },
@@ -62,6 +67,21 @@ const data = [
         product: "Fira Code",
         description: "",
         link: "https://github.com/tonsky/FiraCode",
+      },
+      {
+        product: "Cursor",
+        description: "",
+        link: "https://www.cursor.com/",
+      },
+      {
+        product: "Codex",
+        description: "",
+        link: "https://openai.com/codex/",
+      },
+      {
+        product: "Claude Code",
+        description: "",
+        link: "https://www.anthropic.com/product/claude-code",
       },
     ],
   },
@@ -114,14 +134,39 @@ const data = [
         link: "https://apps.apple.com/us/app/caffeine-utility/id1642185952",
       },
       {
-        product: "Arc Browser",
+        product: "Google Chrome",
         description: "",
-        link: "https://arc.net/",
+        link: "https://www.google.com/chrome/",
       },
       {
         product: "Hidden Bar",
         description: "",
         link: "https://github.com/dwarvesf/hidden",
+      },
+      {
+        product: "Miro",
+        description: "",
+        link: "https://miro.com/product-overview/",
+      },
+      {
+        product: "Spotify",
+        description: "",
+        link: "https://www.spotify.com/",
+      },
+      {
+        product: "Franz",
+        description: "",
+        link: "https://meetfranz.com/",
+      },
+      {
+        product: "Postman",
+        description: "",
+        link: "https://www.postman.com/",
+      },
+      {
+        product: "Tailscale",
+        description: "",
+        link: "https://tailscale.com/",
       },
     ],
   },
@@ -131,12 +176,12 @@ const data = [
       {
         product: "Apple AirPods Pro 2",
         description: "",
-        link: "https://www.apple.com/airpods-pro/",
+        link: "https://support.apple.com/en-us/docs/airpods/300992",
       },
       {
         product: "Sony WH1000XM3",
         description: "",
-        link: "https://a.co/d/5jT6zVn",
+        link: "https://www.sony.com/electronics/support/wireless-headphones-bluetooth-headphones/wh-1000xm3",
       },
       {
         product: "HyperX SoloCast",
@@ -146,7 +191,7 @@ const data = [
       {
         product: "IXTECH Microphone Arm (low profile)",
         description: "",
-        link: "https://amzn.eu/d/1Ut5sBY",
+        link: "https://i-xtech.com/products/adjustable-360-rotatable-microphone-boom-arm-lizard-model",
       },
     ],
   },
@@ -166,7 +211,7 @@ const data = [
       {
         product: "Kindle Paperwhite",
         description: "",
-        link: "https://a.co/d/dcGkH2X",
+        link: "https://www.amazon.com/kindle-paperwhite",
       },
     ],
   },
