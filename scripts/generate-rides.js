@@ -4,6 +4,7 @@ const GpxParser = require("gpxparser");
 
 const VIEWBOX_SIZE = 400;
 const MAX_RENDER_POINTS = 300;
+const MAX_SEGMENT_SPEED_METERS_PER_SECOND = 25;
 const gpxDirectory = path.join(process.cwd(), "gpx");
 const outputFile = path.join(process.cwd(), "data", "rides.json");
 
@@ -32,6 +33,20 @@ const toRoutePoints = (points) => {
     .join(" ");
 };
 
+const calculateSafeDistance = (track) => {
+  return track.points.slice(1).reduce((totalDistance, point, index) => {
+    const previousPoint = track.points[index];
+    const segmentDistance =
+      track.distance.cumul[index] - (track.distance.cumul[index - 1] || 0);
+    const elapsed = new Date(point.time) - new Date(previousPoint.time);
+    const speed = elapsed > 0 ? segmentDistance / (elapsed / 1000) : Infinity;
+
+    return speed <= MAX_SEGMENT_SPEED_METERS_PER_SECOND
+      ? totalDistance + segmentDistance
+      : totalDistance;
+  }, 0);
+};
+
 const parseRide = async (filename) => {
   const filePath = path.join(gpxDirectory, filename);
   const xml = await fs.readFile(filePath, "utf8");
@@ -45,7 +60,7 @@ const parseRide = async (filename) => {
     id: filename.replace(/\.gpx$/, "").replace(/^strava-/, ""),
     name: track.name || "Untitled ride",
     date: gpx.metadata.time || track.points[0].time,
-    distance: Math.round(track.distance.total),
+    distance: Math.round(calculateSafeDistance(track)),
     path: toRoutePoints(track.points),
   };
 };

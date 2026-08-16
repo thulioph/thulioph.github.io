@@ -227,6 +227,134 @@ a {
   font-size: 1.4rem;
 }
 
+/* Rides */
+.rides-summary {
+  margin: 0 0 5rem;
+  padding: 2rem;
+  color: var(--default);
+  background: var(--primary);
+  box-shadow: 12px 12px 0 var(--secondary);
+}
+
+.rides-summary-heading {
+  max-width: 40rem;
+}
+
+.rides-summary-eyebrow {
+  margin: 0;
+  color: var(--secondary);
+  font-size: 0.8rem !important;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  line-height: 1.4 !important;
+  text-transform: uppercase;
+}
+
+.rides-summary h2 {
+  margin: 0.35rem 0 0.75rem;
+  padding: 0;
+  border: 0;
+  color: inherit;
+  font-size: clamp(2rem, 5vw, 3.6rem);
+  line-height: 1;
+  text-transform: none;
+}
+
+.ride-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 2.5rem 0 3rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  border-left: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.ride-stats div {
+  min-height: 6.5rem;
+  padding: 1rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.25);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.ride-stats dt {
+  color: var(--ternary);
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.ride-stats dd {
+  margin: 0.45rem 0 0;
+  color: var(--secondary);
+  font-size: clamp(1.5rem, 4vw, 2.4rem);
+  font-weight: 800;
+  line-height: 1;
+}
+
+.rides-by-year-label {
+  display: flex;
+  justify-content: space-between;
+  color: var(--ternary);
+  font-size: 0.85rem;
+}
+
+.rides-by-year-label strong {
+  color: var(--secondary);
+}
+
+.rides-by-year ol {
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  gap: 0.4rem;
+  height: 10rem;
+  margin: 0.75rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.rides-by-year li {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 0.45rem;
+  color: var(--ternary);
+  font-size: 0.65rem;
+  text-align: center;
+}
+
+.rides-by-year-bar-wrap {
+  display: flex;
+  height: 100%;
+  align-items: flex-end;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.rides-by-year-bar {
+  display: block;
+  width: 100%;
+  background: var(--secondary);
+  transition: background-color 0.2s linear;
+}
+
+.rides-by-year-bar:hover {
+  background: var(--default);
+}
+
+@media (min-width: 720px) {
+  .rides-summary {
+    padding: 3rem;
+  }
+
+  .ride-stats {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .rides-by-year ol {
+    gap: 0.8rem;
+  }
+
+}
+
 /* summary home */
 
 .summary::after {
