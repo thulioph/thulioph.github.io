@@ -12,24 +12,19 @@ const extractCoords = (tracks) => {
 };
 
 const formatFiles = (files) => {
-  const newFiles = files
-    .filter((el) => el)
-    .map((el) => ({
-      tracks: el?.tracks[0],
-      date: el?.metadata?.time,
+  const rides = files
+    .filter(Boolean)
+    .map((file) => ({
+      tracks: file.tracks[0],
+      date: file.metadata.time,
     }))
-    .flat()
-    .sort((a, b) => {
-      return b?.date?.localeCompare(a?.date);
-    });
+    .sort((a, b) => b.date.localeCompare(a.date));
 
-  const spplitedByYears = splitByYear(newFiles);
-
-  return JSON.stringify(spplitedByYears);
+  return JSON.stringify(splitByYear(rides));
 };
 
 const Rides = ({ files }) => {
-  const newFiles = JSON.parse(files);
+  const ridesByYear = JSON.parse(files);
 
   return (
     <React.Fragment>
@@ -40,7 +35,7 @@ const Rides = ({ files }) => {
         <Hero description="Bike trips">Rides</Hero>
 
         <section className="internal-grid">
-          {newFiles.map(({ year, rides }) => (
+          {ridesByYear.map(({ year, rides }) => (
             <React.Fragment key={year}>
               <h2>{year}</h2>
               <ol className="list-items-card">
@@ -58,6 +53,7 @@ const Rides = ({ files }) => {
               </ol>
             </React.Fragment>
           ))}
+
         </section>
       </main>
     </React.Fragment>
