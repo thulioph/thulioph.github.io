@@ -50,7 +50,9 @@ const Rides = ({ ridesByYear, summary }) => {
 
           {ridesByYear.map(({ year, rides }) => (
             <React.Fragment key={year}>
-              <h2>{year}</h2>
+              <h2 id={`rides-year-${year}`} className="rides-year-heading">
+                {year}
+              </h2>
               <ol className="list-items-card">
                 {rides.map(({ id, name, date, distance, path }) => (
                   <li key={id}>

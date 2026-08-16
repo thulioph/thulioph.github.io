@@ -41,14 +41,20 @@ const RideSummary = ({ summary }) => {
         <ol aria-label="Distance ridden each year">
           {summary.byYear.map(({ year, distance }) => (
             <li key={year}>
-              <div className="rides-by-year-bar-wrap">
-                <span
-                  className="rides-by-year-bar"
-                  style={{ height: `${Math.max((distance / maxDistance) * 100, 3)}%` }}
-                  title={`${year}: ${formatDistance(distance)}`}
-                />
-              </div>
-              <span>{year}</span>
+              <a
+                className="rides-by-year-link"
+                href={`#rides-year-${year}`}
+                aria-label={`Jump to rides from ${year}`}
+              >
+                <span className="rides-by-year-bar-wrap">
+                  <span
+                    className="rides-by-year-bar"
+                    style={{ height: `${Math.max((distance / maxDistance) * 100, 3)}%` }}
+                    title={`${year}: ${formatDistance(distance)}`}
+                  />
+                </span>
+                <span>{year}</span>
+              </a>
             </li>
           ))}
         </ol>
