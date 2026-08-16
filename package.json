@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export:strava-gpx": "node scripts/export-strava-gpx.js"
   },
   "dependencies": {
     "disqus-react": "^1.1.6",

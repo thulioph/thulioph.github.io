@@ -16,6 +16,18 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+### Strava rides
+
+`/rides` is generated from the GPX files in `gpx/`. To import cycling activities
+from Strava, register an app in the [Strava developer portal](https://www.strava.com/settings/api),
+authorize it with `activity:read` (or `activity:read_all` for private activities),
+then add `STRAVA_CLIENT_ID`, `STRAVA_CLIENT_SECRET`, and `STRAVA_REFRESH_TOKEN`
+to `.env.local`.
+
+Run `yarn export:strava-gpx` to download any missing routes. Files are named
+`strava-<activity-id>.gpx`, so re-running the script does not duplicate imports.
+The page remains static and no Strava credential is shipped to visitors.
+
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
 [API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
