@@ -24,6 +24,10 @@ authorize it with `activity:read` (or `activity:read_all` for private activities
 then add `STRAVA_CLIENT_ID`, `STRAVA_CLIENT_SECRET`, and `STRAVA_REFRESH_TOKEN`
 to `.env.local`.
 
+Run `yarn authorize:strava` and approve the displayed URL to obtain a fresh
+`STRAVA_REFRESH_TOKEN`. Set the app's Authorization Callback Domain in Strava
+to `localhost` before running it.
+
 Run `yarn export:strava-gpx` to download any missing routes. Files are named
 `strava-<activity-id>.gpx`, so re-running the script does not duplicate imports.
 The page remains static and no Strava credential is shipped to visitors.
