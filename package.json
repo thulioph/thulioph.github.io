@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "authorize:strava": "node scripts/authorize-strava.js",
-    "export:strava-gpx": "node scripts/export-strava-gpx.js"
+    "export:strava-gpx": "node scripts/export-strava-gpx.js",
+    "generate:rides": "node scripts/generate-rides.js"
   },
   "dependencies": {
     "disqus-react": "^1.1.6",

@@ -30,7 +30,10 @@ to `localhost` before running it.
 
 Run `yarn export:strava-gpx` to download any missing routes. Files are named
 `strava-<activity-id>.gpx`, so re-running the script does not duplicate imports.
-The page remains static and no Strava credential is shipped to visitors.
+Then run `yarn generate:rides` to create `data/rides.json`, the compact static
+dataset used by `/rides`. It contains only each ride's metadata and a simplified,
+pre-scaled SVG polyline; GPX point data is never sent to visitors. Commit the
+updated JSON after importing rides. GPX files remain local and are ignored by Git.
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
