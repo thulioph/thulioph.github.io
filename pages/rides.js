@@ -1,30 +1,14 @@
 import React from "react";
+import { promises as fs } from "fs";
+import path from "path";
 
 import AppHeader from "@/components/header";
 import AppNav from "@/components/navbar";
 import Hero from "@/components/hero";
 import CoordsCard from "@/components/coords-card";
-import { getGpxFiles } from "@/services/index";
 import { splitByYear } from "@/utils/index";
 
-const extractCoords = (tracks) => {
-  return tracks?.points?.map(({ lat, lon }) => [lat, lon]);
-};
-
-const formatFiles = (files) => {
-  const rides = files
-    .filter(Boolean)
-    .map((file) => ({
-      tracks: file.tracks[0],
-      date: file.metadata.time,
-    }))
-    .sort((a, b) => b.date.localeCompare(a.date));
-
-  return JSON.stringify(splitByYear(rides));
-};
-
-const Rides = ({ files }) => {
-  const ridesByYear = JSON.parse(files);
+const Rides = ({ ridesByYear }) => {
 
   return (
     <React.Fragment>
@@ -39,14 +23,14 @@ const Rides = ({ files }) => {
             <React.Fragment key={year}>
               <h2>{year}</h2>
               <ol className="list-items-card">
-                {rides.map(({ tracks, date }, key) => (
-                  <li key={key}>
+                {rides.map(({ id, name, date, distance, path }) => (
+                  <li key={id}>
                     <CoordsCard
-                      coords={extractCoords(tracks)}
+                      path={path}
                       date={date}
-                      distance={tracks.distance.total}
+                      distance={distance}
                     >
-                      {tracks.name}
+                      {name}
                     </CoordsCard>
                   </li>
                 ))}
@@ -63,11 +47,12 @@ const Rides = ({ files }) => {
 export default Rides;
 
 export async function getStaticProps() {
-  const files = await getGpxFiles();
+  const ridesFile = path.join(process.cwd(), "data", "rides.json");
+  const rides = JSON.parse(await fs.readFile(ridesFile, "utf8"));
 
   return {
     props: {
-      files: formatFiles(files),
+      ridesByYear: splitByYear(rides),
     },
   };
 }
