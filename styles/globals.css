@@ -234,9 +234,6 @@ a {
   color: var(--default);
   background: var(--primary);
   box-shadow: 12px 12px 0 var(--secondary);
-  position: sticky;
-  top: 1rem;
-  z-index: 1;
 }
 
 .rides-summary-heading {
@@ -315,18 +312,14 @@ a {
 }
 
 .rides-by-year li {
-  min-width: 0;
-  color: var(--ternary);
-  font-size: 0.65rem;
-  text-align: center;
-}
-
-.rides-by-year-link {
   display: flex;
-  height: 100%;
+  min-width: 0;
   flex-direction: column;
   justify-content: flex-end;
   gap: 0.45rem;
+  color: var(--ternary);
+  font-size: 0.65rem;
+  text-align: center;
 }
 
 .rides-by-year-bar-wrap {
@@ -343,17 +336,8 @@ a {
   transition: background-color 0.2s linear;
 }
 
-.rides-by-year-link:hover .rides-by-year-bar {
+.rides-by-year-bar:hover {
   background: var(--default);
-}
-
-.rides-by-year-link:focus-visible {
-  outline: 2px solid var(--default);
-  outline-offset: 3px;
-}
-
-.rides-year-heading {
-  scroll-margin-top: 33rem;
 }
 
 @media (min-width: 720px) {
@@ -369,9 +353,6 @@ a {
     gap: 0.8rem;
   }
 
-  .rides-year-heading {
-    scroll-margin-top: 28rem;
-  }
 }
 
 /* summary home */
